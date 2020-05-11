@@ -1,0 +1,167 @@
+.sidepanel {
+    height: 250px; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+  }
+  
+  /* The sidepanel links */
+  .sidepanel a {
+    padding: 3px 3px 3px 3px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #3b3b3b;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 100px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  /* Style the button that is used to open the sidepanel */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: RGB(245, 245, 245);
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+
+  .btn_navbar{
+      margin: 0.5%;
+      margin-top: 2.5vw;
+      float: right;
+      border-radius: 2vw;
+    width: 7vw;
+    font-size: 1.5vw;
+  }
+
+  header{
+      height: 8vw;
+      background-color: RGB(245, 245, 245);
+  }
+
+#logoCocacola{
+    margin-top: 1vw;
+    margin-left: 35%;
+    display: inline;
+    width: 15%;
+    height: 5vw;
+}
+
+#img_product{
+    margin: 0.2vw 4vw;
+    width: 60%;
+}
+
+#box_input{
+    width: 4vw;
+    font-size: 1.5vw;
+    text-align: center;
+
+}
+
+#log_cesta{
+    width: 2vw;
+    margin-bottom: 0.9vw;
+    margin-left: 2vw;
+
+}
+
+#descripcion{
+    text-align: center;
+    font-size: 2vw;
+}
+
+#cont_products{
+    padding: 1vw auto;
+    background-color: rgba(228, 228, 228, 0.521);
+
+
+}
+
+.product{
+    display: inline-block ;
+    margin: 1vw 2vw;
+    background-color: white;
+    border-radius: 2vw;
+    width:20%;
+    -webkit-box-shadow: -9px 9px 20px -8px rgba(0,0,0,0.52);
+    -moz-box-shadow: -9px 9px 20px -8px rgba(0,0,0,0.52);
+    box-shadow: -9px 9px 20px -8px rgba(0,0,0,0.52);
+}
+
+#precio{
+    display: inline;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-size: 2vw;
+}
+
+#capturaGmaps{
+    margin: 1vw 0vw;
+    width: 50%;
+}
+
+#formularioContacto{
+    text-align: center;
+    height: 34vw;
+    float: right;
+    margin: 1vw 0vw;
+    width: 50%;
+    font-size: 2vw;
+    background-color: rgba(235, 235, 235, 0.801);
+}
+
+.textbox_short{
+    border: none;
+    width: 40%;
+    margin: 1vw;
+    text-align: left;
+    color: rgb(126, 123, 123);
+}
+
+.textbox_large{
+    border: none;
+    width: 85%;
+    margin: 1vw;
+    text-align: left;
+    color: rgb(126, 123, 123);
+}
+
+.textbox_message{
+    width: 85%;
+    border: none;
+    height: 12vw;
+    margin: 1vw;
+    text-align: left;
+    color: rgb(126, 123, 123);
+}
+
+.box_submit{
+    width: 20%;
+    border-radius: 2em;
+}
+
+
