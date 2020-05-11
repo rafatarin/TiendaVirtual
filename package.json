@@ -1,0 +1,27 @@
+{
+  "name": "proyecto_pedidos",
+  "version": "1.0.0",
+  "description": "\"Pedidos\"",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeamSalus/Proyecto_Pedidos.git"
+  },
+  "author": "Jose, Cecilia, Ruben y Rafa.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeamSalus/Proyecto_Pedidos/issues"
+  },
+  "homepage": "https://github.com/TeamSalus/Proyecto_Pedidos#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "express-session": "^1.17.1"
+  }
+}
