@@ -2,7 +2,7 @@
   "name": "proyecto_pedidos",
   "version": "1.0.0",
   "description": "\"Pedidos\"",
-  "main": "app.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib"
   },
