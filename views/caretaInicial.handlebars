@@ -1,0 +1,23 @@
+<div id="cont_products">
+    <br>
+    {{#each todosProductos}}
+    <div class="product" id="initial_product">
+        <img src="../img/{{img}}.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">{{descripcion}}</p>
+        <p id="precio">{{precio}}</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/{{logo}}.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    {{/each}}
+</div>
+<hr>
+<img src="../img/Captura de pantalla 2020-05-11 a las 22.54.29.png" alt="Captura GMAPS" id="capturaGmaps">
+
+<form action="" method="POST" id="formularioContacto">
+    <p>Contacta con nosotros</p>
+    <input type="text" id="name" class="textbox_short" placeholder="Nombre">
+    <input type="email" id="email" class="textbox_short" placeholder="Email">
+    <input type="text" id="subject" class="textbox_large" placeholder="Asunto"><br>
+    <textarea placeholder="Mensaje" class="textbox_message" cols="30" rows="10"></textarea><br>
+    <input type="submit" class="box_submit">
+</form>
