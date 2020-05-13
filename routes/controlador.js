@@ -7,6 +7,9 @@ controlador.get("/", handlers_ln.login);
 
 controlador.get("/usuario", handlers_ln.usuario);
 
-
+controlador.get("/admin", handlers_ln.administrador);
+ 
+controlador.get("/base", handlers_ln.base);
+  
 
 module.exports = controlador;

@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="../css/styles.css" type="text/css">
+<h1><strong> Clientes: </strong></h1>
+
+{{#if datos}}
+	{{#each datos}}
+<div class="product">
+<ul>	
+<li>Nombre:{{nombre}}</li>
+<li>Email: {{email}}</li>
+<li>Telefono: {{telefono}}</li>
+</ul>
+</div>
+{{/each}}
+{{/if}}
