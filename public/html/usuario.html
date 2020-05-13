@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/styles.css" type="text/css">
+    <script src="../src/scripts.js" type="text/javascript" async ></script>
+    <title>Pedidos app</title>
+</head>
+<body>
+<header>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Ver perfil</a>
+        <a href="#">Productos</a>
+      </div>
+      
+      <button class="openbtn" onclick="openNav()">&#9776;</button>
+      <img src="../img/cocacola.png" alt="Logo amazon" id="logoCocacola">
+      <button class="btn_navbar">Log Out</button>
+</header>
+<hr>
+<div><button>Ver historico de mis pedidos</button><p class="carrito"><button>Carrito</button><button>Añadir pedido</button><button>Modificar pedido</button><button>Guardar pedido</button></p><div>
+<hr>
+<div id="cont_products">
+    <div>
+    <br>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+    <div class="product">
+        <img src="../img/chancla.jpg" alt="chancla_producto" id="img_product">
+        <p id="descripcion">Arizona. Birko-Flor Nubuck</p>
+        <p id="precio">19.99€</p>
+        <input type="number" value="1" id="box_input" min="1" max="10">
+        <img src="../img/cesta.png" alt="cesta_compra" id="log_cesta">
+    </div>
+</div>
+</div>
+<hr>
+<img src="../img/Captura de pantalla 2020-05-11 a las 22.54.29.png" alt="Captura GMAPS" id="capturaGmaps">
+
+<form action="" method="POST" id="formularioContacto">
+    <p>Contacta con nosotros</p>
+    <input type="text" id="name" class="textbox_short" placeholder="Nombre">
+    <input type="email" id="email" class="textbox_short" placeholder="Email">
+    <input type="text" id="subject" class="textbox_large" placeholder="Asunto"><br>
+    <textarea placeholder="Mensaje" class="textbox_message" cols="30" rows="10"></textarea><br>
+    <input type="submit" class="box_submit">
+</form>
+
+</footer>
+</body>
+
+</html>

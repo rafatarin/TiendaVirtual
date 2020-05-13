@@ -5,7 +5,7 @@ const controlador = express.Router()
 
 controlador.get("/", handlers_ln.login);
 
-
+controlador.get("/usuario", handlers_ln.usuario);
 
 
 
