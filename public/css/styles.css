@@ -165,3 +165,16 @@
 }
 
 
+.carrito {
+  float: right;
+}
+
+.fotoAdmin {
+  text-decoration: none;
+  color: #212529;
+}
+
+.img_product {
+  margin: 0.2vw 4vw;
+  width: 60%;
+}
