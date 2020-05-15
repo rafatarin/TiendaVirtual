@@ -1,18 +1,18 @@
-<div id="cont_products">
+<hr>
+<div class="cont_products">
     <br>
     {{#each todosProductos}}
-    <div class="product" id="initial_product">
+    <div class="product">
         <img src="../img/{{img}}.jpg" alt="chancla_producto" id="img_product">
         <p id="descripcion">{{descripcion}}</p>
-        <p id="precio">{{precio}}</p>
+        <p class="precio">{{precio}}</p>
         <input type="number" value="1" id="box_input" min="1" max="10">
         <img src="../img/{{logo}}.png" alt="cesta_compra" id="log_cesta">
     </div>
     {{/each}}
 </div>
 <hr>
-<!-- <img src="../img/Captura de pantalla 2020-05-11 a las 22.54.29.png" alt="Captura GMAPS" id="capturaGmaps"> -->
-<div style="width:50%"><iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=coop%20salus+()&ie=UTF8&t=&z=17&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/marcar-radio-circulo-mapa/">Marcar radio en el mapa</a></iframe></div><br />
+<div id="gmaps" style="width:100%"><iframe width="50%" height="400" src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=coop%20salus+()&ie=UTF8&t=&z=17&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/marcar-radio-circulo-mapa/">Marcar radio en el mapa</a></iframe>
 <form action="" method="POST" id="formularioContacto">
     <p>Contacta con nosotros</p>
     <input type="text" id="name" class="textbox_short" placeholder="Nombre">
@@ -21,3 +21,4 @@
     <textarea placeholder="Mensaje" class="textbox_message" cols="30" rows="10"></textarea><br>
     <input type="submit" class="box_submit">
 </form>
+</div>
