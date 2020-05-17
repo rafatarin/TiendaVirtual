@@ -13,6 +13,19 @@ CONSTRAINT pk_clientes PRIMARY KEY (id_cliente));
 
 INSERT INTO clientes (nombre, apellido1, apellido2, usuario, email, password, direccion) VALUES ("Jano", "Soler", "Diaz", "Jano", "jano@gmail.com", "solerdiaz", "calle amapolas 30")
 
+CREATE TABLE admin(
+id_admin MEDIUMINT AUTO_INCREMENT,
+nombre VARCHAR(20),
+apellido1 VARCHAR(20),
+apellido2 VARCHAR(20) NULL,
+usuario VARCHAR(20) NOT NULL UNIQUE,
+email VARCHAR(20) NOT NULL UNIQUE,
+password VARCHAR(29) NOT NULL UNIQUE,
+direccion VARCHAR(100),
+CONSTRAINT pk_admin PRIMARY KEY (id_admin));
+
+INSERT INTO admin (nombre, apellido1, apellido2, usuario, email, password, direccion) VALUES ("Diego", "Martinez", "Diaz", "Diego", "diego@gmail.com", "martinezdiaz", "calle girasoles 15")
+
 CREATE TABLE pedidos(
 id_pedido MEDIUMINT AUTO_INCREMENT,
 id_cliente MEDIUMINT,
