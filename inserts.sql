@@ -1,0 +1,10 @@
+CREATE TABLE clientes(
+id_cliente MEDIUMINT AUTO_INCREMENT,
+nombre VARCHAR(20),
+apellido1 VARCHAR(20),
+apellido2 VARCHAR(20) NULL,
+usuario VARCHAR(20) NOT NULL UNIQUE,
+email VARCHAR(20) NOT NULL UNIQUE,
+contraseña VARCHAR(29) NOT NULL UNIQUE,
+direccion VARCHAR(100),
+CONSTRAINT pk_clientes PRIMARY KEY (id_cliente));
