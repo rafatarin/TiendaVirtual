@@ -19,6 +19,7 @@ controlador.get("/registro", handlers_ln.registro)
 controlador.post("/registro2", handlers_ln.registro2)
 
 controlador.post("/registro3", handlers_ln.registro3)
+controlador.post("/registro3", handlers_ln.nuevoUsuario);
 
 controlador.get("/salir", handlers_ln.logout);
 controlador.get("/salir2", handlers_ln.logout2);
