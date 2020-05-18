@@ -6,6 +6,8 @@ const app = express();
 const handlers_ln = require("./lib/handlers/handlers_ln.js");
 const sesion = require("express-session");
 
+
+
 app.set("port", port);
 
 app.set("view engine", "handlebars");
@@ -17,6 +19,7 @@ app.engine("handlebars", handlebars({
 app.use(express.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public"));
 app.use(express.json());
+
 
 app.use(sesion({resave:false, 
     saveUninitialized:false,
