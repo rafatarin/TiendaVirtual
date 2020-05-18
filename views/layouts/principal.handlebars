@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/styles.css" type="text/css">
-    <script src="../src/scripts.js" type="text/javascript" async ></script>
-    <title>Document</title>
-</head>
-<body>
-    <body>
-    <header>
-        <div id="mySidepanel" class="sidepanel" class="hidden">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Inicio</a>
-            <a href="#">Catálogo</a>
-            <a href="#">Sobre Nosotros</a>
-            <a href="#">Ayuda</a>
-        </div>
+    <script src="../src/scripts.js" type="text/javascript" async></script>
 
-        <button class="openbtn" onclick="openNav()" class="hidden">&#9776;</button>
-        <img src="../img/logo_prueba.png" alt="Logo de Prueba TestNG" id="logoPrueba">
-        <button class="btn_navbar">Identifícate</button>
-        <button class="btn_navbar" onclick="location.href='/registro'">Registrate</button>
-</header>
-    {{{body}}}
-</body>
+</head>
+
+<body>
+
+    <body>
+        <header>
+            <div id="mySidepanel" class="sidepanel" class="hidden" hidden>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Inicio</a>
+                <a href="#">Catálogo</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Ayuda</a>
+            </div>
+            <button class="openbtn" onclick="openNav()" class="hidden" hidden>&#9776;</button>
+
+            <a href="#"><img src="../img/logo_prueba.png" alt="Logo de Prueba TestNG" id="logoPrueba"></a>
+            <ul>
+  <li><a href="/" class="link_menu">Inicio</a></li>
+  <li><a href="/" class="link_menu">Catálogo</a></li>
+  <li><a href="/#contacto" class="link_menu">Contáctanos</a></li>
+  <li><a href="/FAQ" class="link_menu">Preguntas frecuentes</a></li>
+  <li class="btn_navbar" ><a href="/registro" class="link_menu">Registrate</a></li>
+    <li class="btn_navbar"><div class="dropdown">
+  <button class="btn"  type="button" data-toggle="dropdown">
+  <a class="text-muted " class="link_menu">Identifícate</a></button>
+  <ul class="dropdown-menu">
+    <li><input type="text" placeholder="usuario" class="cont_text_identificacion"></input></li>
+    <li><input type="text" placeholder="contraseña" class="cont_text_identificacion"></input></li>
+    <li><input type="submit" value="Enviar" class="cont_text_identificacion"></input></li>
+  </ul>
+</div>
+</li>
+        </header>
+
+        {{{body}}}
+    </body>
+
 </html>

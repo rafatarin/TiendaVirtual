@@ -1,4 +1,3 @@
-
   .sidepanel {
     height: 250px;
     /* Specify a height */
@@ -58,15 +57,44 @@
     background-color: #444;
   }
 
-  .btn_navbar {
-    margin: 0.5%;
-    margin-top: 5.5vw;
+  ul {
+    list-style-type: none;
+    margin: 0 4vw;
+    padding: 0;
+    width: 96%;
+    
+  }
+
+  li {
+    margin-right: 4em;
+    display: inline;
+  }
+
+  .link_menu{
+    color: rgb(114, 114, 114);
+    text-decoration: none;
+}
+  .link_menu:hover{
+    
+    border: solid rgb(114, 114, 114);
+    padding: 0.5em;
+    color: rgb(114, 114, 114); 
+    text-decoration: none;   
+  }
+
+.cont_text_identificacion{
+  width: 90%;
+  background-color: rgb(228, 227, 227) ;
+  margin: 0.5vw ;
+  padding: 1em;
+  border: medium;
+}
+
+  .btn_navbar{
     float: right;
-    border-radius: 2vw;
-    width: 10%;
     font-size: 1.5vw;
   }
-  
+
   header{
     width:100%;
     margin-top: 0%;
@@ -79,9 +107,9 @@
   }
   
   #logoPrueba{
-    margin-top: 1em;
-    margin-left: 25%;
-    width: 30%;
+    margin-top: 0em;
+    margin-left: 30%;
+    width: 40%;
     height: 70%;
   }
   
