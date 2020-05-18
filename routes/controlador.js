@@ -19,6 +19,7 @@ controlador.get("/registro", handlers_ln.registro)
 controlador.post("/registro2", handlers_ln.registro2)
 
 controlador.post("/registro3", handlers_ln.registro3)
+
 controlador.post("/registro3", handlers_ln.nuevoUsuario);
 
 controlador.get("/salir", handlers_ln.logout);
@@ -29,6 +30,7 @@ controlador.get("/login2", handlers_ln.login2);
 
 controlador.post("/login", handlers_ln.compruebaLoginUsuario)
 controlador.post("/login2", handlers_ln.compruebaLoginAdmin)
+
 
 //controlador.post("/usuarioRegistrado", handlers_ln.usuarioRegistrado)
 
