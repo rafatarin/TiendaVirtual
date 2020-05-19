@@ -32,7 +32,6 @@ controlador.post("/login", handlers_ln.compruebaLoginUsuario)
 controlador.post("/login2", handlers_ln.compruebaLoginAdmin)
 
 
-//controlador.post("/usuarioRegistrado", handlers_ln.usuarioRegistrado)
 
 
 module.exports = controlador;
