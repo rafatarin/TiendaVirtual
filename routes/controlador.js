@@ -2,9 +2,7 @@ const express = require("express");
 const handlers_ln =require("../lib/handlers/handlers_ln.js")
 const controlador = express.Router()
 
-
-
-controlador.get("/", handlers_ln.caretaInicial);
+controlador.get("/", handlers_ln.inicio);
 
 controlador.get("/catalogo", handlers_ln.catalogo);
 
@@ -30,8 +28,6 @@ controlador.get("/login2", handlers_ln.login2);
 
 controlador.post("/login", handlers_ln.compruebaLoginUsuario)
 controlador.post("/login2", handlers_ln.compruebaLoginAdmin)
-
-
 
 
 module.exports = controlador;

@@ -1,77 +1,74 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
-=======
-=======
->>>>>>> 6d0598bd39e44e8dae0c65bab5a3d2c292f3af24
 
-    <!DOCTYPE html>
-<html lang="es">
-
->>>>>>> 6d0598bd39e44e8dae0c65bab5a3d2c292f3af24
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
     <link rel="stylesheet" href="../css/styles.css" type="text/css">
-    <script src="../src/scripts.js" type="text/javascript" async></script>
+    <link rel="stylesheet" href="../css/stylesRegister.css" type="text/css">
+    <script src="../src/registroForm/registro2.js" type="text/javascript" async></script>
 
 </head>
+
 <body>
-        <header>
-            <div id="mySidepanel" class="sidepanel" class="hidden" hidden>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">Inicio</a>
-                <a href="#">Catálogo</a>
-                <a href="#">Sobre Nosotros</a>
-                <a href="#">Ayuda</a>
+    <header>
+        <div id="mySidepanel" class="sidepanel" class="hidden" hidden>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Inicio</a>
+            <a href="#">Catálogo</a>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Ayuda</a>
+        </div>
+        <button class="openbtn" onclick="openNav()" class="hidden" hidden>&#9776;</button>
+
+        <a href="#"><img src="../img/logo_prueba.png" alt="Logo de Prueba TestNG" id="logoPrueba"></a>
+        <ul class="listadoDesplegable">
+            <li><a href="/" class="link_menu">Inicio</a></li>
+            <li><a href="/" class="link_menu">Catálogo</a></li>
+            <li><a href="/#contacto" class="link_menu">Contáctanos</a></li>
+            <li><a href="/FAQ" class="link_menu">Preguntas frecuentes</a></li>
+            <div class="btn_navbar">
+                <li><a href="/registro" class="link_menu">Registrate</a></li>
+                <li class="link_menu">
+                    <button class="btn" type="button" data-toggle="dropdown">
+                        <a class="text-muted ">Identifícate</a></button>
+                    <ul class="dropdown-menu">
+                        <div class="desplegable">
+                            <li><input type="text" placeholder="usuario"
+                                    class=" desplegable cont_text_identificacion"></input></li><br>
+                            <li><input type="text" placeholder="contraseña"
+                                    class=" desplegable cont_text_identificacion"></input></li><br>
+                            <li><input type="submit" value="Enviar" class="cont_text_identificacion"></input></li>
+                    </ul>
+                </li>
             </div>
-            <button class="openbtn" onclick="openNav()" class="hidden" hidden>&#9776;</button>
-            <a href="#"><img src="../img/logo_prueba.png" alt="Logo de Prueba TestNG" id="logoPrueba"></a>
-            <ul>
-  <li><a href="/" class="link_menu">Inicio</a></li>
-  <li><a href="/" class="link_menu">Catálogo</a></li>
-  <li><a href="/#contacto" class="link_menu">Contáctanos</a></li>
-  <li><a href="/FAQ" class="link_menu">Preguntas frecuentes</a></li>
-  <li class="btn_navbar" ><a href="/registro" class="link_menu">Registrate</a></li>
-    <li class="btn_navbar"><div class="dropdown">
-  <button class="btn"  type="button" data-toggle="dropdown">
-  <a class="text-muted " class="link_menu">Identifícate</a></button>
-  <ul class="dropdown-menu">
-    <li><input type="text" placeholder="usuario" class="cont_text_identificacion"></input></li>
-    <li><input type="text" placeholder="contraseña" class="cont_text_identificacion"></input></li>
-    <li><input type="submit" value="Enviar" class="cont_text_identificacion"></input></li>
-  </ul>
-</div>
-</li>
-        </header>
+    </header>
 
 
-    <div>
-        <form action="/registro3"  method="POST">
-        <img src="../img/logo_prueba.png" alt="logo de empresa" style="width: 10%; margin:none">
-        <h3>Crea una cuenta con nosotros</h3>
-        <h5>PASO 2</h5>
-        <input type="text" placeholder="Usuario" id="usuario">
-        <input type="text" placeholder="Repita el usuario" id="rep_usuario"><br><br>
-        <select id="provincias">
-            
-            
-        </select>
+    <div class="cont_registros">
+        <form action="/registro3" method="POST">
+            <h5>PASO 2</h5><br>
+            <input type="text" placeholder="Usuario" id="usuario" class="box_inputs"><br><br>
+            <input type="text" placeholder="Repita el usuario" id="rep_usuario" class="box_inputs"><br><br>
+            <select id="provincias">
+
+
+            </select>
             <br><br>
-        <input type="submit" value="Siguiente">  
-    </form> 
-    </div>     
+            <input type="submit" value="Siguiente">
+        </form>
+    </div>
 </body>
+
 </html>

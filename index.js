@@ -6,8 +6,6 @@ const app = express();
 const handlers_ln = require("./lib/handlers/handlers_ln.js");
 const sesion = require("express-session");
 
-
-
 app.set("port", port);
 
 app.set("view engine", "handlebars");
