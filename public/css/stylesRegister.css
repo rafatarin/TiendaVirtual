@@ -20,11 +20,28 @@
     z-index: 1;
 }
 
-.btn-facebook {
-    background-color: #405D9D;
-    color: #fff;
-}
-.btn-twitter {
-    background-color: #42AEEC;
-    color: #fff;
-}
+.cont_registros{
+    text-align: center;
+    margin: 13% auto;
+    width: 50%;
+    padding: 3%;
+    border-radius: 4em;
+    background-color: rgb(238, 238, 238);
+    box-shadow: beige;
+  }
+
+  .box_inputs{
+    width: 80%;
+  }
+
+ .box_inputs_contraseña{
+    width: 80%;
+    margin: 0.5em;
+ }
+
+ .cont_contraseña{
+     width: 90%;
+     display: inline;
+     
+
+ }

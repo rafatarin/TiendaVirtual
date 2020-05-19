@@ -32,23 +32,24 @@
         <button class="openbtn" onclick="openNav()" class="hidden" hidden>&#9776;</button>
 
         <a href="#"><img src="../img/logo_prueba.png" alt="Logo de Prueba TestNG" id="logoPrueba"></a>
-        <ul>
+        <ul class="listadoDesplegable">
             <li><a href="/" class="link_menu">Inicio</a></li>
-            <li><a href="/" class="link_menu">Catálogo</a></li>
+            <li><a href="/catalogo" class="link_menu">Catálogo</a></li>
             <li><a href="/#contacto" class="link_menu">Contáctanos</a></li>
             <li><a href="/FAQ" class="link_menu">Preguntas frecuentes</a></li>
-            <li class="btn_navbar"><a href="/registro" class="link_menu">Registrate</a></li>
-            <li class="btn_navbar">
-                <div class="dropdown">
-                    <button class="btn" type="button" data-toggle="dropdown">
-                        <a class="text-muted " class="link_menu">Identifícate</a></button>
+            <div class="btn_navbar">
+            <li><a href="/registro" class="link_menu">Registrate</a></li>
+            <li class="link_menu">
+            <button class="btn" type="button" data-toggle="dropdown">
+                        <a class="text-muted " >Identifícate</a></button>
                     <ul class="dropdown-menu">
-                        <li><input type="text" placeholder="usuario" class="cont_text_identificacion"></input></li>
-                        <li><input type="text" placeholder="contraseña" class="cont_text_identificacion"></input></li>
+                        <div class="desplegable">
+                        <li><input type="text" placeholder="usuario" class=" desplegable cont_text_identificacion"></input></li><br>
+                        <li><input type="text" placeholder="contraseña" class=" desplegable cont_text_identificacion"></input></li><br>
                         <li><input type="submit" value="Enviar" class="cont_text_identificacion"></input></li>
                     </ul>
-                </div>
             </li>
+        </div>
     </header>
 
     {{{body}}}
