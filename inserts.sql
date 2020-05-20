@@ -6,7 +6,7 @@ nombre VARCHAR(20),
 apellido1 VARCHAR(20),
 apellido2 VARCHAR(20) NULL,
 usuario VARCHAR(20) NOT NULL UNIQUE,
-email VARCHAR(20) NOT NULL UNIQUE,
+email VARCHAR(50) NOT NULL UNIQUE,
 password VARCHAR(29) NOT NULL UNIQUE,
 direccion VARCHAR(100),
 CONSTRAINT pk_clientes PRIMARY KEY (id_cliente));

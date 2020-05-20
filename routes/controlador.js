@@ -1,5 +1,5 @@
 const express = require("express");
-const handlers_ln =require("../lib/handlers/handlers_ln.js")
+const handlers_ln = require("../lib/handlers/handlers_ln.js")
 const controlador = express.Router()
 
 controlador.get("/", handlers_ln.inicio);
@@ -9,16 +9,16 @@ controlador.get("/catalogo", handlers_ln.catalogo);
 controlador.get("/usuario", handlers_ln.usuario);
 
 controlador.get("/admin", handlers_ln.administrador);
- 
+
 controlador.get("/base", handlers_ln.base);
 
 controlador.get("/registro", handlers_ln.registro)
 
-controlador.post("/registro2", handlers_ln.registro2)
+controlador.post("/registrado1", handlers_ln.nuevoUsuario1);
 
-controlador.post("/registro3", handlers_ln.registro3)
+controlador.post("/registrado2", handlers_ln.nuevoUsuario2);
 
-controlador.post("/registro3", handlers_ln.nuevoUsuario);
+controlador.post("/registrado3", handlers_ln.nuevoUsuario3);
 
 controlador.get("/salir", handlers_ln.logout);
 controlador.get("/salir2", handlers_ln.logout2);

@@ -33,7 +33,7 @@ function mostrarProvincias(){
   
   for (let i=0; i<provincias.length; i++){
 
-    document.getElementById("provincias").innerHTML += `<option value=${i}>${provincias[i]}</option>`
+    document.getElementById("provincias").innerHTML += `<option value=${i} name="provincias">${provincias[i]}</option>`
   }
 
 }

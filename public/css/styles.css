@@ -137,7 +137,17 @@ margin-left: 40%;
     font-size: 1vw;
   }
 
-  
+  .text_seccion{
+    width: 50%;
+    margin: 0em 30%;
+    font-size: 2vw;
+    color: rgb(61, 61, 61);
+    text-decoration: none;
+  }
+
+ :hover{
+    color: grey;
+  }
   
   .product {
     float: left;
@@ -236,12 +246,16 @@ margin-left: 40%;
     margin:1.5em 3em;
   }
   
+.cont_main_secciones{
+  padding: 1.5em;
+}
+
   .cont_secciones{
     margin: 1em 0.7em;
     height: 20em;
     display: inline-block;
     width: 30%;
-    background-color: rgba(209, 209, 209, 0.377);  
+    background-color: rgba(233, 233, 233, 0.596);  
   }
 
   

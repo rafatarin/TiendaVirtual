@@ -29,13 +29,13 @@ function comprobarEmail(){
   
 function comprobarContraseña(){
   
-  var expRegContraseña = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/; //CONTRASEÑA /Minimo 8 caracteres, al menos 1 letra, 1 número y un carácter especial
+  var expRegContraseña = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/; //La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.
   
-    if( !expRegContraseña.test(this.value)){
+    if(!expRegContraseña.test(this.value)){
       event.preventDefault();
         var nodoError4 = document.createElement("p");
         nodoError4.setAttribute("id", "nodo");
-        var contError4 = document.createTextNode("El campo no coincide con Usuario");
+        var contError4 = document.createTextNode("La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.");
         nodoError4.appendChild(contError4);
         this.parentNode.appendChild(nodoError4);
         nodoError4.classList.add("errorEnCasillas");
