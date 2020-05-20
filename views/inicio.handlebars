@@ -4,12 +4,25 @@
     {{#each secciones}}
     <a href="../public/html/zapatillas.html">
     <div class="cont_secciones">
-        <img src="../img/{{img}}" alt="ropa_deportiva" class="imgSeccion">
+        <img src="../img/{{categoria}}.png" alt="ropa_deportiva" class="imgSeccion">
         <br><br>
-        <p class="descripcion">{{desc}}</p>
+        <p class="descripcion">{{categoria}}</p>
         
     </div>
     </a>
     
     {{/each}}
+</div>
+
+<a href="" name="contacto"></a>
+
+<div id="gmaps" style="width:100%"><iframe width="50%" height="400" src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=coop%20salus+()&ie=UTF8&t=&z=17&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/marcar-radio-circulo-mapa/">Marcar radio en el mapa</a></iframe>
+<form action="" method="POST" id="formularioContacto">
+    <p>Contacta con nosotros</p>
+    <input type="text" id="name" class="textbox_short" placeholder="Nombre">
+    <input type="email" id="email" class="textbox_short" placeholder="Email">
+    <input type="text" id="subject" class="textbox_large" placeholder="Asunto"><br>
+    <textarea placeholder="Mensaje" class="textbox_message" cols="30" rows="10"></textarea><br>
+    <input type="submit" class="box_submit">
+</form>
 </div>
