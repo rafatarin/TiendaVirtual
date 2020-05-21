@@ -1,0 +1,35 @@
+
+<h1 id="stock">Stock</h1>
+<div id="selectCat">
+
+<select id="categorias">
+  <option value="todas">Todas</option>
+  <option value="ropaDeportiva">Ropa Deportiva</option>
+  <option value="zapatillas">Zapatillas</option>
+  <option value="joyeria">Joyería</option>
+  <option value="juguetes">Juguetes</option>
+  <option value="libros">Libros</option>
+</select>
+</div>
+<div id="botones">
+{{#if stock}}
+{{#each stock}}
+<div class="contenedorStock">
+  		<ul class="stockVista">
+    		<p>Descripción</p><li class="valorStock">{{descripcion}}<input class="valorStock" type="text" size="50"><button id="{{id_articulo}}" class="valorStock btnActualizar">Modificar</button></li><br/>
+    	
+        <p>Categoría</p><li class="valorStock">{{categoria}}</li><br/>
+
+        <p>Stock</p><li class="valorStock">{{stock}}<input class="valorStock" type="text" size="50"><button id="{{id_articulo}}{{stock}}" class="valorStock">Modificar</button></li><br/>
+        
+        <p>Precio Eur</p><li class="valorStock">{{precio}}<input class="valorStock" type="text" size="50"><button id="{{id_articulo}}{{precio}}" class="valorStock">Modificar</button></li><br/>
+        
+            <img class="imagenStock" src="../img/{{id_articulo}}.webp"><br/>
+            <label for="avatar">Modificar imagen:</label>
+            <input type="file" id="photo" />
+</ul>
+</div>
+	{{/each}}
+{{/if}}
+</div>
+<script src="../src/stock.js" type="text/javascript" async></script>

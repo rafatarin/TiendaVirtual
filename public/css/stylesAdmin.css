@@ -1,0 +1,113 @@
+.product {
+  display: inline-block;
+  margin: 1vw 2vw;
+  background-color: white;
+  border-radius: 2vw;
+  width: 20%;
+  -webkit-box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
+  box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
+}
+
+.fotoAdmin {
+  text-decoration: none;
+  color: #212529;
+}
+
+.img_product {
+  margin: 0.2vw 4vw;
+  width: 50%;
+  height: 25%;
+  padding-top: 1%;
+}
+
+.container {
+  margin-top: 3%;
+  width: 50%;
+  height: 50%;
+}
+
+#muestra {
+  width: 70%;
+  margin: 0 auto;
+}
+#muestraAdmin {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.descStats {
+  font-size: 1vw;
+  text-align: center;
+}
+
+.descSecciones {
+  text-align: center;
+  font-size: 1vw;
+}
+.menuEstadis {
+  display: inline-block;
+  margin-left: 1%;
+  margin-top: 10%;
+  background-color: white;
+  border-radius: 2vw;
+  width: 30%;
+  height: 15%;
+  -webkit-box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
+  box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
+}
+.stock {
+  padding-top: 6%;
+}
+
+.proceso {
+  margin-top: auto;
+}
+
+#stock {
+  padding-top: 10%;
+  text-align: center;
+}
+.contenedorStock {
+  display: inline-block;
+  margin-left: 2%;
+  border-radius: 2vw;
+  padding: 0.5%;
+  width: 30%;
+  border-style: ridge;
+}
+
+.contenedorStock button {
+  border-radius: 2vw;
+  margin: 0.2%;
+  margin-top: 1%;
+}
+
+.valorStock {
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 2vw;
+  width: 100%;
+}
+
+.imagenStock {
+  height: 20%;
+  width: 20%;
+}
+
+.stockVista > li {
+  list-style: none;
+}
+
+input.file {
+  width: 100%;
+}
+
+#selectCat {
+  margin-left: 46%;
+}
+
+.stockVista {
+  padding-left: -2%;
+}
