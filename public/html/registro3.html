@@ -20,6 +20,7 @@
     <script src="../src/registroForm/registro3.js" type="text/javascript" async></script>
 
 </head>
+<<<<<<< HEAD
 
 <body>
     <header>
@@ -68,6 +69,55 @@
                             class="box_inputs_contraseña" name="campos">
                     </div>
                     <input type="submit" value="Terminar">
+=======
+
+<body>
+    <header>
+        <div id="mySidepanel" class="sidepanel" class="hidden" hidden>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Inicio</a>
+            <a href="#">Catálogo</a>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Ayuda</a>
+        </div>
+        <button class="openbtn" onclick="openNav()" class="hidden" hidden>&#9776;</button>
+
+        <a href="#"><img src="../img/logo_prueba.png" alt="Logo de Prueba TestNG" id="logoPrueba"></a>
+        <ul class="listadoDesplegable">
+            <li><a href="/" class="link_menu">Inicio</a></li>
+            <li><a href="/" class="link_menu">Catálogo</a></li>
+            <li><a href="/#contacto" class="link_menu">Contáctanos</a></li>
+            <li><a href="/FAQ" class="link_menu">Preguntas frecuentes</a></li>
+            <div class="btn_navbar">
+                <li><a href="/registro" class="link_menu">Registrate</a></li>
+                <li class="link_menu">
+                    <button class="btn" type="button" data-toggle="dropdown">
+                        <a class="text-muted ">Identifícate</a></button>
+                    <ul class="dropdown-menu">
+                        <div class="desplegable">
+                            <li><input type="text" placeholder="usuario"
+                                    class=" desplegable cont_text_identificacion"></input></li><br>
+                            <li><input type="text" placeholder="contraseña"
+                                    class=" desplegable cont_text_identificacion"></input></li><br>
+                            <li><input type="submit" value="Enviar" class="cont_text_identificacion"></input></li>
+                    </ul>
+                </li>
+            </div>
+    </header>
+    <div>
+        <form action="/usuarioRegistrado" method="POST">
+
+
+            <div class="cont_registros">
+                <form action="/" method="POST">
+                    <h5>PASO 3</h5><br>
+                    <input type="email" id="email" placeholder="Dirección de email" class="box_inputs"><br><br>
+                    <div class="cont_contraseña">
+                    <input type="password" id="contraseña" placeholder="Contraseña mínimo 6 caracteres" class="box_inputs_contraseña">
+                    <input type="password" id="rep_contraseña" placeholder="Confirmar contraseña" class="box_inputs_contraseña">
+                    </div>
+                    <input type="submit" value="CONTINUAR">
+>>>>>>> origin/master
                 </form>
             </div>
 </body>
