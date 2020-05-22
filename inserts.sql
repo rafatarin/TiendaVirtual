@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS pedidoProducto;
+CREATE DATABASE IF NOT EXISTS pedidoArticulo CHARACTER SET 'UTF8' COLLATE 'utf8_general_ci';
 
 CREATE TABLE clientes(
 id_cliente MEDIUMINT AUTO_INCREMENT,
@@ -12,7 +12,7 @@ poblacion VARCHAR(100),
 fecha_registro DATE,
 CONSTRAINT pk_clientes PRIMARY KEY (id_cliente));
 
-INSERT INTO clientes (nombre, apellido1, apellido2, usuario, email, password, poblacion, fecha_registro) VALUES ("Jano", "Soler", "Diaz", "Jano", "jano@gmail.com", "solerdiaz", "castellon", "2020-05-22");
+INSERT INTO clientes (nombre, apellido1, apellido2, usuario, email, password, poblacion, fecha_registro) VALUES ("Jano", "Soler", "Diaz", "Jano", "jano@gmail.com", "solerdiaz", "castellon", curdate());
 
 CREATE TABLE admin(
 id_admin MEDIUMINT AUTO_INCREMENT,
@@ -26,7 +26,7 @@ poblacion VARCHAR(100),
 fecha_registro DATE,
 CONSTRAINT pk_admin PRIMARY KEY (id_admin));
 
-INSERT INTO admin (nombre, apellido1, apellido2, usuario, email, password, poblacion, fecha_registro) VALUES ("Diego", "Martinez", "Diaz", "Diego", "diego@gmail.com", "martinezdiaz", "Castellon", "2020-05-22");
+INSERT INTO admin (nombre, apellido1, apellido2, usuario, email, password, poblacion, fecha_registro) VALUES ("Diego", "Martinez", "Diaz", "Diego", "diego@gmail.com", "martinezdiaz", "Castellon", curdate());
 
 CREATE TABLE pedidos(
 id_pedido MEDIUMINT AUTO_INCREMENT,
@@ -65,7 +65,6 @@ VALUES ("pantalones cortos de hombre Treviso Joma", "ropa deportiva", "8", "5.60
 CREATE TABLE detalle_pedidos(
 id_pedido MEDIUMINT,
 id_articulo MEDIUMINT,
-fecha DATE,
 pedidos_entregados BOOLEAN,
 pedidos_en_proceso BOOLEAN,
 pedidos_enviados BOOLEAN,
