@@ -4,6 +4,8 @@ const controlador = express.Router();
 
 controlador.get("/", handlers_ln.inicio);
 
+controlador.get("/articulos", handlers_ln.articulos)
+
 controlador.get("/catalogo", handlers_ln.catalogo);
 
 controlador.get("/usuario", handlers_ln.usuario);
