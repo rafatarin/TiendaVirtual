@@ -6,7 +6,7 @@ controlador.get("/", handlers_ln.inicio);
 
 controlador.get("/articulos", handlers_ln.articulos)
 
-controlador.get("/catalogo", handlers_ln.catalogo);
+controlador.get("/secciones", handlers_ln.secciones);
 
 controlador.get("/usuario", handlers_ln.usuario);
 
@@ -17,6 +17,8 @@ controlador.post("/registrado1", handlers_ln.nuevoUsuario1);
 controlador.post("/registrado2", handlers_ln.nuevoUsuario2);
 
 controlador.post("/registrado3", handlers_ln.nuevoUsuario3);
+
+controlador.post("/enviarContacto", handlers_ln.enviarContacto)
 
 controlador.get("/salir", handlers_ln.logout);
 controlador.get("/salir2", handlers_ln.logout2);

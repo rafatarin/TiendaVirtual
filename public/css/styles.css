@@ -59,7 +59,7 @@
 
   .listadoDesplegable {
     list-style-type: none;
-    margin:0vw 5vw;
+    margin:0vw 15vw;
     padding: 0vw;
     width: 96%;
     
@@ -71,9 +71,9 @@
   }
 
   .link_menu{
-    
+    margin-right: 2em;
     flex: initial;
-    color: rgb(114, 114, 114);
+    color: rgb(44, 44, 44);
 }
 
   .link_menu:hover{
@@ -93,26 +93,29 @@
 }
 
 .btn_navbar{
-display: inline-block;
-margin-left: 40%;
+  background-color: rgb(48, 48, 48);
+  text-align: right;
+  width: 100%;
 }
 
   header{
     width:100%;
-    margin-top: 0%;
     padding-top: 0%;
     position: fixed;
     top: 0px;
     z-index: 100;
-    height: 10vw;
-    background-color: rgba(228, 227, 227, 0.918);
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.925);
   }
   
-  
+  #carouselExampleIndicators{
+    margin-top: 12em;
+  }
+
   #logoPrueba{
-    margin-left: 25%;
+    margin-left: 2.5em;
     width: 30%;
-    height: 70%;
+    height: 60%;
   }
 
   #box_input {
@@ -175,19 +178,24 @@ margin-left: 40%;
     font-size: 2vw;
   }
   
-  #capturaGmaps {
-    margin: 1vw 0vw;
-    width: 50%;
-  }
   
   #formularioContacto {
     text-align: center;
     height: 34vw;
-    float: right;
-    margin: 1vw 0vw;
+    float: left;
     width: 50%;
     font-size: 2vw;
-    background-color: rgba(255, 255, 255, 0.801);
+    
+    
+  }
+
+  .cont_contacto{
+    width: 97%;
+    margin: 1em auto;
+    padding: 1em;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 5%, rgba(1,65,129,1) 100%);
+
   }
   
   .textbox_short {
@@ -247,7 +255,10 @@ margin-left: 40%;
   }
   
 .cont_main_secciones{
-  padding: 1.5em;
+  margin-top: 9em;
+  margin-left: 10px;
+  padding: 2em;
+
 }
 
   .cont_secciones{
@@ -258,11 +269,32 @@ margin-left: 40%;
     background-color: rgba(233, 233, 233, 0.596);  
   }
 
- 
-
   .mySlides{
-   
     width: 90%;
+  }
 
-   
+  .banners_inicio{
+    width: 97%;
+    height: 6em;
+    margin: 1em auto;
+    background-color: RGB(1, 65, 129);
+
+ 
+  }
+
+  .banner_text_inicio{
+    width: 60%;
+    margin: 1em auto;
+    padding: 1em;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.7em;    
+     
+  }
+
+  footer{
+    height: 15vw;
+    background-color: rgb(109, 109, 109);
+    margin: 0em;
+    padding: 0em;
   }
