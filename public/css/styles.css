@@ -120,7 +120,6 @@ header {
   margin-top: 8em;
 }
 
-<<<<<<< HEAD
  :hover{
     color: grey;
   }
@@ -228,59 +227,6 @@ header {
   
 .cont_main_secciones{
   padding: 1.5em;
-=======
-#logoPrueba{
- margin: 0.5em 4em;
-  width: 14%;
-  height: 50%;
-}
-
-#box_input {
-  display: inline;
-  float: left;
-  margin-left: 2vw;
-  width: 2em;
-  font-size: 1.5vw;
-  text-align: center;
-}
-
-#log_cesta {
-  float: left;
-  width: 2vw;
-  margin-bottom: 0.9vw;
-  margin-left: 2vw;
-}
-
-.descripcion {
-  width: 70%;
-  margin: 4em;
-  font-size: 1vw;
-}
-
-.text_seccion {
-  width: 50%;
-  margin: 0em 30%;
-  font-size: 2vw;
-  color: rgb(61, 61, 61);
-  text-decoration: none;
-}
-
-:hover {
-  color: grey;
-}
-
-.product {
-  float: left;
-  display: block;
-  margin: 3vw 2vw;
-  background-color: white;
-  border-radius: 2vw;
-  width: 20%;
-  height: 350px;
-  -webkit-box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
-  -moz-box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
-  box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
->>>>>>> 3189a3ec9494447bf2d03c564002a7f88a1290df
 }
 
 .cont_products {
