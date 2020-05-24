@@ -267,6 +267,7 @@ header {
 
 }
 
+<<<<<<< HEAD
 .cont_secciones {
   margin: 1em 0.7em;
   height: 20em;
@@ -316,3 +317,41 @@ footer {
   margin: 0em auto;
 }
 
+=======
+  .cont_secciones{
+    margin: 1em 0.7em;
+    height: 20em;
+    display: inline-block;
+    width: 30%;
+    background-color: rgba(233, 233, 233, 0.596);  
+  }
+
+
+  .mySlides{
+    width: 90%;
+  }
+
+  .banners_inicio{
+    width: 97%;
+    height: 6em;
+    margin: 1em auto;
+    background-color: RGB(1, 65, 129);
+  }
+
+  .banner_text_inicio{
+    width: 60%;
+    margin: 1em auto;
+    padding: 1em;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.7em;    
+     
+  }
+
+  footer{
+    height: 15vw;
+    background-color: rgb(109, 109, 109);
+    margin: 0em;
+    padding: 0em;
+  }
+>>>>>>> 83463c9d021f59f9e8b3a044ac9b6d49e6d3e212
