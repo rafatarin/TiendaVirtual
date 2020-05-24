@@ -224,6 +224,10 @@ margin-left: 40%;
   .carrito {
     float: right;
   }
+
+  #logout {
+    float: right;
+  }
   
   .fotoAdmin {
     text-decoration: none;

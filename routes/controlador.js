@@ -36,4 +36,9 @@ controlador.get("/datos", handlers_ln.datos);
 
 controlador.get("/stock", handlers_ln.stock);
 
+controlador.get("/anadir", handlers_ln.anadirPedido);
+
+controlador.get("/historico", handlers_ln.historico);
+
+
 module.exports = controlador;

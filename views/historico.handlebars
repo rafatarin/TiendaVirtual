@@ -1,0 +1,14 @@
+<h1>PEDIDOS REALIZADOS POR EL USUARIO {{usuario}} </h1>
+
+{{#if registros}}
+       {{#each registros}}
+        <p>Nº articulo: {{id_pedido}} -
+        descripcion: {{descripcion}} -
+        cantidad: {{cantidad}} -
+        cliente: {{id_cliente}} -
+    {{/each}}
+{{/if}}
+<br>
+<br>
+<br>
+<a href="/usuario"><button>Volver a opciones de usuario</button></a>
