@@ -16,9 +16,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="../css/styles.css" type="text/css">
-    <link rel="stylesheet" href="../css/stylesRegister.css" type="text/css">
-    <script src="../src/registroForm/registro2.js" type="text/javascript" async></script>
-
+    <script type="text/javascript" src="../src/scripts.js" async></script>
 </head>
 
 <body>
@@ -32,27 +30,20 @@
         </div>
         <button class="openbtn" onclick="openNav()" class="hidden" hidden>&#9776;</button>
 
-        <a href="#"><img src="../img/logo_prueba.png" alt="Logo de Prueba TestNG" id="logoPrueba"></a>
+
+        <div class="btn_navbar">
+            <li class="text-light" style="float: left; margin: 0em 10em;">Estás viendo la nueva web, esta es la version beta</li>
+            <li><a href="/registro" class="text-light">Mi cesta <img src="../img/cesta.png" alt="cesta" class="header_logo_cesta"></a></li>
+            <li><a href="/registro" class="text-light">Registrate</a></li>
+            <li><a href="/identificacion" class="text-light">identificate</a></li>
+
+        </div>
+        <a href="/"><img src="../img/logo.png" alt="Logo de Prueba TestNG" id="logoPrueba"></a>
         <ul class="listadoDesplegable">
             <li><a href="/" class="link_menu">Inicio</a></li>
-            <li><a href="/" class="link_menu">Catálogo</a></li>
+            <li><a href="/secciones" class="link_menu">Secciones</a></li>
             <li><a href="/#contacto" class="link_menu">Contáctanos</a></li>
-            <li><a href="/FAQ" class="link_menu">Preguntas frecuentes</a></li>
-            <div class="btn_navbar">
-                <li><a href="/registro" class="link_menu">Registrate</a></li>
-                <li class="link_menu">
-                    <button class="btn" type="button" data-toggle="dropdown">
-                        <a class="text-muted ">Identifícate</a></button>
-                    <ul class="dropdown-menu">
-                        <div class="desplegable">
-                            <li><input type="text" placeholder="usuario"
-                                    class=" desplegable cont_text_identificacion"></input></li><br>
-                            <li><input type="text" placeholder="contraseña"
-                                    class=" desplegable cont_text_identificacion"></input></li><br>
-                            <li><input type="submit" value="Enviar" class="cont_text_identificacion"></input></li>
-                    </ul>
-                </li>
-            </div>
+        </ul>
     </header>
 
     <div></div>
