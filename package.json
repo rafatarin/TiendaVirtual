@@ -19,10 +19,14 @@
     "url": "https://github.com/TeamSalus/Proyecto_Pedidos/issues"
   },
   "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "cookies": "^0.8.0",
     "express": "^4.17.1",
     "express-handlebars": "^4.0.4",
     "express-session": "^1.17.1",
     "mariadb": "^2.3.1",
+    "memorystore": "^1.6.2",
     "mongoose": "^5.9.14",
     "mysql": "^2.18.1",
     "nodemailer": "^6.4.6"

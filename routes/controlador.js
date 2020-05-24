@@ -20,7 +20,13 @@ controlador.post("/registrado2", handlers_ln.nuevoUsuario2);
 
 controlador.post("/registrado3", handlers_ln.nuevoUsuario3);
 
-controlador.post("/enviarContacto", handlers_ln.enviarContacto)
+controlador.post("/enviarContacto", handlers_ln.enviarContacto);
+
+controlador.get("/perfil", handlers_ln.mostrarPerfil);
+
+controlador.post("/updatePerfil", handlers_ln.actualizarPerfil)
+
+controlador.post("updatePerfil", handlers_ln.actualizarPerfil)
 
 controlador.get("/salir", handlers_ln.logout);
 
