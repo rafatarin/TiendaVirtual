@@ -316,3 +316,30 @@ footer {
   margin: 0em auto;
 }
 
+  .mySlides{
+    width: 90%;
+  }
+
+  .banners_inicio{
+    width: 97%;
+    height: 6em;
+    margin: 1em auto;
+    background-color: RGB(1, 65, 129);
+  }
+
+  .banner_text_inicio{
+    width: 60%;
+    margin: 1em auto;
+    padding: 1em;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.7em;    
+     
+  }
+
+  footer{
+    height: 15vw;
+    background-color: rgb(109, 109, 109);
+    margin: 0em;
+    padding: 0em;
+  }
