@@ -49,13 +49,10 @@ controlador.get("/datosGraf", handlers_ln.datosGraf);
 
 controlador.get("/stock", handlers_ln.stock);
 
-<<<<<<< HEAD
 controlador.get("/anadir", handlers_ln.anadirPedido);
 
 controlador.get("/historico", handlers_ln.historico);
 
-=======
-<<<<<<< HEAD
 controlador.get("/buscaPorTexto/:texto", handlers_ln.buscaPorTexto);
 
 controlador.put("/descripcion/:id_articulo", handlers_ln.descripcion);
@@ -67,9 +64,8 @@ controlador.get("/pedidosEnviados", handlers_ln.pedidosEnviados);
 controlador.put("/actualizaProceso/:id_pedido", handlers_ln.actualizaProceso);
 
 controlador.put("/actualizaEnviados/:id_pedido", handlers_ln.actualizaEnviados);
-=======
+
 controlador.get("/carrito", handlers_ln.carrito)
->>>>>>> 051ba48c92c1522a9a3a52df64ad2b86de58e3f8
->>>>>>> 3189a3ec9494447bf2d03c564002a7f88a1290df
+
 
 module.exports = controlador;
