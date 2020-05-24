@@ -74,8 +74,9 @@
   margin-left: 2%;
   border-radius: 2vw;
   padding: 0.5%;
-  width: 30%;
+  width: 29%;
   border-style: ridge;
+  overflow-wrap: break-word;
 }
 
 .contenedorStock button {
@@ -91,6 +92,10 @@
   width: 100%;
 }
 
+.valorStock button {
+  background-color: #e2c8c8;
+}
+
 .imagenStock {
   height: 20%;
   width: 20%;
@@ -101,7 +106,7 @@
 }
 
 input.file {
-  width: 100%;
+  width: 60%;
 }
 
 #selectCat {
@@ -110,4 +115,12 @@ input.file {
 
 .stockVista {
   padding-left: -2%;
+}
+
+.btnActualizar {
+  background-color: #e2c8c8;
+}
+
+.clientes {
+  text-transform: uppercase;
 }

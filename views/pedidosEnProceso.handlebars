@@ -1,0 +1,27 @@
+
+<h1 id="stock"><strong> Pedidos en Proceso: </strong></h1>
+
+{{#if enProceso}}
+{{#each enProceso}}
+<div class="product clientes">
+<ul>	
+<li>Id pedido:{{id_pedido}}</li>
+<li>Productos:{{descripcion}}</li>
+<li>Cantidad:{{cantidad}}</li>
+<li>Id_cliente:{{id_cliente}}</li>
+<label><input id="{{id_pedido}}" name="miCheck" type="checkbox">Enviado</a></label>
+</ul>
+
+</div>
+
+
+
+<script async>
+async function alertaValue(req, res){ 
+   	actualizaProceso({{id_pedido}});
+   	
+} 
+document.getElementById("{{id_pedido}}").addEventListener("click", alertaValue);
+</script>
+{{/each}}
+{{/if}}
