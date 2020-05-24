@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS pedidoArticulo CHARACTER SET 'UTF8' COLLATE 'utf8_general_ci';
+CREATE DATABASE IF NOT EXISTS pedidosArticulo CHARACTER SET 'UTF8' COLLATE 'utf8_general_ci';
 
 CREATE TABLE clientes(
 id_cliente MEDIUMINT AUTO_INCREMENT,
@@ -31,7 +31,6 @@ INSERT INTO admin (nombre, apellido1, apellido2, usuario, email, password, pobla
 CREATE TABLE pedidos(
 id_pedido MEDIUMINT AUTO_INCREMENT,
 id_cliente MEDIUMINT,
-cantidad MEDIUMINT,
 fecha_pedido DATE,
 CONSTRAINT pk_pedidos PRIMARY KEY (id_pedido),
 CONSTRAINT fk_pedidos FOREIGN KEY (id_cliente) REFERENCES clientes (id_cliente));
@@ -65,6 +64,7 @@ VALUES ("pantalones cortos de hombre Treviso Joma", "ropa deportiva", "8", "5.60
 CREATE TABLE detalle_pedidos(
 id_pedido MEDIUMINT,
 id_articulo MEDIUMINT,
+cantidad MEDIUMINT,
 pedidos_entregados BOOLEAN,
 pedidos_en_proceso BOOLEAN,
 pedidos_enviados BOOLEAN,

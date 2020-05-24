@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Mantenimiento Stock</title>
+		<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js"></script>
+		<script
+			type="text/javascript"
+			src="../src/stock.precompiled.js"
+		></script>
+		<script type="text/javascript" src="../src/stock.js" async></script>
+		<link rel="stylesheet" href="../css/stylesAdmin.css" />
+	</head>
+	<body>
+		<h1 id="stock">Mantenimiento Stock</h1>
+		<div id="selectCat">
+			<p>
+				<input type="text" name="search" id="id_text_search" /><button
+					value="Buscar"
+					id="id_search"
+				>
+					Buscar
+				</button>
+			</p>
+
+			<select id="categorias">
+				<option value="todas">Todas</option>
+				<option value="ropaDeportiva">Ropa Deportiva</option>
+				<option value="zapatillas">Zapatillas</option>
+				<option value="joyeria">Joyería</option>
+				<option value="juguetes">Juguetes</option>
+				<option value="libros">Libros</option>
+			</select>
+		</div>
+		<div id="resultados"></div>
+	</body>
+</html>

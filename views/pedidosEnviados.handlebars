@@ -1,0 +1,27 @@
+<h1 id="stock"><strong> Pedidos Enviados: </strong></h1>
+
+{{#if enviados}}
+{{#each enviados}}
+<div class="product clientes">
+<ul>	
+<li>Id pedido:{{id_pedido}}</li>
+<li>Productos:{{descripcion}}</li>
+<li>Cantidad:{{cantidad}}</li>
+<li>Id_cliente:{{id_cliente}}</li>
+<label><input id="{{id_pedido}}" name="miCheck" type="checkbox">Entregado</a></label>
+
+</ul>
+
+</div>
+
+
+
+<script>
+async function alertaValueEnv(req, res){ 
+   	actualizaEnviados({{id_pedido}});
+   	
+} 
+document.getElementById("{{id_pedido}}").addEventListener("click", alertaValueEnv);
+</script>
+{{/each}}
+{{/if}}
