@@ -11,67 +11,47 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/styles.css" type="text/css">
      <script src="../src/scripts.js" type="text/javascript" async ></script>
-	   
+	<script type="text/javascript" src="/src/estadisticas.precompiled.js"></script> 
     </head>
 	<body>
-	
-<header>
-    <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/">Home</a>
-        <a href="#">Productos</a>
-        <a href="/base">Base de Datos</a>
-        <a href="#">Estadísticas</a>
-        <a href="#">Stock</a>
-        <a href="#">Pedidos en proceso</a>
-        <a href="#">Pedidos entregados</a>
-        <a href="#">Pedidos anulados</a>
-      </div>
-      
-      <button class="openbtn" onclick="openNav()">&#9776;</button>
-      <img src="../img/logo_prueba.png" alt="Logo de Prueba TestNG" id="logoPrueba">
-      
-    	<button class="btn_navbar" onclick="location.href='/salir2'"><a href="/">Log Out</a></button>
-</header>
-    <br>
-    <div class="product"><a class="fotoAdmin" href="/base">
+	    <div id="muestraAdmin">
+    <div class="menuEstadis" ><a class="fotoAdmin" href="/clientes">
         <img src="../img/bd2.png" alt="base de datos" class="img_product">
-        <p id="descripcion">Base de datos</p></a>
-                 </div>
-    <div class="product"><a class="fotoAdmin" href="/admin">
+        <p class="descSecciones">Datos Clientes</p></a>
+    </div>
+    <div class="menuEstadis"><a class="fotoAdmin" href="/datos">
         
         <img src="../img/grafico2.png" alt="dibujo gráfico" class="img_product">
-        <p id="descripcion">Estadísticas</p>
+        <p class="descSecciones">Estadísticas</p>
     </a>
     </div>
 
-    <div class="product"><a class="fotoAdmin" href="">
-    	
-        <img src="../img/confirmados.png" alt="chancla_producto" class="img_product">
-        <p id="descripcion">Pedidos en proceso</p>
-        </a>
-    </div>
-    <div class="product"><a class="fotoAdmin" href="">
-    	<img src="../img/delivered.png" alt="chancla_producto" class="img_product">
-        <p id="descripcion">Pedidos enviados</p>
-        </a>
-        
-        
-    </div>
-    <div class="product"><a class="fotoAdmin" href="">
-    	<img src="../img/anulados.png" alt="pedidos anulados" class="img_product">
-        <p id="descripcion">Pedidos anulados</p>
+  
+         <div class="menuEstadis"><a class="fotoAdmin" href="/stock">
+        <img src="../img/stock3.png" alt="chancla_producto" class="img_product stock">
+        <p class="descSecciones">Stock</p>
         
         
         </a>
     </div>
-    <div class="product"><a class="fotoAdmin" href="">
-        <img src="../img/stock2.png" alt="chancla_producto" class="img_product">
-        <p id="descripcion">Stock</p>
-        
-        
+    <div class="menuEstadis"><a class="fotoAdmin" href="/pedidosEnProceso">
+    
+        <img src="../img/confirmados.png" alt="chancla_producto" class="img_product proceso">
+        <p class="descSecciones">Pedidos en proceso</p>
         </a>
     </div>
+     <div class="menuEstadis"><a class="fotoAdmin" href="">
+       
+       
+    </div>
+    <div class="menuEstadis"><a class="fotoAdmin" href="/pedidosEnviados">
+        <img src="../img/delivered.png" alt="chancla_producto" class="img_product">
+        <p class="descSecciones">Pedidos enviados</p>
+        </a>
+    </div>
+          
+      
+</div>
 </div>
 	</body>
 </html>

@@ -1,58 +1,75 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 
-			
+            
 {{#if datos}}
 
-	<div id="muestra">
-	    <div class="menuEstadis"><a class="fotoAdmin" href="#">
+    <div id="muestra">
+        <div class="menuEstadis"><a class="fotoAdmin" href="#">
         <img src="../img/productosVistos.png" alt="base de datos" class="img_product">
         <p class="descStats">Vista Producto/Comprado</p></button>
         </div>
-    	
-    	<div class="menuEstadis"><a class="fotoAdmin" href="#">
+        
+        <div class="menuEstadis"><a class="fotoAdmin" href="#">
         <img src="../img/clientes.png" alt="dibujo gráfico" class="img_product">
         <p class="descStats">Vista Clientes Registrados</p></a>
-    	</div>
+        </div>
 
-    	<div class="menuEstadis"><a class="fotoAdmin" href="#">
-    	<img src="../img/productosComprados.png" alt="chancla_producto" class="img_product">
+        <div class="menuEstadis"><a class="fotoAdmin" href="#">
+        <img src="../img/productosComprados.png" alt="chancla_producto" class="img_product">
         <p class="descStats">Productos +/- Comprados</p></a>
-    	</div>
+        </div>
         
     </div>
     <div class="container">
-			<canvas id="grafica"></canvas>
+            <canvas id="grafica"></canvas>
             <div id="buttons">
-	<button id="dias" class="valorStock">Días</button><button id="meses" class="valorStock">Meses</button><button id="años" class="valorStock">Años</button>
+    <button id="dias" class="valorStock">Días</button><button id="meses" class="valorStock">Meses</button><button id="años" class="valorStock">Años</button>
     </div>
-	</div>
-	    
+    </div>
+        
     
-	<script>
+    <script>
     
   
   
-	async function canvas() {
-	
+    async function canvas() {
+    const data = await getData();
     let miCanvas = document.getElementById("grafica").getContext("2d");
-	
-	let chart = new Chart(miCanvas, {
-		type: "line",
-		data: {
-			labels: ["Pantalones", "Cantidad"],
-			datasets: [
-				{
-					label: "Venta de Productos",
-					backgroundColor: "rgb(255,255,0)",
-				            data: [1, 6],
+    
+    let chart = new Chart(miCanvas, {
+        type: "horizontalBar",
+        data: {
+            labels: descripcion,
+            datasets: [
+                {
+                    label: "Stock productos",
+                    backgroundColor: "rgb(255,255,0)",
+                            data: datos,
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
                 
+    'rgba(30, 99, 132, 0.6)',
+    'rgba(60, 99, 132, 0.6)',
+    'rgba(90, 99, 132, 0.6)',
+    'rgba(120, 99, 132, 0.6)',
+    'rgba(150, 99, 132, 0.6)',
+    'rgba(180, 99, 132, 0.6)',
+    'rgba(210, 99, 132, 0.6)',
+    'rgba(240, 99, 132, 0.6)',
+    'rgba(30, 99, 132, 0.6)',
+    'rgba(60, 99, 132, 0.6)',
+    'rgba(90, 99, 132, 0.6)',
+    'rgba(120, 99, 132, 0.6)',
+    'rgba(150, 99, 132, 0.6)',
+    'rgba(180, 99, 132, 0.6)',
+    'rgba(210, 99, 132, 0.6)',
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
                 
             ],
             borderWidth: 1
@@ -68,10 +85,8 @@
 });
 }
 
+
 document.getElementById("muestra").addEventListener("click", canvas);
 
-
-</script>
-
     {{/if}}
-
+</script>
