@@ -4,34 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
-    <!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<!-- Google Fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
-<!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
-
+       <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet" 
+    >
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js" ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js" ></script>
     <link rel="stylesheet" href="../css/styles.css" type="text/css">
     <script type="text/javascript" src="../src/scripts.js" async></script>
 </head>
@@ -49,33 +41,42 @@
 
 
 
-        <div class="btn_navbar"> 
-           
-            <li class="text-light" style="float: left; margin: 0em 10em;">Estás viendo la nueva web, esta es la version beta</li>
-            <li><a href="/registro" class="text-light">Mi cesta <img src="../img/cesta.png" alt="cesta" class="header_logo_cesta"></a></li>           
-            <li> {{#if btn_hidden}}<a href="/registro" style="visibility: {{btn_hidden}};" class="text-light ">Registrate</a></li>
-            <li><a href="/identificacion"  {{btn_hidden}} class="text-light " >Identifícate</a>
-            {{/if}}
-            <li><button class="btn" type="button" data-toggle="dropdown" style="padding: 0em;"><a class="text-light" >{{#if identificado}}{{identificado}}</a></button>
-                <ul class="dropdown-menu">
-                    <div class="desplegable">
-                        <li><a href="/perfil">Mi cuenta</a></li><br>
-                        <li><a href="/carrito">Mis pedidos</a></li><br>
-                        <li><a href="/salir">Cerrar sesión</a></li><br>
-                </ul>{{/if}}
-            </li>
+        <div class="btn_navbar">
+
+            <li class="text-light" style="float: left; margin: 0em 10em;">Estás viendo la nueva web, esta es la version
+                beta</li>
+            <li><a href="/registro" class="text-light">Mi cesta <img src="../img/cesta.png" alt="cesta"
+                        class="header_logo_cesta"></a></li>
+            <li> {{#if btn_hidden}}<a href="/registro" style="visibility: {{btn_hidden}};"
+                    class="text-light ">Registrate</a></li>
+            <li><a href="/identificacion" {{btn_hidden}} class="text-light ">Identifícate</a>
+                {{/if}}
+
         </div>
-        </div>
-    
+
         <a href="/"><img src="../img/logo.png" alt="Logo de Prueba TestNG" id="logoPrueba"></a>
         <ul class="listadoDesplegable">
             <li><a href="/" class="link_menu">Inicio</a></li>
             <li><a href="/secciones" class="link_menu">Secciones</a></li>
             <li><a href="/#contacto" class="link_menu">Contáctanos</a></li>
+            <li>
+                <div class="dropdown float-sm-right">
+                    {{#if identificado}}
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{identificado}}</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/perfil">Mi cuenta</a>
+                        <a class="dropdown-item" href="/carrito">Mis pedidos</a>
+                        <a class="dropdown-item" href="/salir">Cerrar sesión</a>
+                    </div>
+                </div>{{/if}}
+            </li>
         </ul>
     </header>
 
+
     {{{body}}}
+   
 </body>
 
 </html>
