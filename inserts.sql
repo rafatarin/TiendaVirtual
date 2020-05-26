@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS pedidosArticulo CHARACTER SET 'UTF8mb4';
+CREATE DATABASE IF NOT EXISTS pedidoArticulo CHARACTER SET 'UTF8mb4';
 
 CREATE TABLE clientes(
 id_cliente MEDIUMINT AUTO_INCREMENT,
@@ -13,7 +13,7 @@ fecha_registro DATE,
 rol varchar(10) not null,
 CONSTRAINT pk_clientes PRIMARY KEY (id_cliente));
 
-INSERT INTO clientes (nombre, apellido1, apellido2, usuario, email, password, poblacion, fecha_registro, tipo_usuario) VALUES ("Jano", "Soler", "Diaz", "Jano", "jano@gmail.com", "solerdiaz", "castellon", curdate(), "admin"),("Diego","Diego","Diaz","Diego","diego@gmail.com","diego1","castellón","2020-04-02","cliente"),("Bob","Marley","Musical","Bob","bob@gmail.com","bob1","kingston","2020-02-20","cliente"),("Lisa","Simpson","Cientifica","Lisa","lisa@gmail.com","lisa","springsfield","2020-04-05","cliente"); 
+INSERT INTO clientes (nombre, apellido1, apellido2, usuario, email, password, poblacion, fecha_registro, rol) VALUES ("Jano", "Soler", "Diaz", "Jano", "jano@gmail.com", "solerdiaz", "castellon", curdate(), "admin"),("Diego","Diego","Diaz","Diego","diego@gmail.com","diego1","castellón","2020-04-02","cliente"),("Bob","Marley","Musical","Bob","bob@gmail.com","bob1","kingston","2020-02-20","cliente"),("Lisa","Simpson","Cientifica","Lisa","lisa@gmail.com","lisa","springsfield","2020-04-05","cliente"); 
 
 
 CREATE TABLE pedidos(
@@ -53,10 +53,10 @@ CREATE TABLE detalle_pedidos(
 id_pedido MEDIUMINT,
 id_articulo MEDIUMINT,
 cantidad MEDIUMINT,
-pedidos_entregados BOOLEAN,
-pedidos_en_proceso BOOLEAN,
-pedidos_enviados BOOLEAN,
-pedidos_guardados BOOLEAN,
+pedidos_entregados BOOLEAN default false,
+pedidos_en_proceso BOOLEAN default false,
+pedidos_enviados BOOLEAN default false,
+pedidos_guardados BOOLEAN default false,
 CONSTRAINT pk_detalle_pedidos PRIMARY KEY (id_pedido, id_articulo),
 CONSTRAINT fk_detalle_pedidos1 FOREIGN KEY (id_pedido) REFERENCES pedidos (id_pedido),
 CONSTRAINT fk_detalle_pedidos2 FOREIGN KEY (id_articulo) REFERENCES articulos (id_articulo));
@@ -64,5 +64,17 @@ CONSTRAINT fk_detalle_pedidos2 FOREIGN KEY (id_articulo) REFERENCES articulos (i
 insert into pedidos (id_cliente, fecha_pedido) values (2, "2020-04-15"), (3, "2020-03-19"), (4, "2020-04-06"), (2, "2020-05-16"), (3, "2020-04-25"), (4, "2020-05-20");
 
 insert into detalle_pedidos (id_pedido, id_articulo, cantidad, pedidos_en_proceso) values (1, 11, 1, true), (2, 4, 1, true), (3, 14, 1, true), (4, 2, 1,true), (5, 8, 1, true), (6, 11, 1, true);
+
+CREATE TABLE categorias (
+id_categoria MEDIUMINT AUTO_INCREMENT,
+categoria VARCHAR(50),
+CONSTRAINT pk_categorias PRIMARY KEY (id_categoria));
+
+CREATE TABLE secciones_articulos (
+id_categoria MEDIUMINT
+id_articulo mediumint
+CONSTRAINT pk_secciones_articulos PRIMARY KEY (id_categoria, id_articulo),
+CONSTRAINT fk_secciones_articulos1 FOREIGN KEY (id_categoria) REFERENCES categorias (id_categoria),
+CONSTRAINT fk_secciones_articulos2 FOREIGN KEY (id_articulo) REFERENCES articulos (id_articulo));
 
 
