@@ -349,6 +349,19 @@ header {
 
 }
 
+<<<<<<< HEAD
+=======
+.banner_text_inicio {
+  width: 60%;
+  margin: 0em auto;
+  padding: 1em;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.7em;
+
+}
+
+>>>>>>> 33eb2647c200cd9c858552555736742c54f2f2b2
 .footer {
   width: 97%;
   margin: 0em auto;
@@ -358,6 +371,15 @@ header {
 
 .header_logo_cesta {
   width:3em
+}
+
+#log_cesta{
+  width: 100%;
+}
+
+.logo_col1_footer{
+  margin: 0em;
+  width: 7%;
 }
 
 #log_cesta{
@@ -396,5 +418,8 @@ header {
   }
 
   
+<<<<<<< HEAD
 
   
+=======
+>>>>>>> 33eb2647c200cd9c858552555736742c54f2f2b2
