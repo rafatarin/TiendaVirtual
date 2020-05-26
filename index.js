@@ -7,7 +7,6 @@ const handlers_ln = require("./lib/handlers/handlers_ln.js");
 const sesion = require("express-session");
 const cookieSession = require("cookie-session");
 var MemoryStore = require('memorystore')(sesion)
-const Nexmo = require('nexmo');
 var admin = require("firebase-admin");
 
 
