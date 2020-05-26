@@ -1,14 +1,23 @@
-<h1>PEDIDOS REALIZADOS POR EL USUARIO {{usuario}} </h1>
 
-{{#if registros}}
-       {{#each registros}}
-        <p>Nº articulo: {{id_pedido}} -
-        descripcion: {{descripcion}} -
-        cantidad: {{cantidad}} -
-        cliente: {{id_cliente}} -
-    {{/each}}
+<h1 id="stock"><strong> Histórico Pedidos: </strong></h1>
+<div class="divEnlaces">
+<a class="enlaces" href="/pedidosEnProceso">Pasa a vista Pedidos en Proceso</a>
+<a  class="enlaces" href="/pedidosEnviados">Pasa a vista Pedidos Enviados</a></div>
+
+{{#if historicoPedidos}}
+{{#each historicoPedidos}}
+<div class="listaPedido">
+<ul>	
+<li>Id pedido: {{id_pedido}}</li>
+<li>Productos: {{descripcion}}</li>
+<li>Cantidad: {{cantidad}}</li>
+<li><button id="{{id_cliente}}button"> Id_cliente: {{id_cliente}}</li>
+</ul>
+</div>
+
+
+
+{{/each}}
 {{/if}}
-<br>
-<br>
-<br>
-<a href="/usuario"><button>Volver a opciones de usuario</button></a>
+
+

@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS pedidosArticulo CHARACTER SET 'UTF8' COLLATE 'utf8_general_ci';
+CREATE DATABASE IF NOT EXISTS pedidosArticulo CHARACTER SET 'UTF8mb4';
 
 CREATE TABLE clientes(
 id_cliente MEDIUMINT AUTO_INCREMENT,
@@ -10,23 +10,11 @@ email VARCHAR(50) NOT NULL UNIQUE,
 password VARCHAR(29) NOT NULL UNIQUE,
 poblacion VARCHAR(100),
 fecha_registro DATE,
+rol varchar(10) not null,
 CONSTRAINT pk_clientes PRIMARY KEY (id_cliente));
 
-INSERT INTO clientes (nombre, apellido1, apellido2, usuario, email, password, poblacion, fecha_registro) VALUES ("Jano", "Soler", "Diaz", "Jano", "jano@gmail.com", "solerdiaz", "castellon", curdate());
+INSERT INTO clientes (nombre, apellido1, apellido2, usuario, email, password, poblacion, fecha_registro, tipo_usuario) VALUES ("Jano", "Soler", "Diaz", "Jano", "jano@gmail.com", "solerdiaz", "castellon", curdate(), "admin"),("Diego","Diego","Diaz","Diego","diego@gmail.com","diego1","castellón","2020-04-02","cliente"),("Bob","Marley","Musical","Bob","bob@gmail.com","bob1","kingston","2020-02-20","cliente"),("Lisa","Simpson","Cientifica","Lisa","lisa@gmail.com","lisa","springsfield","2020-04-05","cliente"); 
 
-CREATE TABLE admin(
-id_admin MEDIUMINT AUTO_INCREMENT,
-nombre VARCHAR(20),
-apellido1 VARCHAR(20),
-apellido2 VARCHAR(20) NULL,
-usuario VARCHAR(20) NOT NULL UNIQUE,
-email VARCHAR(50) NOT NULL UNIQUE,
-password VARCHAR(29) NOT NULL UNIQUE,
-poblacion VARCHAR(100),
-fecha_registro DATE,
-CONSTRAINT pk_admin PRIMARY KEY (id_admin));
-
-INSERT INTO admin (nombre, apellido1, apellido2, usuario, email, password, poblacion, fecha_registro) VALUES ("Diego", "Martinez", "Diaz", "Diego", "diego@gmail.com", "martinezdiaz", "Castellon", curdate());
 
 CREATE TABLE pedidos(
 id_pedido MEDIUMINT AUTO_INCREMENT,
@@ -41,7 +29,7 @@ descripcion VARCHAR(200),
 categoria VARCHAR(50),
 stock MEDIUMINT,
 precio FLOAT,
-imagen MEDIUMBLOB,
+imagen varchar(20),
 CONSTRAINT pk_articulos PRIMARY KEY (id_articulo));
 
 INSERT INTO articulos (descripcion, categoria, stock, precio, imagen)
@@ -68,6 +56,13 @@ cantidad MEDIUMINT,
 pedidos_entregados BOOLEAN,
 pedidos_en_proceso BOOLEAN,
 pedidos_enviados BOOLEAN,
+pedidos_guardados BOOLEAN,
 CONSTRAINT pk_detalle_pedidos PRIMARY KEY (id_pedido, id_articulo),
 CONSTRAINT fk_detalle_pedidos1 FOREIGN KEY (id_pedido) REFERENCES pedidos (id_pedido),
 CONSTRAINT fk_detalle_pedidos2 FOREIGN KEY (id_articulo) REFERENCES articulos (id_articulo));
+
+insert into pedidos (id_cliente, fecha_pedido) values (2, "2020-04-15"), (3, "2020-03-19"), (4, "2020-04-06"), (2, "2020-05-16"), (3, "2020-04-25"), (4, "2020-05-20");
+
+insert into detalle_pedidos (id_pedido, id_articulo, cantidad, pedidos_en_proceso) values (1, 11, 1, true), (2, 4, 1, true), (3, 14, 1, true), (4, 2, 1,true), (5, 8, 1, true), (6, 11, 1, true);
+
+
