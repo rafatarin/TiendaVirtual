@@ -7,6 +7,8 @@ const handlers_ln = require("./lib/handlers/handlers_ln.js");
 const sesion = require("express-session");
 const cookieSession = require("cookie-session");
 var MemoryStore = require('memorystore')(sesion)
+const Nexmo = require('nexmo');
+var admin = require("firebase-admin");
 
 
 app.set("port", port);
@@ -22,16 +24,18 @@ app.use(cookieSession({
 
 }));
 
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({
+    extended: true
+}));
 app.use(express.static(__dirname + "/public"));
 app.use(express.json());
 
 
 app.use(sesion({
-    resave: true, 
-    saveUninitialized:false,
+    resave: true,
+    saveUninitialized: false,
     secret: "ancient high jack lion",
-    store: new MemoryStore(), 
+    store: new MemoryStore(),
     maxAge: Date.now()
 }))
 
@@ -41,4 +45,4 @@ app.use("/", controlador);
 app.use(handlers_ln.error404)
 app.use(handlers_ln.error500)
 
-app.listen(port,()=> console.log(`Escuchando el puerto: ${port}`))
+app.listen(port, () => console.log(`Escuchando el puerto: ${port}`))

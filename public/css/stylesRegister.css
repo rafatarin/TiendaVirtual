@@ -14,7 +14,7 @@
     content: "";
     position: absolute;
     width: 100%;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgb(0, 0, 0);
     top: 55%;
     left: 0;
     z-index: 1;
@@ -26,12 +26,14 @@
     width: 50%;
     padding: 3%;
     border-radius: 4em;
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(115, 163, 194);
     box-shadow: beige;
   }
 
   .box_inputs{
     width: 80%;
+    color: black;
+    font-weight: bolder;
   }
 
  .box_inputs_contraseña{
@@ -44,4 +46,8 @@
      display: inline;
      
 
+ }
+
+ .errorEnCasillas{
+     color: black;
  }
