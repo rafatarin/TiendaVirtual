@@ -1,17 +1,14 @@
-<div class="cont_main_secciones">
-   
-    
+
+
+    <div class="cont_main_secciones"> 
     {{#each secciones}}
-    <a href="/articulos/#{{seccion}}">
-    <div class="cont_secciones">
-        <img src="../img/{{seccion}}.png" alt="ropa_deportiva" class="imgSeccion">
-        <br><br>
-        <p class="text_seccion">{{seccion}}</p>
-        
+
+    <div class="d-inline-block  mx-4">
+       <a href="/articulos"><img src="../img/{{seccion}}" alt="ropa_deportiva" class=" imgSecciones" ></a>
+     <p class="text_seccion">{{titulo}}</p>
     </div>
-    </a>
-    
-    {{/each}}
+
+    {{/each}} 
 </div>
 
 

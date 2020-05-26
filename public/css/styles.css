@@ -123,7 +123,9 @@ header {
 }
 
 #carouselExampleIndicators {
-  margin-top: 8em;
+  width: 97%;
+  margin: 8em auto;
+  margin-bottom: 2em;
 }
 
  :hover{
@@ -219,15 +221,8 @@ header {
     display: inline;
   }
   
-  .imgSeccion{
-    width: 70%; 
-    height: 60%; 
-    margin:1.5em 3em;
-  }
+
   
-.cont_main_secciones{
-  padding: 1.5em;
-}
 
 .cont_products {
   margin-top: 8vw;
@@ -311,25 +306,34 @@ header {
   display: inline;
 }
 
-.imgSeccion {
-  width: 70%;
-  height: 60%;
-  margin: 1.5em 3em;
-}
+
 
 .cont_main_secciones {
-  margin-top: 9em;
-  margin-left: 10px;
-  padding: 2em;
+  margin-top: 7em;
+  margin-left: 2em;
+}
+
+.imgSecciones{
+  margin-top: 2em;
+  height:400px;
+  width:350px;
+}
+
+
+.cont_secciones {
+  float:left;
+  width: 50%;
+  margin: 1em;
 
 }
 
-.cont_secciones {
-  margin: 1em 0.7em;
-  height: 20em;
-  display: inline-block;
-  width: 30%;
-  background-color: rgba(233, 233, 233, 0.596);
+.text_seccion{
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  width: 50%;
+  margin: 0.5em auto;
+  font-weight: bolder;
 }
 
 .mySlides {
@@ -345,16 +349,6 @@ header {
 
 }
 
-.banner_text_inicio {
-  width: 60%;
-  margin: 0em auto;
-  padding: 1em;
-  color: white;
-  font-weight: bolder;
-  font-size: 1.7em;
-
-}
-
 .footer {
   width: 97%;
   margin: 0em auto;
@@ -363,8 +357,7 @@ header {
 }
 
 .header_logo_cesta {
-  flex: auto;
-  width: 1.5%;
+  width:3em
 }
 
 #log_cesta{
@@ -394,12 +387,14 @@ header {
 
   .banner_text_inicio{
     width: 60%;
-    margin: 1em auto;
+    margin: 0.3em auto;
     padding: 1em;
     color: white;
     font-weight: bolder;
     font-size: 1.7em;    
      
   }
+
+  
 
   

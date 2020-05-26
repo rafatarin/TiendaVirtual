@@ -74,3 +74,46 @@ function comprobarRepContraseña(){
 }
 
 document.getElementById("rep_contraseña").addEventListener("change", comprobarRepContraseña)
+
+
+
+
+
+window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+  'size': 'normal',
+  'callback': function(response) {
+    // reCAPTCHA solved, allow signInWithPhoneNumber.
+    // ...
+  },
+  'expired-callback': function() {
+    // Response expired. Ask user to solve reCAPTCHA again.
+    // ...
+  }
+});
+
+var phoneNumber = getPhoneNumberFromUserInput();
+var appVerifier = window.recaptchaVerifier;
+firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
+    .then(function (confirmationResult) {
+      // SMS sent. Prompt user to type the code from the message, then sign the
+      // user in with confirmationResult.confirm(code).
+      window.confirmationResult = confirmationResult;
+    }).catch(function (error) {
+      // Error; SMS not sent
+      // ...
+    });
+
+    var code = getCodeFromUserInput();
+  confirmationResult.confirm(code).then(function (result) {
+  // User signed in successfully.
+  var user = result.user;
+  // ...
+  }).catch(function (error) {
+  // User couldn't sign in (bad verification code?)
+  // ...
+});
+
+var credential = firebase.auth.PhoneAuthProvider.credential(confirmationResult.verificationId, code);
+
+firebase.auth().signInWithCredential(credential);
+

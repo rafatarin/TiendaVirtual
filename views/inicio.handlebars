@@ -31,9 +31,15 @@
       </div>
 
       <!-- BANNERS DE LA EMPRESA-->
-      <a href="/secciones" style="text-decoration: none;"><div class="banners_inicio">
-<p class="banner_text_inicio">TODAS LAS SECCIONES DE NUESTRO CATALOGO</p>
-</div></a>
+      <a href="/secciones" style="text-decoration: none;"><div class="banners_inicio"><p class="banner_text_inicio">TODAS LAS SECCIONES DE NUESTRO CATALOGO</p></div></a>
+<div class="row">
+<div class="banners_inicio col-5 ">
+<a href="/secciones" ><p class="banner_text_inicio">OFERTAS</p> </a>
+</div>
+<div class="banners_inicio col-5" ><a href="/secciones" style="text-decoration: none;"><p class="banner_text_inicio">NOVEDADES</p></a>
+</div>
+</div>
+
 
       <!-- MAPA DE LA EMPRESA-->
 <a href="" name="contacto"></a>
@@ -49,7 +55,7 @@
     <div class="row">
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+            <form id="contact-form" name="contact-form" action="/enviarMail" method="POST">
 
                 <!--Grid row-->
                 <div class="row">
@@ -79,8 +85,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control text-light">
-                            <label for="subject" class="text-light">Asunto</label>
+                            <input type="text" id="subject" name="asunto" class="form-control text-light">
+                            <label for="subject" class="text-light ">Asunto</label>
                         </div>
                     </div>
                 </div>
@@ -93,7 +99,7 @@
                     <div class="col-md-12">
 
                         <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea text-light"></textarea>
+                            <textarea type="text" id="message" name="mensaje" rows="2" class="form-control md-textarea text-light"></textarea>
                             <label for="message" class="text-light">Mensaje</label>
                         </div>
 

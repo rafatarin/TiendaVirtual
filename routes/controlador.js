@@ -20,13 +20,11 @@ controlador.post("/registrado2", handlers_ln.nuevoUsuario2);
 
 controlador.post("/registrado3", handlers_ln.nuevoUsuario3);
 
-controlador.post("/enviarContacto", handlers_ln.enviarContacto);
-
 controlador.get("/perfil", handlers_ln.mostrarPerfil);
 
-controlador.post("/updatePerfil", handlers_ln.actualizarPerfil)
+controlador.post("/updatePerfil", handlers_ln.actualizarPerfil);
 
-controlador.post("updatePerfil", handlers_ln.actualizarPerfil)
+controlador.post("updatePerfil", handlers_ln.actualizarPerfil);
 
 controlador.get("/salir", handlers_ln.logout);
 
@@ -34,12 +32,12 @@ controlador.get("/salir", handlers_ln.logout);
 //controlador.get("/login2", handlers_ln.login2);
 
 controlador.post("/login", handlers_ln.compruebaLoginUsuario);
-controlador.post("/login2", handlers_ln.compruebaLoginAdmin);
 
-//las rutas del administrador
 controlador.get("/admin", handlers_ln.administrador);
 
 controlador.get("/clientes", handlers_ln.clientes);
+
+controlador.get("/autenticador", handlers_ln.autenticador);
 
 controlador.get("/estadisticas", handlers_ln.estadisticas);
 
@@ -65,7 +63,9 @@ controlador.put("/actualizaProceso/:id_pedido", handlers_ln.actualizaProceso);
 
 controlador.put("/actualizaEnviados/:id_pedido", handlers_ln.actualizaEnviados);
 
-controlador.get("/carrito", handlers_ln.carrito)
+controlador.get("/perfil/#password", handlers_ln.carrito)
+
+controlador.post("/enviarMail", handlers_ln.enviarMail)
 
 
 module.exports = controlador;
