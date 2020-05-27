@@ -309,14 +309,13 @@ header {
 
 
 .cont_main_secciones {
-  margin-top: 7em;
-  margin-left: 2em;
+  margin: 2.5em 0em;
 }
 
 .imgSecciones{
-  margin-top: 2em;
+  margin: 2em auto;
   height:400px;
-  width:350px;
+  width:376px;
 }
 
 
@@ -395,6 +394,6 @@ header {
      
   }
 
-  
-
-  
+.space-btn{
+  margin-left: 10vw;
+}
