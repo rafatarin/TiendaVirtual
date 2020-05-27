@@ -25,11 +25,13 @@ CONSTRAINT fk_pedidos FOREIGN KEY (id_cliente) REFERENCES clientes (id_cliente))
 
 CREATE TABLE articulos (
 id_articulo MEDIUMINT AUTO_INCREMENT,
+id_categoria mediumint,
 descripcion VARCHAR(200),
 categoria VARCHAR(50),
 stock MEDIUMINT,
 precio FLOAT,
 imagen varchar(20),
+fecha date,
 CONSTRAINT pk_articulos PRIMARY KEY (id_articulo));
 
 INSERT INTO articulos (descripcion, categoria, stock, precio, imagen)
