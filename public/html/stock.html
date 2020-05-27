@@ -12,25 +12,24 @@
 		<link rel="stylesheet" href="../css/stylesAdmin.css" />
 	</head>
 	<body>
+		<header>
+    <div>
+                    <div id="header">
+                                   
+                        <a class="enlaces" href="/salir">Cerrar sesión</a>
+                        <a class="enlaces" href="/admin">Regresar a zona Administrador</a>
+                </div>
+</header>	
 		<h1 id="stock">Mantenimiento Stock</h1>
 		<div id="selectCat">
 			<p>
-				<input type="text" name="search" id="id_text_search" /><button
+				<input type="text" name="search" id="id_text_search" /><input type="submit"  
 					value="Buscar"
 					id="id_search"
-				>
-					Buscar
-				</button>
+				/>
+				
+				
 			</p>
-
-			<select id="categorias">
-				<option value="todas">Todas</option>
-				<option value="ropaDeportiva">Ropa Deportiva</option>
-				<option value="zapatillas">Zapatillas</option>
-				<option value="joyeria">Joyería</option>
-				<option value="juguetes">Juguetes</option>
-				<option value="libros">Libros</option>
-			</select>
 		</div>
 		<div id="resultados"></div>
 	</body>

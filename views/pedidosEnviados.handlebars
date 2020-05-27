@@ -1,17 +1,20 @@
+
 <h1 id="stock"><strong> Pedidos Enviados: </strong></h1>
+<div class="divEnlaces">
+<a  class="enlaces" href="/historicoPedidos">Pasa a vista Histórico de Pedidos</a></div>
 
 {{#if enviados}}
 {{#each enviados}}
-<div class="product clientes">
+
+<div class="listaPedido">
 <ul>	
-<li>Id pedido:{{id_pedido}}</li>
-<li>Productos:{{descripcion}}</li>
-<li>Cantidad:{{cantidad}}</li>
-<li>Id_cliente:{{id_cliente}}</li>
-<label><input id="{{id_pedido}}" name="miCheck" type="checkbox">Entregado</a></label>
-
+<li>Id pedido: {{id_pedido}}</li>
+<li>Productos: {{descripcion}}</li>
+<li>Cantidad: {{cantidad}}</li>
+<li><button id="{{id_cliente}}button"> Id_cliente: {{id_cliente}}</li>
+<label><input id="{{id_pedido}}" name="miCheck" type="checkbox"> Entregado </a></label>
 </ul>
-
+<p id="mensaje"> {{mensaje}} </p>
 </div>
 
 
@@ -22,6 +25,16 @@ async function alertaValueEnv(req, res){
    	
 } 
 document.getElementById("{{id_pedido}}").addEventListener("click", alertaValueEnv);
+
+async function enviaMensaje(req, res){ 
+   	muestraMensajeEnv({{id_pedido}});
+   	
+} 
+document.getElementById("{{id_pedido}}").addEventListener("click", enviaMensaje);
+
+
 </script>
 {{/each}}
 {{/if}}
+
+

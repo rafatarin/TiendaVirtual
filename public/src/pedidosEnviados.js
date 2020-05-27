@@ -1,6 +1,4 @@
 async function actualizaEnviados(id_pedido) {
-	console.log(id_pedido);
-
 	let respuesta = await fetch(
 		`http://localhost:3000/actualizaEnviados/${id_pedido}`,
 		{
@@ -11,6 +9,15 @@ async function actualizaEnviados(id_pedido) {
 	);
 	let respuestaJson = await respuesta.json();
 	console.log(respuestaJson.json);
+}
 
-	//res.write(`<p>Has accedido por la url : ${url}`)
+async function muestraMensajeEnv() {
+	let newDiv = document.createElement("p");
+	let newContent = document.createTextNode(
+		"Este pedido pasa a estar en la vista Histórico Pedidos"
+	);
+	newDiv.appendChild(newContent);
+
+	var currentDiv = document.getElementById("mensaje");
+	document.body.appendChild(newDiv, currentDiv);
 }
