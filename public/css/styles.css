@@ -132,19 +132,7 @@ header {
     color: grey;
   }
   
-  .product {
-    float: left;
-    display: block;
-    margin: 3vw 2vw;
-    background-color: white;
-    border-radius: 2vw;
-    width: 20%;
-    height: 330px;
-    -webkit-box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
-    -moz-box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
-    box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
-  }
-  
+ 
   .cont_products {
     margin-top: 8vw;
     padding: 1vw auto;
@@ -220,8 +208,6 @@ header {
   #gmaps {
     display: inline;
   }
-  
-
   
 
 .cont_products {
@@ -359,8 +345,8 @@ header {
   width:3em
 }
 
-#log_cesta{
-  width: 100%;
+.imagenArticulos{
+  width: 2%;
 }
 
 .logo_col1_footer{
@@ -397,3 +383,8 @@ header {
 .space-btn{
   margin-left: 10vw;
 }
+
+
+
+
+
