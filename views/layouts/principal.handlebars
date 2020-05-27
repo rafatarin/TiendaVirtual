@@ -25,8 +25,11 @@
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js" ></script>
     <link rel="stylesheet" href="../css/styles.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/stylesArticulos.css" >
     <script type="text/javascript" src="../src/scripts.js" async></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
 </head>
 
@@ -45,33 +48,20 @@
 
         <div class="btn_navbar">
 
-            <li class="text-light" style="float: left; margin: 0em 10em;">Estás viendo la nueva web, esta es la version
+            <li class="text-light float-left; margin: 0em 10em;">Estás viendo la nueva web, esta es la version
                 beta</li>
-<<<<<<< HEAD
-            
-=======
-            <li><a href="/registro" class="text-light">Mi cesta <img src="../img/cesta.png" alt="cesta"
-                        class="header_logo_cesta"></a></li>
->>>>>>> 33eb2647c200cd9c858552555736742c54f2f2b2
-            <li> {{#if btn_hidden}}<a href="/registro" style="visibility: {{btn_hidden}};"
-                    class="text-light ">Registrate</a></li>
-            <li><a href="/identificacion" {{btn_hidden}} class="text-light ">Identifícate</a>
-                {{/if}}
-<<<<<<< HEAD
-                
-
         </div>
         
-=======
-
-        </div>
->>>>>>> 33eb2647c200cd9c858552555736742c54f2f2b2
 
         <a href="/"><img src="../img/logo.png" alt="Logo de Prueba TestNG" id="logoPrueba"></a>
         <ul class="listadoDesplegable">
             <li><a href="/" class="link_menu">Inicio</a></li>
             <li><a href="/secciones" class="link_menu">Secciones</a></li>
-            <li><a href="/#contacto" class="link_menu">Contáctanos</a></li>
+            <li><a href="/#contacto" class="link_menu mr-4">Contáctanos</a></li>
+             <li> {{#if btn_hidden}}<a href="/registro" style="visibility: {{btn_hidden}};"
+                    class="text-light "><button class="btn btn-primary space-btn">Registrate</button> </a></li>
+            <li><a href="/identificacion" {{btn_hidden}} class="text-light "><button class="btn btn-primary">Identifícate</button> </a>
+                {{/if}}
             <li>
                 <div class="dropdown float-sm-right">
                     {{#if identificado}}
@@ -82,11 +72,8 @@
                         <a class="dropdown-item" href="/carrito">Mis pedidos</a>
                         <a class="dropdown-item" href="/salir">Cerrar sesión</a>
                     </div>
-<<<<<<< HEAD
                     <a href="/perfil" class="text-light float-left"><img src="../img/carrito.png" alt="cesta"
                         class="header_logo_cesta"></a>
-=======
->>>>>>> 33eb2647c200cd9c858552555736742c54f2f2b2
                 </div>{{/if}}
             </li>
         </ul>
@@ -94,7 +81,44 @@
 
 
     {{{body}}}
-   
+
+   <footer class="footer row ml-3">
+  <div class="col-md-4">
+    <br>
+    <img src="../img/logo.png" alt="logo empresa" class="w-25">
+    <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Debitis tempore officia odit tempora quia laudantium magnam voluptatibus ea alias! </p>
+    <ul class="mx-3" >
+      <li class="mx-3">
+      <a href="https://www.facebook.com/coopsaluss/"><img src="../img/logo_twitter.png" class="logo_col1_footer mx-3"  alt="logo_facebook"></a>
+      </li>
+       <li>
+        <a href="https://www.facebook.com/coopsaluss/"><img src="../img/logo_facebook.png" class="logo_col1_footer mx-3" alt="logo_facebook"></a>
+      </li>
+       <li>
+        <a href="www.instagram.com"><img src="../img/logo_instragram.png" class="logo_col1_footer mx-3" alt="logo_instagram"></a>
+      </li>
+    </ul>
+  </div>
+    <div class="col-md-4">
+        <ul><br>
+            <li class="text-light font-weight-bold">INFORMACIÓN LEGAL Y AYUDA</li><br><br>
+            <a href="" class="text-light"><li>Blog</li></a><br>
+           <a href="" class="text-light"><li>Contacto</li></a><br>
+           <a href="" class="text-light"><li>Inicio</li></a><br>
+           <a href="" class="text-light"><li>Terminos y condiciones</li></a><br>  
+        </ul>
+    </div>
+    <div class="col-md-4">
+      <ul><br>
+        <li class="text-light font-weight-bold">CONTACTA CON NOSOTROS </li><br><br>
+        <li class="text-light">Dirección: Carrer del Pintor Vergara, 3, 12004 Castelló de la Plana, Castelló</li><br>
+        <li class="text-light">Teléfono: 964 21 86 17</li><br>
+        <li class="text-light">info@coopsalus.com</li><br>
+      </ul>
+    </div>
+
+</footer>
 </body>
 
 </html>

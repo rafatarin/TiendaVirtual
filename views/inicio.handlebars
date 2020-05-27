@@ -32,13 +32,21 @@
 
       <!-- BANNERS DE LA EMPRESA-->
       <a href="/secciones" style="text-decoration: none;"><div class="banners_inicio"><p class="banner_text_inicio">TODAS LAS SECCIONES DE NUESTRO CATALOGO</p></div></a>
-<div class="row">
-<div class="banners_inicio col-5 ">
-<a href="/secciones" ><p class="banner_text_inicio">OFERTAS</p> </a>
+
+
+      <!-- SECCIONES DEL CATALOGO-->
+
+ <div class="cont_main_secciones"> 
+    {{#each secciones}}
+
+    <div class="d-inline-block  mx-4">
+       <a href="/articulos"><img src="../img/{{seccion}}" alt="ropa_deportiva" class=" imgSecciones" ></a>
+     <p class="text_seccion">{{titulo}}</p>
+    </div>
+
+    {{/each}} 
 </div>
-<div class="banners_inicio col-5" ><a href="/secciones" style="text-decoration: none;"><p class="banner_text_inicio">NOVEDADES</p></a>
-</div>
-</div>
+
 
 
       <!-- MAPA DE LA EMPRESA-->
@@ -127,42 +135,6 @@
 </div>
 
 
-<footer class="footer row">
-  <div class="col-md-4">
-    <br>
-    <img src="../img/logo.png" alt="logo empresa" class="w-25">
-    <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Debitis tempore officia odit tempora quia laudantium magnam voluptatibus ea alias! </p>
-    <ul class="mx-3" >
-      <li class="mx-3">
-      <a href="https://www.facebook.com/coopsaluss/"><img src="../img/logo_twitter.png" class="logo_col1_footer mx-3"  alt="logo_facebook"></a>
-      </li>
-       <li>
-        <a href="https://www.facebook.com/coopsaluss/"><img src="../img/logo_facebook.png" class="logo_col1_footer mx-3" alt="logo_facebook"></a>
-      </li>
-       <li>
-        <a href="www.instagram.com"><img src="../img/logo_instragram.png" class="logo_col1_footer mx-3" alt="logo_instagram"></a>
-      </li>
-    </ul>
-  </div>
-    <div class="col-md-4">
-        <ul><br>
-            <li class="text-light font-weight-bold">INFORMACIÓN LEGAL Y AYUDA</li><br><br>
-            <a href="" class="text-light"><li>Blog</li></a><br>
-           <a href="" class="text-light"><li>Contacto</li></a><br>
-           <a href="" class="text-light"><li>Inicio</li></a><br>
-           <a href="" class="text-light"><li>Terminos y condiciones</li></a><br>  
-        </ul>
-    </div>
-    <div class="col-md-4">
-      <ul><br>
-        <li class="text-light font-weight-bold">CONTACTA CON NOSOTROS </li><br><br>
-        <li class="text-light">Dirección: Carrer del Pintor Vergara, 3, 12004 Castelló de la Plana, Castelló</li><br>
-        <li class="text-light">Teléfono: 964 21 86 17</li><br>
-        <li class="text-light">info@coopsalus.com</li><br>
-      </ul>
-    </div>
 
-</footer>
 </body>
 </html>

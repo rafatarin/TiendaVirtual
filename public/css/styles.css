@@ -132,19 +132,7 @@ header {
     color: grey;
   }
   
-  .product {
-    float: left;
-    display: block;
-    margin: 3vw 2vw;
-    background-color: white;
-    border-radius: 2vw;
-    width: 20%;
-    height: 330px;
-    -webkit-box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
-    -moz-box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
-    box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
-  }
-  
+ 
   .cont_products {
     margin-top: 8vw;
     padding: 1vw auto;
@@ -220,8 +208,6 @@ header {
   #gmaps {
     display: inline;
   }
-  
-
   
 
 .cont_products {
@@ -309,14 +295,13 @@ header {
 
 
 .cont_main_secciones {
-  margin-top: 7em;
-  margin-left: 2em;
+  margin: 2.5em 0em;
 }
 
 .imgSecciones{
-  margin-top: 2em;
+  margin: 2em auto;
   height:400px;
-  width:350px;
+  width:376px;
 }
 
 
@@ -349,19 +334,6 @@ header {
 
 }
 
-<<<<<<< HEAD
-=======
-.banner_text_inicio {
-  width: 60%;
-  margin: 0em auto;
-  padding: 1em;
-  color: white;
-  font-weight: bolder;
-  font-size: 1.7em;
-
-}
-
->>>>>>> 33eb2647c200cd9c858552555736742c54f2f2b2
 .footer {
   width: 97%;
   margin: 0em auto;
@@ -373,17 +345,8 @@ header {
   width:3em
 }
 
-#log_cesta{
-  width: 100%;
-}
-
-.logo_col1_footer{
-  margin: 0em;
-  width: 7%;
-}
-
-#log_cesta{
-  width: 100%;
+.imagenArticulos{
+  width: 2%;
 }
 
 .logo_col1_footer{
@@ -417,9 +380,11 @@ header {
      
   }
 
-  
-<<<<<<< HEAD
+.space-btn{
+  margin-left: 10vw;
+}
 
-  
-=======
->>>>>>> 33eb2647c200cd9c858552555736742c54f2f2b2
+
+
+
+

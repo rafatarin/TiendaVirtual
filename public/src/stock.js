@@ -50,4 +50,3 @@ async function procesarBoton(e) {
 	}
 }
 document.getElementById("botones").addEventListener("click", procesarBoton);
-*/
