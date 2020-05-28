@@ -25,3 +25,10 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";
 }
 
+  
+
+  $(document).ready(function() {
+    $('.loadMore').loadMoreResults({
+      displayedItems: 5
+    });
+  })

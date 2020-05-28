@@ -35,17 +35,6 @@
 
 <body>
     <header>
-        <div id="mySidepanel" class="sidepanel" class="hidden" hidden>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Inicio</a>
-            <a href="#">Catálogo</a>
-            <a href="#">Sobre Nosotros</a>
-            <a href="#">Ayuda</a>
-        </div>
-        <button class="openbtn" onclick="openNav()" class="hidden" hidden>&#9776;</button>
-
-
-
         <div class="btn_navbar">
 
             <li class="text-light float-left; margin: 0em 10em;">Estás viendo la nueva web, esta es la version
@@ -55,9 +44,9 @@
 
         <a href="/"><img src="../img/logo.png" alt="Logo de Prueba TestNG" id="logoPrueba"></a>
         <ul class="listadoDesplegable">
-            <li><a href="/" class="link_menu">Inicio</a></li>
-            <li><a href="/secciones" class="link_menu">Secciones</a></li>
-            <li><a href="/#contacto" class="link_menu mr-4">Contáctanos</a></li>
+            <li><a href="/" class="link_menu ml-4">Inicio</a></li>
+            <li><a href="/secciones" class="link_menu mr-5">Secciones</a></li>
+            <li><a href="/#contacto" class="link_menu mr-2">Contáctanos</a></li>
              <li> {{#if btn_hidden}}<a href="/registro" style="visibility: {{btn_hidden}};"
                     class="text-light "><button class="btn btn-primary space-btn">Registrate</button> </a></li>
             <li><a href="/identificacion" {{btn_hidden}} class="text-light "><button class="btn btn-primary">Identifícate</button> </a>

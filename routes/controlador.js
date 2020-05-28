@@ -4,7 +4,7 @@ const controlador = express.Router();
 
 controlador.get("/", handlers_ln.inicio);
 
-controlador.get("/articulos", handlers_ln.articulos);
+controlador.get("/articulos/:name", handlers_ln.articulos);
 
 controlador.get("/secciones", handlers_ln.secciones);
 
