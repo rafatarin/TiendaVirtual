@@ -4,31 +4,34 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <br><br><br><br><br>
 {{#each secciones}}
-<div class="container row d-inline loadMore">
+<div class="row d-inline">
         <div class="col-3 float-left item">
                 <div class="card-wrapper">
                         <div class="card">
                                 <div class="card-img-wrapper">
+                                        <div class="">
+                                                        <span>
+                                                        <p class="col-4 text-center  bg-warning mt-2"><strong>{{precio}}€</strong></p>
+                                                        </span>
+                                        </div>
                                         <div class="h-25 d-inline-block">
                                                  <img class="card-img-top" src="../img/{{imagen}}" alt="Card image cap">
                                         </div>
                                        
-                                        <div class="card-body">
+                                        <div class="card-body row float-left">
                                                 <h5 class="card-title">{{descripcion}}</h5>
-                                                <div class="card-text row mx-1">
-                                                        <div class="ml-2">
-                                                                <span>
-                                                                        <p class="font-size"><strong>{{precio}}€</strong></p>
-                                                                </span>
+                                                        <div class="col-md-1 ">
+
                                                         </div>
-                                                        <div class="col-md-3 ml-1">
+                                                
+                                                        <div class=" ml-2 col-md-4">
                                                                 <span class=""><input type="number"
                                                                                 value="1" id="box_input" min="1"
                                                                                 max="10"></span>
                                                         </div>
-                                                        <div class="col-md-3 ml-1">
+                                                         <div class="col-md-4 ">
                                                                 <a href="/carrito" id="carrito"><img
-                                                                                src="../img/cesta.png" class="w-75 "
+                                                                                src="../img/cesta.png" class="w-50 "
                                                                                 alt="cesta_compra"></a>
                                                         </div>
                                                 </div>

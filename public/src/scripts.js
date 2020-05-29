@@ -1,34 +1,21 @@
-function openNav() {
-  document.getElementById("mySidepanel").style.width = "250px";
-}
 
-/* Set the width of the sidebar to 0 (hide it) */
-function closeNav() {
-  document.getElementById("mySidepanel").style.width = "0";
-}
-
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
 
   
+const ratings = {
+  hotel_a : 2.8,
+  hotel_b: 3.3,
+  hotel_c : 1.9,
+  hotel_d : 4.3,
+  hotel_e : 4.74
+};
 
-  $(document).ready(function() {
-    $('.loadMore').loadMoreResults({
-      displayedItems: 5
-    });
-  })
+// total number of stars
+const starTotal = 5;
+
+for(const rating in ratings) {  
+  const starPercentage = (ratings[rating] / starTotal) * 100;
+  const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
+  console.log(document.querySelector(`stars-inner`))
+  document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded; 
+}
+
