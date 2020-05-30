@@ -80,4 +80,6 @@ controlador.put("/actualizaEnviados/:id_pedido", handlers_ln.actualizaEnviados);
 
 controlador.get("/buscarCliente/:id_cliente", handlers_ln.buscarCliente);
 
+controlador.post("/upload", handlers_ln.actualizarAvatar)
+
 module.exports = controlador;

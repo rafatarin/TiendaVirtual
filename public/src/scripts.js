@@ -9,13 +9,13 @@ const ratings = {
   hotel_e : 4.74
 };
 
-// total number of stars
-const starTotal = 5;
 
-for(const rating in ratings) {  
-  const starPercentage = (ratings[rating] / starTotal) * 100;
-  const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
-  console.log(document.querySelector(`stars-inner`))
-  document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded; 
+
+function openCity(cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(cityName).style.display = "block";  
 }
-

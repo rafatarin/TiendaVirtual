@@ -1,205 +1,75 @@
-<br><br><br><br><br><div class="container p-0">
-
-  
-
-    <div class="row">
-        <div class="col-md-5 col-xl-4">
-
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="card-title mb-0">Mi cuenta personal</h5>
-                </div>
-
-                <div class="list-group list-group-flush" role="tablist">
-                    <a class="list-group-item list-group-item-action " data-toggle="list" href="#account" role="tab">
-                      Mi perfil
-                    </a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#password" role="tab">
-                      Cambiar contraseña
-                    </a>
-                    <a class="list-group-item list-group-item-action active" data-toggle="list" href="#pedidosClientes" role="tab">
-                        Mis pedidos
-                    </a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#eliminarCuenta" role="tab">
-                      Eliminar cuenta
-                    </a>
-                    
-                </div>
-            </div>
+<br><br><br><br><br>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Mi perfil</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Mis pedidos</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+<div class="ml-3"><br><h3>Mis datos personales</h3></div><br><br>
+<div class="container row">
+        <div class="col-8">
+          <div class="col-8 mt-2">
+              <label for="nombre" style="width: 40%;">Nombre: </label>
+              <input type="text" placeholder="{{nombre}}" required>
+          </div>
+          <div class="col-8 mt-3">
+              <label for="nombre"  style="width: 40%;">Primer apellido: </label>
+              <input type="text" placeholder="{{apellido1}}" required>
+          </div>
+          <div class="col-8 mt-3">
+              <label for="nombre"  style="width: 40%;">Segundo apellido: </label>
+              <input type="text" placeholder="{{apellido2}}"  required>
+          </div>
+          <div class="col-8 mt-3">
+              <label for="email"  style="width: 40%;">Email: </label>
+              <input type="email" name="email" id="email"  required>
+          </div>
+            <div class="col-8 mt-3">
+              <label for="user" style="width: 40%;">Usuario: </label>
+              <input type="text" name="user" id="user" required>
+          </div>
+          <div class="col-8 mt-3">
+              <label for="password" style="width: 40%;">Contraseña: </label>
+              <input type="password" name="password" id="password" required>
+          </div>
+           <div class="col-8 mt-3">
+              <label for="adress" style="width: 40%;">Dirección: </label>
+              <input type="text" name="adress" id="adress"  required>
+          </div>
+          <div class="col-12 mt-3">
+              <input type="submit" name="guardar" id="guardar" value="Guardar" class="mb-5" required>
+          </div>
         </div>
-
-        <div class="col-md-7 col-xl-8">
-            <div class="tab-content">
-                <div class="tab-pane fade " id="account" role="tabpanel">
-
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-actions float-right">
-                                <div class="dropdown show">
-                                
-                                </div>
-                            </div>
-                            <h5 class="card-title mb-0">Mis datos personales</h5>
-                        </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <div class="form-group">
-                                            <label for="inputUsername">Usuario</label>
-                                            <input type="text" class="form-control" id="inputUsername" placeholder="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputUsername">Biografía</label>
-                                            <textarea rows="2" class="form-control" id="inputBio" placeholder="Habla un poco de tí"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="text-center">
-                                            <img alt="Andrew Jones" src="https://bootdey.com/img/Content/avatar/avatar1.png" class="rounded-circle img-responsive mt-2" width="128" height="128">
-                                            <div class="mt-2">
-                                                <span class="btn btn-primary"><svg class="svg-inline--fa fa-upload fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="upload" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg><!-- <i class="fas fa-upload"></i> --> Subir</span>
-                                            </div>
-                                            <small>Tamaños recomendados de 128px por 128px en .jpg</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary">Guardar</button>
-                            </form>
-
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-actions float-right">
-                                <div class="dropdown show">
-                                   
-                                </div>
-                            </div>
-                            <h5 class="card-title mb-0">Private info</h5>
-                        </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="inputFirstName">Nombre</label>
-                                        <input type="text" class="form-control" id="inputFirstName" placeholder="">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputLastName">Apellidos</label>
-                                        <input type="text" class="form-control" id="inputLastName" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputEmail4">Email</label>
-                                    <input type="email" class="form-control" id="inputEmail4" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputAddress">Dirección</label>
-                                    <input type="text" class="form-control" id="inputAddress" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputAddress2">Dirección alternativa</label>
-                                    <input type="text" class="form-control" id="inputAddress2" placeholder="">
-                                </div>
-                                
-                                <button type="submit" class="btn btn-primary">Guardar</button>
-                            </form>
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="tab-pane fade" id="password" role="tabpanel">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Contraseña</h5>
-
-                            <form>
-                                <div class="form-group">
-                                    <label for="inputPasswordCurrent">Contraseña actual</label>
-                                    <input type="password" class="form-control" id="inputPasswordCurrent">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPasswordNew">Nueva contraseña</label>
-                                    <input type="password" class="form-control" id="inputPasswordNew">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPasswordNew2">Verificar contraseña</label>
-                                    <input type="password" class="form-control" id="inputPasswordNew2">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Guardar</button>
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade show active" id="pedidosClientes" role="tabpanel">
-                    <div class="card">
-                        <a href="" name="pedidosClientes"></a>
-                        <div class="card-body row ">
-                            <h5 class="card-title col-12">Fecha de pedido: 18.05.2020</h5>
-                            <div class="col ">               
-                                <img src="../img/chancla.jpg" class="w-25 " alt="">
-                                <div class="form-group ">
-                                    <label for="inputPasswordCurrent">Pedido número: 123</label>
-                                </div>
-                                <div class="form-group ">
-                                    <label for="inputPasswordNew">Descripción: Chanclas para andar por la calle</label>
-                                </div>
-                                <div class="form-group ">
-                                    <label for="inputPasswordNew2">Cantidad: 2</label>
-                                </div>
-                                <div class="form-group ">
-                                    <label for="inputPasswordNew2">Precio: 12€</label>
-                                </div>
-                          </div> 
-                          <div class="col">
-                                <img src="../img/zapatillas.png" class="w-25 " alt="">
-                                <div class="form-group ">
-                                    <label for="inputPasswordCurrent">Pedido número: 123</label>
-                                </div>
-                                <div class="form-group ">
-                                    <label for="inputPasswordNew">Descripción: Nike 123SD. Aptas para running.</label>
-                                </div>
-                                <div class="form-group ">
-                                    <label for="inputPasswordNew2">Cantidad: 1</label>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPasswordNew2">Precio: 19€</label>
-                                </div>
-                      </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="eliminarCuenta" role="tabpanel">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Eliminar cuenta</h5>
-
-                                <div class="form-group">
-                                    <label for="inputPasswordCurrent">Explicanos las razones de eliminar tu cuenta:</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPasswordNew">Correo Electrónico</label>
-                                    <input type="email" class="form-control" required >
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPasswordNew2">Verifica el correo electrónico</label>
-                                    <input type="email" class="form-control" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Eliminar Cuenta</button>
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+          <div class="col-4">
+                <img src="/img/image.png" alt="" class="w-50">
+                <form ref='uploadForm' id='uploadForm' action='/upload' method='post' encType="multipart/form-data">
+                        <input type="file" name="sampleFile" />
+                        <input type='submit' value='Upload!' />
+                </form>              
+          </div>
+      </div>
     </div>
-
+  
+  <div class="tab-pane fade row" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <h2>Pedido nº: {{pedido}}</h2>
+      <div class="col-4">
+          <img src="../img/{{imagen}}">
+      </div class="col-4">
+      <div class="col-4">
+          <p>{{descripcion}}</p>
+      </div >
+      <div class="col-4">
+          <p>{{cantidad}}</p>
+          <p>{{precio}}</p>
+      </div>
+  </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
 </div>
+
