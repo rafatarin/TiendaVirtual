@@ -44,10 +44,6 @@ controlador.get("/historico", handlers_ln.historico);
 
 //los del administrador
 
-controlador.get("/admin", handlers_ln.administrador);
-
-controlador.get("/clientes", handlers_ln.clientes);
-
 controlador.get("/estadisticas", handlers_ln.estadisticas);
 
 controlador.get("/datos", handlers_ln.datos);
@@ -81,5 +77,7 @@ controlador.put("/actualizaEnviados/:id_pedido", handlers_ln.actualizaEnviados);
 controlador.get("/buscarCliente/:id_cliente", handlers_ln.buscarCliente);
 
 controlador.post("/upload", handlers_ln.actualizarAvatar)
+
+controlador.get("/imprimirPDF", handlers_ln.generarPDF)
 
 module.exports = controlador;

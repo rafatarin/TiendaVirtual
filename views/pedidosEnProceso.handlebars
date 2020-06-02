@@ -3,12 +3,15 @@
 <h1 id="stock"><strong> Pedidos en Proceso: </strong></h1>
 <div class="divEnlaces">
 <a class="enlaces" href="/pedidosEnviados">Pasa a vista Pedidos Enviados</a>
-<a  class="enlaces" href="/historicoPedidos">Pasa a vista Histórico de Pedidos</a></div>
+<a  class="enlaces" href="/historicoPedidos">Pasa a vista Histórico de Pedidos</a>
+<a class="enlaces" id="generarPDF" href="/imprimirPDF"> Generar PDF</a>
+
+</div>
 
 {{#if enProceso}}
 {{#each enProceso}}
 
-<div class="listaPedido">
+<div class="listaPedido" id="imprimir">
 <ul>	
 <li>Id pedido: {{id_pedido}}</li>
 <li>Productos: {{descripcion}}</li>
@@ -18,6 +21,9 @@
 </ul>
 <p id="mensaje">{{mensaje}}</p>
 </div>
+
+
+
 
 
 
