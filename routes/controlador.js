@@ -43,6 +43,9 @@ controlador.post("/enviarMail", handlers_ln.enviarMail);
 controlador.get("/historico", handlers_ln.historico);
 
 //los del administrador
+controlador.get("/admin", handlers_ln.loginAdmin);
+
+controlador.get("/clientes", handlers_ln.clientes);
 
 controlador.get("/estadisticas", handlers_ln.estadisticas);
 
