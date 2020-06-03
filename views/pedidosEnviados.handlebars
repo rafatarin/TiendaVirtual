@@ -11,8 +11,8 @@
 <li>Id pedido: {{id_pedido}}</li>
 <li>Productos: {{descripcion}}</li>
 <li>Cantidad: {{cantidad}}</li>
-<li><button id="{{id_cliente}}button"> Id_cliente: {{id_cliente}}</li>
 <label><input id="{{id_pedido}}" name="miCheck" type="checkbox"> Entregado </a></label>
+<li><button id="{{id_pedido}}button">Guardar</li>
 </ul>
 <p id="mensaje"> {{mensaje}} </p>
 </div>
@@ -21,16 +21,20 @@
 
 <script>
 async function alertaValueEnv(req, res){ 
-   	actualizaEnviados({{id_pedido}});
-   	
+   	const check = document.getElementById("{{id_pedido}}");
+   	if (check) {
+	actualizaEnviados({{id_pedido}});
+   	}
+  	
 } 
+
 document.getElementById("{{id_pedido}}").addEventListener("click", alertaValueEnv);
 
-async function enviaMensaje(req, res){ 
+async function enviaMensajeEnv(req, res){ 
    	muestraMensajeEnv({{id_pedido}});
    	
 } 
-document.getElementById("{{id_pedido}}").addEventListener("click", enviaMensaje);
+document.getElementById("{{id_pedido}}button").addEventListener("click", enviaMensajeEnv);
 
 
 </script>

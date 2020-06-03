@@ -1,7 +1,4 @@
-
 async function actualizaProceso(id_pedido) {
-	//console.log(id_pedido);
-
 	let respuesta = await fetch(
 		`http://localhost:3000/actualizaProceso/${id_pedido}`, {
 			method: "PUT",
