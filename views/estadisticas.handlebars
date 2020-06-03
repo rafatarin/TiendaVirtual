@@ -1,156 +1,28 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-<script src="../src/estadisticas.js" type="text/javascript" async></script>
-
-			
 {{#if datos}}
 
-	<div id="muestra">
-	    <div id="vistaProducto" class="menuEstadis"><a class="fotoAdmin" href="#">
-        <img src="../img/productosVistos.png" alt="base de datos" class="img_product">
+    <div id="muestra">
+        <div id="vistaProducto" class="menuEstadis"><a class="fotoAdmin" href="#">
+        <img src="../img/productosVistos.png" alt="dibujo representa base de datos" class="img_product">
         <p class="descStats">Vista Producto/Comprado</p></a>
         </div>
-    	
-    	<div id="vistaClientes" class="menuEstadis"><a class="fotoAdmin" href="#">
-        <img src="../img/clientes.png" alt="dibujo gráfico" class="img_product">
+        
+        <div id="vistaClientes" class="menuEstadis"><a class="fotoAdmin" href="#">
+        <img src="../img/clientes.png" alt="dibujo de un gráfico" class="img_product">
         <p class="descStats">Vista Clientes Registrados</p></a>
-    	</div>
+        </div>
 
-    	<div id="productosComprados" class="menuEstadis"><a class="fotoAdmin" href="#">
-    	<img src="../img/productosComprados.png" alt="chancla_producto" class="img_product">
-        <p class="descStats">Productos Comprados</p></a>
-    	</div>
+        <div id="productosComprados" class="menuEstadis"><a class="fotoAdmin" href="#">
+        <img src="../img/productosComprados.png" alt="imagen representa productos comprados" class="img_product">
+        <p class="descStats">Productos Comprados/Poblaciones</p></a>
+        </div>
         
     </div>
-    <div class="containerCanvas">
-			<canvas id="grafica"></canvas>
+    <div id="containerCanvas" class="containerCanvas">
+            <canvas id="grafica"></canvas>
             
     </div>
-	<script>
+    
     
   
-  
-	async function addDataVistaProductos() {
-
-    const data = await getData2();
-    let miCanvas = document.getElementById("grafica").getContext("2d");
-    
-    let chart = new Chart(miCanvas, {
-	
-		type: "horizontalBar",
-		data: {
-			labels: x,
-			datasets: [
-				{
-					label: "Vista Productos Comprados",
-					backgroundColor: "rgb(255,255,0)",
-				            data: y,
-            backgroundColor: [
-                
-    'rgba(30, 99, 132, 0.6)',
-    'rgba(60, 99, 132, 0.6)',
-    'rgba(90, 99, 132, 0.6)',
-    'rgba(120, 99, 132, 0.6)',
-    'rgba(150, 99, 132, 0.6)',
-    'rgba(180, 99, 132, 0.6)',
-    'rgba(210, 99, 132, 0.6)',
-    'rgba(240, 99, 132, 0.6)',
-    'rgba(30, 99, 132, 0.6)',
-    'rgba(60, 99, 132, 0.6)',
-    'rgba(90, 99, 132, 0.6)',
-    'rgba(120, 99, 132, 0.6)',
-    'rgba(150, 99, 132, 0.6)',
-    'rgba(180, 99, 132, 0.6)',
-    'rgba(210, 99, 132, 0.6)',
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        responsive: true
-        },
-        ticks: {
-        min: 0
-    }
-    
-});
-miCanvas.destroy();
-}
-
-async function usuariosRegistrados() {
-
-    const data = await getData();
-    
-    miCanvas = document.getElementById("grafica").getContext("2d");
-    
-    chart = new Chart(miCanvas, {
-    
-        type: "horizontalBar",
-        data: {
-            labels: usuarios,
-            datasets: [
-                {
-                    label: "Vista Usuarios Registrados",
-                    backgroundColor: "rgb(255,255,0)",
-                            data: dates,
-            backgroundColor: [
-                
-    'rgba(30, 99, 132, 0.6)',
-    'rgba(60, 99, 132, 0.6)',
-    'rgba(90, 99, 132, 0.6)',
-    'rgba(120, 99, 132, 0.6)',
-    'rgba(150, 99, 132, 0.6)',
-    'rgba(180, 99, 132, 0.6)',
-    'rgba(210, 99, 132, 0.6)',
-    'rgba(240, 99, 132, 0.6)',
-    'rgba(30, 99, 132, 0.6)',
-    'rgba(60, 99, 132, 0.6)',
-    'rgba(90, 99, 132, 0.6)',
-    'rgba(120, 99, 132, 0.6)',
-    'rgba(150, 99, 132, 0.6)',
-    'rgba(180, 99, 132, 0.6)',
-    'rgba(210, 99, 132, 0.6)',
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        responsive: true
-        },
-        ticks: {
-        min: 0
-    }
-    
-});
-
-}
-
-
-
-
-
-        
-
-document.getElementById("vistaProducto").addEventListener("click", addDataVistaProductos);
-document.getElementById("vistaClientes").addEventListener("click", usuariosRegistrados);
-//document.getElementById("productosComprados").addEventListener("click", addDataComprados);
 
     {{/if}}
-</script>
