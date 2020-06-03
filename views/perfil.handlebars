@@ -1,76 +1,142 @@
 <br><br><br><br><br>
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Mi perfil</a>
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+      aria-selected="true">Mi perfil</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Mis pedidos</a>
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#misPedidos" role="tab" aria-controls="profile"
+      aria-selected="false">Mis pedidos</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+      aria-selected="false">Contact</a>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-<div class="ml-3"><br><h3>Mis datos personales</h3></div><br><br>
-<div class="container row">
-        <div class="col-8">
-          <div class="col-8 mt-2">
-              <label for="nombre" style="width: 40%;">Nombre: </label>
-              <input type="text" placeholder="{{nombre}}" required>
-          </div>
-          <div class="col-8 mt-3">
-              <label for="nombre"  style="width: 40%;">Primer apellido: </label>
-              <input type="text" placeholder="{{apellido1}}" required>
-          </div>
-          <div class="col-8 mt-3">
-              <label for="nombre"  style="width: 40%;">Segundo apellido: </label>
-              <input type="text" placeholder="{{apellido2}}"  required>
-          </div>
-          <div class="col-8 mt-3">
-              <label for="email"  style="width: 40%;">Email: </label>
-              <input type="email" name="email" id="email"  required>
-          </div>
-            <div class="col-8 mt-3">
-              <label for="user" style="width: 40%;">Usuario: </label>
-              <input type="text" name="user" id="user" required>
-          </div>
-          <div class="col-8 mt-3">
-              <label for="password" style="width: 40%;">Contraseña: </label>
-              <input type="password" name="password" id="password" required>
-          </div>
-           <div class="col-8 mt-3">
-              <label for="adress" style="width: 40%;">Dirección: </label>
-              <input type="text" name="adress" id="adress"  required>
-          </div>
-          <div class="col-12 mt-3">
-              <input type="submit" name="guardar" id="guardar" value="Guardar" class="mb-5" required>
-          </div>
+    <div class="ml-3"><br>
+      <h3>Mis datos personales</h3>
+    </div><br><br>
+    <div class="container row">
+      <div class="col-6">
+        <div class="col-8 mt-2">
+          <label for="nombre" style="width: 40%;">Nombre: </label>
+          <input type="text" placeholder="{{nombre}}" required>
         </div>
-          <div class="col-4">
-                <img src="./uploads/{{imagenAvatar}}" alt="" class="w-50">
-                <br><br>
-                <form ref='uploadForm' id='uploadForm' action='/upload' method='post' encType="multipart/form-data">
-                        <input type="file" name="sampleFile" />
-                        <input type='submit' value='Upload!' />
-                </form>              
-          </div>
+        <div class="col-8 mt-3">
+          <label for="nombre" style="width: 40%;">Primer apellido: </label>
+          <input type="text" placeholder="{{apellido1}}" required>
+        </div>
+        <div class="col-8 mt-3">
+          <label for="nombre" style="width: 40%;">Segundo apellido: </label>
+          <input type="text" placeholder="{{apellido2}}" required>
+        </div>
+        <div class="col-8 mt-3">
+          <label for="email" style="width: 40%;">Email: </label>
+          <input type="email" name="email" id="email" placeholder="{{email}}" required>
+        </div>
+        <div class="col-8 mt-3">
+          <label for="user" style="width: 40%;">Usuario: </label>
+          <input type="text" name="user" id="user" placeholder="{{usuario}}" required>
+        </div>
+        <div class="col-8 mt-3">
+          <label for="password" style="width: 40%;">Contraseña: </label>
+          <input type="password" name="password" id="password" required>
+        </div>
+        <div class="col-8 mt-3">
+          <label for="adress" style="width: 40%;">Dirección: </label>
+          <input type="text" name="adress" id="adress" required>
+        </div>
+        <div class="col-12 mt-3">
+          <input type="submit" name="guardar" id="guardar" value="Guardar" class="mb-5" required>
+        </div>
+      </div>
+      <div class="col-4">
+        <img src="./uploads/{{imagenAvatar}}" alt="" class="w-50">
+        <br><br>
+        <form ref='uploadForm' id='uploadForm' action='/upload' method='post' encType="multipart/form-data">
+          <input type="file" name="sampleFile" />
+          <input type='submit' value='Upload!' />
+        </form>
       </div>
     </div>
-  
-  <div class="tab-pane fade row" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-      <h2>Pedido nº: {{pedido}}</h2>
-      <div class="col-4">
-          <img src="../img/{{imagen}}">
-      </div class="col-4">
-      <div class="col-4">
-          <p>{{descripcion}}</p>
-      </div >
-      <div class="col-4">
-          <p>{{cantidad}}</p>
-          <p>{{precio}}</p>
+  </div>
+
+  <div class="tab-pane fade show active" id="misPedidos" role="tabpanel" aria-labelledby="home-tab">
+
+    <div class="container row">
+      {{#if facturas}}
+
+      <div class="col-12 text-center">
+        <h1><strong> PEDIDOS SALUS</strong></h1>
+
       </div>
+      <div class="col-6 mt-4 mr-5 text-left">
+        Adreça: Carrer del Pintor Vergara, 3, <br>
+        12004 Castelló de la Plana, Castelló
+      </div>
+      <div class="col-5 ml-4 mt-4 ">
+        <img src="../img/logo.png" alt="" class="w-50">
+      </div>
+
+      <div class="col-4 mt-5">
+        <h5>Facturar a:</h5>
+        <div>
+          {{nombre}} {{apellido1}} {{apellido2}}
+        </div>
+        <div>
+          {{direccion}}
+        </div>
+      </div>
+      <div class="col-4 mt-5">
+        <h5>Enviar a:</h5>
+        <div>
+          {{nombre}} {{apellido1}} {{apellido2}}
+        </div>
+        <div>
+          {{direccion}}
+        </div>
+      </div>
+      <div class="col-4 mt-5">
+
+        <div class="col-8">
+          <strong> Nº de pedido:</strong> {{pedido}}
+        </div>
+        <div class="col-8">
+          <strong> Fecha: </strong> {{fecha}}
+        </div>
+      </div>
+
+      <div>
+        <table class="row mt-5 ml-3">
+          <tr>
+            <td class="apartadoFactura col">CANTIDAD</td>
+            <td class="apartadoDescripcion col">DESCRIPCIÓN</td>
+            <td class="apartadoFactura col">PRECIO UNITARIO</TD>
+            <td class="apartadoFactura col">IMPORTE</td>
+          </tr>
+          {{#each facturas}}
+          <tr>
+            <td class="apartadoFactura">{{cantidad}}</td>
+            <td class="apartadoFactura">{{descripcion}} €</td>
+            <td class="apartadoFactura">{{precio}} €</td>
+            <td class="apartadoFactura">{{precioCantidad}} €</td>
+            
+          </tr>{{/each}}
+
+          </table>
+            
+            <div class="resultados ">SubTotal:</div> <div class="resultadosCantidad"> {{sumaPrecio}} €</div>
+           
+            <div class="resultados">IVA 21%:</div> <div class="resultadosCantidad"> {{precioIVA}} €</div>
+         
+            <div class="resultados">TOTAL:</div> <div class="resultadosCantidad mb-5"> {{totalFactura}} €</div>
+        
+      </div>
+
+      {{/if}}
+    </div>
   </div>
   <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
 </div>
-

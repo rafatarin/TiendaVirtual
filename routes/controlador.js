@@ -81,6 +81,6 @@ controlador.get("/buscarCliente/:id_cliente", handlers_ln.buscarCliente);
 
 controlador.post("/upload", handlers_ln.actualizarAvatar)
 
-controlador.get("/imprimirPDF", handlers_ln.generarPDF)
+controlador.get("/imprimirPDF", handlers_ln.generarPDF);
 
 module.exports = controlador;

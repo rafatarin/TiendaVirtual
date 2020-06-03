@@ -1,0 +1,32 @@
+.container{
+    margin-left: 8em;
+
+
+}
+
+.apartadoFactura{
+    text-align: center;
+    width:6em;
+
+}
+
+.apartadoDescripcion{
+    text-align: center;
+    width:40em;
+
+}
+
+td{
+    border: solid black 1px;
+}
+
+.resultados{
+    display: inline;
+    margin-left: 710px;
+
+}
+
+.resultadosCantidad{
+    float:right;
+    margin-right: 250px;
+}
