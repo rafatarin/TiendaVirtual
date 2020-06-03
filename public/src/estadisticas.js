@@ -206,12 +206,10 @@ async function getData2() {
 	y = [];
 	let resultado = await fetch(`http://localhost:3000/datosGraf2`);
 	let data = await resultado.json();
-	console.log(data);
 	for (let i in data) {
 		x.push(data[i].articulos);
-		console.log("descripcion" + x);
 		y.push(data[i].cantidad);
-		console.log("datos" + y);
+	
 	}
 }
 
