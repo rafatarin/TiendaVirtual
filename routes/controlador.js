@@ -20,6 +20,8 @@ controlador.post("/registrado2", handlers_ln.nuevoUsuario2);
 
 controlador.post("/registrado3", handlers_ln.nuevoUsuario3);
 
+controlador.get("/usuarioRegistrado", handlers_ln.usuarioRegistrado)
+
 controlador.get("/perfil", handlers_ln.mostrarPerfil);
 
 controlador.post("/updatePerfil", handlers_ln.actualizarPerfil);
