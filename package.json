@@ -37,6 +37,7 @@
     "fs": "0.0.1-security",
     "fs-extra": "^9.0.0",
     "googleapis": "^39.2.0",
+    "handlebars-pdf": "^1.0.1",
     "html-pdf": "^2.2.0",
     "mariadb": "^2.3.1",
     "memorystore": "^1.6.2",
