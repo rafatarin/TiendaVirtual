@@ -83,4 +83,8 @@ controlador.post("/upload", handlers_ln.actualizarAvatar)
 
 controlador.get("/imprimirPDF", handlers_ln.generarPDF);
 
+//los del usuario
+controlador.get("/pedidosGuardados", handlers_ln.guardarPedidos);
+// controlador.put("/seleccionaCantidad/:id_pedido", handlers_ln.seleccionaCantidad)
+
 module.exports = controlador;
