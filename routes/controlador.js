@@ -57,6 +57,8 @@ controlador.get("/datosGraf", handlers_ln.datosGraf);
 
 controlador.get("/datosGraf2", handlers_ln.datosGraf2);
 
+controlador.get("/datosGraf3", handlers_ln.datosGraf3);
+
 controlador.get("/stock", handlers_ln.stock);
 
 controlador.get("/buscaPorTexto/:texto", handlers_ln.buscaPorTexto);
@@ -80,6 +82,16 @@ controlador.put("/actualizaProceso/:id_pedido", handlers_ln.actualizaProceso);
 controlador.put("/actualizaEnviados/:id_pedido", handlers_ln.actualizaEnviados);
 
 controlador.get("/buscarCliente/:id_cliente", handlers_ln.buscarCliente);
+
+controlador.put("/modificaDesc/:id_articulo", handlers_ln.modificaDesc);
+
+controlador.put("/modificaStock/:id_articulo", handlers_ln.modificaStock);
+
+controlador.put("/modificaPrecio/:id_articulo", handlers_ln.modificaPrecio);
+
+controlador.post("/creaArticulo", handlers_ln.creaArticulo);
+
+controlador.post("/uploadArticulo", handlers_ln.modificaImagen)
 
 controlador.post("/upload", handlers_ln.actualizarAvatar)
 

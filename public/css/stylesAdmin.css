@@ -180,3 +180,11 @@ input.file {
 #grafica {
   margin-left: 25%;
 }
+
+fieldset {
+  border: none;
+}
+#nuevoProducto {
+ border: 1px solid #decede;
+ 
+}

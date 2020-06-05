@@ -1,23 +1,62 @@
 
 
 
-
 {{#each stock}}
-<div class="contenedorStock">
-      <ul class="stockVista">
-        <p>Descripción</p><li class="valorStock">{{descripcion}}<input class="valorStock" type="text" size="50"><button id="{{id_articulo}}_desc" class="valorStock btnActualizar">Modificar</button></li>
-      
-        <p>Categoría</p><li class="valorStock">{{categoria}}</li>
+<section data-id="{{id_articulo}}_desc" class="contenedorStock box">
 
-        <p>Stock</p><li class="valorStock">{{stock}}<input class="valorStock" type="text" size="50"><button id="{{id_articulo}}_stock" class="valorStock">Modificar</button></li><br/>
-        
-        <p>Precio Eur</p><li class="valorStock">{{precio}}<input class="valorStock" type="text" size="50"><button id="{{id_articulo}}_precio" class="valorStock">Modificar</button></li><br/>
-        
-            <img class="imagenStock" src="../img/{{imagen}}"><br/>
-            <label for="avatar">Modificar imagen:</label>
-            <input type="file" id="photo" />
-</ul>
-</div>
-  {{/each}}
+        <article>
+        <p class="titulosStock">Categoría - {{categoria}}</p>
+        <label for="descr{{id_articulo}}">Descripción:</label><br/>
+        <p class="valorStock">{{descripcion}}<br/>
+	    <input name="descripcion" type="text" id="descr-{{id_articulo}}" value="{{descripcion}}" size="40">
+        <button id="btModificar" class="btModificar">Modificar</button>
+        </article>
+        <article>
+        <label for="stock{{id_articulo}}">Stock Actual: {{stock}} </label>
+		<input name="stock" type="text" id="stock-{{id_articulo}}" value="{{stock}}" size="3">
+        <button class="btModificarStock">Modificar</button><br/>
+        </article>
+        <article>
+        <label for="precio{{id_articulo}}">Precio en Eur: {{precio}}</label>
+        <input name="precio" type="text" id="precio-{{id_articulo}}" value="{{precio}}" size="3">
+        <button class="btModificarPrecio">Modificar</button><br/>
+        </article>
+        <article>
+         <img src="./img/{{imagen}}" img class="imagenStock" alt="imagen Producto"> Nombre de la imagen: {{imagen}}
+        <br><br>
+        <form ref='uploadForm' id='upload{{id_articulo}}' action='/uploadArticulo' method='post' encType="multipart/form-data">
+          <input type="file" name="sampleFile" />
+          <input type='submit' value='Cambiar Imagen' />
+        </form>
 
+
+ </section>
+
+ {{/each}}
+ 
+ <div id="nuevoProducto">
+<section id="formNuevo" class="formNuevo">
+    <p>Crea un nuevo producto</p>
+    <p>La imagen se debe incluir en la modificación de producto cuando ya se haya creado.</p>
+    <form id="form" action="/creaArticulo" method="POST">
+    <fieldset>
+        <label for="descripcion">Descripción:</label>
+        <input name="descripcion" type="text" id="descripcion" size="40">
+    </fieldset>
+    <fieldset>
+        <label for="stock">Stock Actual:</label>
+        <input name="stock" type="text" id="stock" size="3">
+    </fieldset>
+    <fieldset>
+        <label for="precio">Precio en Eur:</label>
+        <input name="precio" type="text" id="precio" size="3">
+    </fieldset>
+    <fieldset> Último nombre de imagen utilizado: {{imagenUltima}}
+      <label for="nombreImagen">Nombre Imagen:</label>
+        <input name="nombreImagen" type="text" id="nombreImagen" size="6">
+    </fieldset>
+        <input id="enviar" type="submit" value="Guardar">
+    </form>
+</section>
 </div>
+
