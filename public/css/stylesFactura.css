@@ -1,6 +1,6 @@
 .container{
     margin-left: 8em;
-
+    color: black;
 
 }
 
@@ -29,4 +29,10 @@ td{
 .resultadosCantidad{
     float:right;
     margin-right: 250px;
+}
+
+.botonPDF{
+    float: right;
+    margin-right: 19em;
+
 }

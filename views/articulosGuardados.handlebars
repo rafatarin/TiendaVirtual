@@ -1,0 +1,16 @@
+<br><br><br><br><br>
+<h1><strong> Pedidos Guardados: </strong></h1>
+{{#if datosGuardados}}
+{{#each datosGuardados}}
+<ul>
+	<li>Productos: {{descripcion}}</li><br>
+	<li>Precio: {{precio}} €</li><br>
+	<img src="../img/{{imagen}}" alt="" class="w-25"><br><br><br><br>
+</ul>
+
+{{/each}}
+{{/if}}
+	<li>Cantidad:{{cantidad}} <button id="id_pedido">Modificar cantidad</button></li><br>
+
+
+<button id="guardarArticulos">Guardar artículos</button>

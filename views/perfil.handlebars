@@ -9,31 +9,31 @@
       aria-selected="false">Mis pedidos</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-      aria-selected="false">Contact</a>
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#eliminar" role="tab" aria-controls="contact"
+      aria-selected="false">Eliminar cuenta</a>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
     <div class="ml-3"><br>
-      <h3>Mis datos personales</h3>
+      <h3 class="text-dark">Mis datos personales</h3>
     </div><br><br>
     <div class="container row">
       <div class="col-6">
         <div class="col-8 mt-2">
           <label for="nombre" style="width: 40%;">Nombre: </label>
-          <input type="text" placeholder="{{nombre}}" required>
+          <input type="text"  id="nombre" placeholder="{{nombre}}" required>
         </div>
         <div class="col-8 mt-3">
-          <label for="nombre" style="width: 40%;">Primer apellido: </label>
-          <input type="text" placeholder="{{apellido1}}" required>
+          <label for="apellido1" style="width: 40%;">Primer apellido: </label>
+          <input type="text" id="apellido1" placeholder="{{apellido1}}" required>
         </div>
         <div class="col-8 mt-3">
-          <label for="nombre" style="width: 40%;">Segundo apellido: </label>
-          <input type="text" placeholder="{{apellido2}}" required>
+          <label for="apellido2" style="width: 40%;">Segundo apellido: </label>
+          <input type="text" id="apellido2" placeholder="{{apellido2}}" required>
         </div>
         <div class="col-8 mt-3">
-          <label for="email" style="width: 40%;">Email: </label>
+          <label for="email"  style="width: 40%;">Email: </label>
           <input type="email" name="email" id="email" placeholder="{{email}}" required>
         </div>
         <div class="col-8 mt-3">
@@ -56,14 +56,14 @@
         <img src="./uploads/{{imagenAvatar}}" alt="" class="w-50">
         <br><br>
         <form ref='uploadForm' id='uploadForm' action='/upload' method='post' encType="multipart/form-data">
-          <input type="file" name="sampleFile" />
-          <input type='submit' value='Upload!' />
+          <input type="file" name="sampleFile"/><br><br>
+          <input type='submit' value='Guardar imagen' />
         </form>
       </div>
     </div>
   </div>
 
-  <div class="tab-pane fade show active" id="misPedidos" role="tabpanel" aria-labelledby="home-tab">
+  <div class="tab-pane fade" id="misPedidos" role="tabpanel" aria-labelledby="home-tab">
 
     <div class="container row">
       {{#if facturas}}
@@ -131,15 +131,33 @@
            
             <div class="resultados">IVA 21%:</div> <div class="resultadosCantidad"> {{precioIVA}} €</div>
          
-            <div class="resultados">TOTAL:</div> <div class="resultadosCantidad mb-5"> {{totalFactura}} €</div>
+            <div class="resultados">TOTAL:</div> <div class="resultadosCantidad mb-3"> {{totalFactura}} €</div>
         
       </div>
 
       {{/if}}
     </div>
     
-      <a href="/imprimirPDF"><div class="btn btn-primary push-right">Generar PDF</div></a>
+      <a href="/imprimirPDF"><div class="btn btn-primary botonPDF">Generar PDF</div></a>
     
   </div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+  <div class="tab-panel fade" id="eliminar" role="tabpanel">
+  <h2 class="ml-5 mt-4 text-dark">Confirma tu email y contraseña para eliminar tu cuenta.</h2>
+  <div class="container row">
+    <div class="col-10 mt-5">
+      <form action="/eliminarCuenta" method="POST">
+        <div class="col">
+          <label for="email" style="width: 30%;">Introduce tu email:</label>
+          <input type="email" placeholder="Dirección de correos" name="correoElimina">
+        </div>
+        <div class="col mb-5">
+          <label for="email" style="width: 30%;">Confirma tu contraseña:</label>
+          <input type="password" placeholder="********" name="passwordElimina">
+        </div>
+        <button type="submit" class="btn btn-primary mb-4 push-center" >
+            Eliminar cuenta
+        </button>
+      </form>
+    </div>
+  </div>
 </div>

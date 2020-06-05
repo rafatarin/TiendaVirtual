@@ -97,8 +97,15 @@ controlador.post("/upload", handlers_ln.actualizarAvatar)
 
 controlador.get("/imprimirPDF", handlers_ln.generarPDF);
 
-//los del usuario
-controlador.get("/pedidosGuardados", handlers_ln.guardarPedidos);
+controlador.post("/eliminarCuenta", handlers_ln.eliminarCuenta);
+
+controlador.post("/pedidosGuardados/:id", handlers_ln.guardarArticulos);
+
+controlador.get("/articulosGuardados", handlers_ln.articulosGuardados)
+
+controlador.post("/articulosGuardados/:id", handlers_ln.articulosGuardados);
+
+
 // controlador.put("/seleccionaCantidad/:id_pedido", handlers_ln.seleccionaCantidad)
 
 module.exports = controlador;
