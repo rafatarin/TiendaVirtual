@@ -1,22 +1,22 @@
 
 <h1 id="stock"><strong> Pedidos Enviados: </strong></h1>
 <div class="divEnlaces">
+<a class="enlaces" href="/pedidosEnProceso">Pasa a vista Pedidos En Proceso</a>
 <a  class="enlaces" href="/historicoPedidos">Pasa a vista Histórico de Pedidos</a></div>
 
 {{#if enviados}}
 {{#each enviados}}
 
 <div class="listaPedido">
-<ul>	
+<ul id="{{id_pedido}}mensaje">	
 <li>Id pedido: {{id_pedido}}</li>
 <li>Productos: {{descripcion}}</li>
 <li>Cantidad: {{cantidad}}</li>
 <label><input id="{{id_pedido}}" name="miCheck" type="checkbox"> Entregado </a></label>
 <li><button id="{{id_pedido}}button">Guardar</li>
+<li>{{mensaje}}</li>
 </ul>
-<p id="mensaje"> {{mensaje}} </p>
 </div>
-
 
 
 <script>

@@ -12,18 +12,15 @@
 {{#each enProceso}}
 
 <div class="listaPedido" id="imprimir">
-<ul>	
+<ul id="{{id_pedido}}mensaje">	
 <li>Id pedido: {{id_pedido}}</li>
 <li>Productos: {{descripcion}}</li>
 <li>Cantidad: {{cantidad}}</li>
 <label><input id="{{id_pedido}}" name="miCheck" type="checkbox"> Enviado </a></label>
 <li><button id="{{id_pedido}}button">Guardar</button></li>
+<li>{{mensaje}}</li>
 </ul>
-<p id="mensaje">{{mensaje}}</p>
 </div>
-
-
-
 
 
 
@@ -35,6 +32,7 @@ async function alertaValue(req, res){
    	}
   	
 } 
+
 document.getElementById("{{id_pedido}}button").addEventListener("click", alertaValue);
 
 async function enviaMensaje(req, res){ 

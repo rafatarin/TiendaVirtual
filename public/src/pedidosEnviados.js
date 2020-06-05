@@ -11,13 +11,13 @@ async function actualizaEnviados(id_pedido) {
 	console.log(respuestaJson.json);
 }
 
-async function muestraMensajeEnv() {
-	let newDiv = document.createElement("p");
+async function muestraMensajeEnv(id_pedido) {
+	let newLi = document.createElement("li");
 	let newContent = document.createTextNode(
 		"Este pedido pasa a estar en la vista Histórico Pedidos"
 	);
-	newDiv.appendChild(newContent);
-
-	var currentDiv = document.getElementById("mensaje");
-	document.body.appendChild(newDiv, currentDiv);
+	newLi.appendChild(newContent);
+	let mensaje = "mensaje"
+	var currentDiv = document.getElementById(`${id_pedido}`+ mensaje).append(newLi);
+	
 }

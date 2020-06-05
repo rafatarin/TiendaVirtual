@@ -12,15 +12,15 @@ async function actualizaProceso(id_pedido) {
 	);
 }
 
-async function muestraMensaje() {
-	let newDiv = document.createElement("p");
+async function muestraMensaje(id_pedido) {
+	let newLi = document.createElement("li");
 	let newContent = document.createTextNode(
 		`Este pedido pasa a estar en la vista Pedidos Enviados`
 	);
-	newDiv.appendChild(newContent);
+	newLi.appendChild(newContent);
+	let mensaje = "mensaje"
 
-	let currentDiv = document.getElementById("mensaje");
-	document.body.appendChild(newDiv, currentDiv);
+	let currentDiv = document.getElementById(`${id_pedido}` + mensaje).append(newLi);
 }
 
 
