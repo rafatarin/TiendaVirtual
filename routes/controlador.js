@@ -89,7 +89,9 @@ controlador.put("/modificaStock/:id_articulo", handlers_ln.modificaStock);
 
 controlador.put("/modificaPrecio/:id_articulo", handlers_ln.modificaPrecio);
 
-controlador.post("/creaArticulo", handlers_ln.creaArticulo);
+controlador.get("/imagenUltima", handlers_ln.imagenUltima);
+
+controlador.post("/crearArticulo", handlers_ln.crearArticulo);
 
 controlador.post("/uploadArticulo", handlers_ln.modificaImagen)
 

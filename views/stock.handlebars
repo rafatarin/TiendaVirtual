@@ -29,34 +29,6 @@
           <input type='submit' value='Cambiar Imagen' />
         </form>
 
-
  </section>
-
  {{/each}}
- 
- <div id="nuevoProducto">
-<section id="formNuevo" class="formNuevo">
-    <p>Crea un nuevo producto</p>
-    <p>La imagen se debe incluir en la modificación de producto cuando ya se haya creado.</p>
-    <form id="form" action="/creaArticulo" method="POST">
-    <fieldset>
-        <label for="descripcion">Descripción:</label>
-        <input name="descripcion" type="text" id="descripcion" size="40">
-    </fieldset>
-    <fieldset>
-        <label for="stock">Stock Actual:</label>
-        <input name="stock" type="text" id="stock" size="3">
-    </fieldset>
-    <fieldset>
-        <label for="precio">Precio en Eur:</label>
-        <input name="precio" type="text" id="precio" size="3">
-    </fieldset>
-    <fieldset> Último nombre de imagen utilizado: {{imagenUltima}}
-      <label for="nombreImagen">Nombre Imagen:</label>
-        <input name="nombreImagen" type="text" id="nombreImagen" size="6">
-    </fieldset>
-        <input id="enviar" type="submit" value="Guardar">
-    </form>
-</section>
-</div>
-
+  

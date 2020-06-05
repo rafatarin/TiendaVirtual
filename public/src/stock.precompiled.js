@@ -42,9 +42,9 @@ templates['stock'] = template({"1":function(container,depth0,helpers,partials,da
     + alias4(((helper = (helper = lookupProperty(helpers,"imagen") || (depth0 != null ? lookupProperty(depth0,"imagen") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"imagen","hash":{},"data":data,"loc":{"start":{"line":25,"column":105},"end":{"line":25,"column":115}}}) : helper)))
     + "\n        <br><br>\n        <form ref='uploadForm' id='upload"
     + alias4(((helper = (helper = lookupProperty(helpers,"id_articulo") || (depth0 != null ? lookupProperty(depth0,"id_articulo") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id_articulo","hash":{},"data":data,"loc":{"start":{"line":27,"column":41},"end":{"line":27,"column":56}}}) : helper)))
-    + "' action='/uploadArticulo' method='post' encType=\"multipart/form-data\">\n          <input type=\"file\" name=\"sampleFile\" />\n          <input type='submit' value='Cambiar Imagen' />\n        </form>\n\n\n </section>\n\n";
+    + "' action='/uploadArticulo' method='post' encType=\"multipart/form-data\">\n          <input type=\"file\" name=\"sampleFile\" />\n          <input type='submit' value='Cambiar Imagen' />\n        </form>\n\n </section>\n";
 },"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
-    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), lookupProperty = container.lookupProperty || function(parent, propertyName) {
+    var stack1, lookupProperty = container.lookupProperty || function(parent, propertyName) {
         if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
           return parent[propertyName];
         }
@@ -52,9 +52,7 @@ templates['stock'] = template({"1":function(container,depth0,helpers,partials,da
     };
 
   return "\n\n\n"
-    + ((stack1 = lookupProperty(helpers,"each").call(alias1,(depth0 != null ? lookupProperty(depth0,"stock") : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data,"loc":{"start":{"line":4,"column":0},"end":{"line":35,"column":10}}})) != null ? stack1 : "")
-    + " \n <div id=\"nuevoProducto\">\n<section id=\"formNuevo\" class=\"formNuevo\">\n    <p>Crea un nuevo producto</p>\n    <p>La imagen se debe incluir en la modificación de producto cuando ya se haya creado.</p>\n    <form id=\"form\" action=\"/creaArticulo\" method=\"POST\">\n    <fieldset>\n        <label for=\"descripcion\">Descripción:</label>\n        <input name=\"descripcion\" type=\"text\" id=\"descripcion\" size=\"40\">\n    </fieldset>\n    <fieldset>\n        <label for=\"stock\">Stock Actual:</label>\n        <input name=\"stock\" type=\"text\" id=\"stock\" size=\"3\">\n    </fieldset>\n    <fieldset>\n        <label for=\"precio\">Precio en Eur:</label>\n        <input name=\"precio\" type=\"text\" id=\"precio\" size=\"3\">\n    </fieldset>\n    <fieldset> Último nombre de imagen utilizado: "
-    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"imagenUltima") || (depth0 != null ? lookupProperty(depth0,"imagenUltima") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"imagenUltima","hash":{},"data":data,"loc":{"start":{"line":54,"column":50},"end":{"line":54,"column":66}}}) : helper)))
-    + "\n      <label for=\"nombreImagen\">Nombre Imagen:</label>\n        <input name=\"nombreImagen\" type=\"text\" id=\"nombreImagen\" size=\"6\">\n    </fieldset>\n        <input id=\"enviar\" type=\"submit\" value=\"Guardar\">\n    </form>\n</section>\n</div>\n\n";
+    + ((stack1 = lookupProperty(helpers,"each").call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? lookupProperty(depth0,"stock") : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data,"loc":{"start":{"line":4,"column":0},"end":{"line":33,"column":10}}})) != null ? stack1 : "")
+    + "  ";
 },"useData":true});
 })();

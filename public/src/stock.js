@@ -25,6 +25,9 @@ async function buscaTodoStock() {
 }
 buscaTodoStock();
 
+
+
+
 /*
 async function modificaDesc() {
 	let descripcion = document.getElementById("descripcion").value;
