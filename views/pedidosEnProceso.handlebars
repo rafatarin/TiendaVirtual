@@ -1,18 +1,16 @@
-
-
 <h1 id="stock"><strong> Pedidos en Proceso: </strong></h1>
 <div class="divEnlaces">
 <a class="enlaces" href="/pedidosEnviados">Pasa a vista Pedidos Enviados</a>
 <a  class="enlaces" href="/historicoPedidos">Pasa a vista Histórico de Pedidos</a>
-<a class="enlaces" id="generarPDF" href="/imprimirPDF"> Generar PDF</a>
 
 </div>
 
 {{#if enProceso}}
 {{#each enProceso}}
 
-<div class="listaPedido" id="imprimir">
+<div name="divPedido" class="listaPedido">
 <ul id="{{id_pedido}}mensaje">	
+<a href="/detallePedido/{{id_pedido}}">Detalle Pedido</a>
 <li>Id pedido: {{id_pedido}}</li>
 <li>Productos: {{descripcion}}</li>
 <li>Cantidad: {{cantidad}}</li>
@@ -48,6 +46,9 @@ async function sendValue(req, res){
 } 
 
 document.getElementById("{{id_cliente}}").addEventListener("click", sendValue);
+
 </script>
 {{/each}}
 {{/if}}
+
+

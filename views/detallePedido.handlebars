@@ -1,0 +1,21 @@
+<h1 id="stock"><strong> Detalle Pedido: </strong></h1>
+<div class="divEnlaces">
+<a class="enlaces" href="/pedidosEnProceso">Pasa a vista Pedidos En Proceso</a>
+<a class="enlaces" id="generarPDF" href="/imprimirPDF"> Generar PDF</a>
+</div>
+
+{{#each detallePedido}}
+
+
+<div name="divPedido" class="listaPedido" id="imprimir">
+<ul>	
+<li>Id pedido: {{id_pedido}}</li>
+<li>Productos: {{descripcion}}</li>
+<li>Cantidad: {{cantidad}}</li>
+<li>Precio Unidad: €{{precio}}</li> 
+{{/each}}
+<li>Subtotal: €{{sumaPrecio}}</li>
+<li>Precio Iva: € {{precioIVA}}</li>
+<li>Total Factura: €{{totalFactura}}</li>
+</ul>
+</div>
