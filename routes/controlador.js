@@ -75,6 +75,8 @@ controlador.get("/pedidosEnProceso", handlers_ln.pedidosEnProceso);
 
 controlador.get("/pedidosEnviados", handlers_ln.pedidosEnviados);
 
+controlador.get("/detallePedido/:id_pedido", handlers_ln.detallePedido);
+
 controlador.get("/historicoPedidos", handlers_ln.historicoPedidos);
 
 controlador.put("/actualizaProceso/:id_pedido", handlers_ln.actualizaProceso);
