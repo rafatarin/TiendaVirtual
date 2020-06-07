@@ -240,27 +240,6 @@ async function getData() {
 
 console.log(fecha, usuario)
 
-/*
-    for (let i in data) {
-        usuarios.push(data[i].usuarios);
-        console.log("usuarios" + usuarios);
-        dates.push(data[i].dates);
-        console.log("dates " + dates);
-}
-
-/*
-   } for (var i = 0; i>=dates.length; i++) {
-       otrasDate.push(dates[i])
-   }
-   console.log(otrasDate)
-
-newFechas.push(dates[0]);
-
-        newFechas1 = newFechas[0];
-
-        newFechas1finally = newFechas1.split("T");
-
-                console.log(newFechas1finally[0])   */
 
 
 

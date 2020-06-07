@@ -35,7 +35,7 @@
 }
 
 #muestra {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 #muestraAdmin {
@@ -141,7 +141,6 @@ ul > li {
 }
 
 
-
 .listaPedido {
   margin-top: 3%;
   border: 0.5px solid grey;
@@ -151,12 +150,13 @@ ul > li {
 }
 
 .containerCanvas {
-  width: 60%;
+  width: 80%;
   margin-top: 3%;
   height: 50%;
 }
 #grafica {
-  margin-left: 25%;
+  margin-left: 15%;
+  
 }
 
 

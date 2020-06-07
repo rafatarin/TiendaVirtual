@@ -8,7 +8,7 @@ templates['clientes'] = template({"1":function(container,depth0,helpers,partials
         return undefined
     };
 
-  return "    <div class=\"col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 mb-5\">\n    	<figure class=\"user-card green\">\n			<figcaption>\n				<img src=\"https://bootdey.com/img/Content/avatar/avatar1.png\" alt=\"Milestone Admin\" class=\"profile\">\n				<h5>"
+  return "<div class=\"container page-container\">\n	\n<div class=\"row gutters\">\n    \n    <div class=\"col-lg-4 col-md-4 col-sm-4 col-3 mb-5\">\n    	<figure class=\"user-card green\">\n			<figcaption>\n				\n				<img src=\"https://bootdey.com/img/Content/avatar/avatar1.png\" alt=\"Milestone Admin\" class=\"profile\">\n				<h5>"
     + alias4(((helper = (helper = lookupProperty(helpers,"Nombre") || (depth0 != null ? lookupProperty(depth0,"Nombre") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"Nombre","hash":{},"data":data,"loc":{"start":{"line":11,"column":8},"end":{"line":11,"column":18}}}) : helper)))
     + " "
     + alias4(((helper = (helper = lookupProperty(helpers,"apellido1") || (depth0 != null ? lookupProperty(depth0,"apellido1") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"apellido1","hash":{},"data":data,"loc":{"start":{"line":11,"column":19},"end":{"line":11,"column":32}}}) : helper)))
@@ -24,7 +24,7 @@ templates['clientes'] = template({"1":function(container,depth0,helpers,partials
     + alias4(((helper = (helper = lookupProperty(helpers,"poblacion") || (depth0 != null ? lookupProperty(depth0,"poblacion") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"poblacion","hash":{},"data":data,"loc":{"start":{"line":21,"column":35},"end":{"line":21,"column":48}}}) : helper)))
     + "\n                    </li>\n                    <li>\n                        Rol: "
     + alias4(((helper = (helper = lookupProperty(helpers,"rol") || (depth0 != null ? lookupProperty(depth0,"rol") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"rol","hash":{},"data":data,"loc":{"start":{"line":24,"column":29},"end":{"line":24,"column":36}}}) : helper)))
-    + "\n                    </li>\n				</ul>\n			</figcaption>\n		</figure>\n	</div>";
+    + "\n                    </li>\n				</ul>\n			</figcaption>\n		</figure>\n	</div>\n</div>\n</div>\n";
 },"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, lookupProperty = container.lookupProperty || function(parent, propertyName) {
         if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
@@ -33,8 +33,7 @@ templates['clientes'] = template({"1":function(container,depth0,helpers,partials
         return undefined
     };
 
-  return "\n\n\n<div class=\"container page-container\">\n<div class=\"row gutters\">\n"
-    + ((stack1 = lookupProperty(helpers,"each").call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? lookupProperty(depth0,"clientes") : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data,"loc":{"start":{"line":6,"column":4},"end":{"line":29,"column":16}}})) != null ? stack1 : "")
-    + "\n</div>\n</div>\n\n\n\n\n\n";
+  return ((stack1 = lookupProperty(helpers,"each").call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? lookupProperty(depth0,"clientes") : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data,"loc":{"start":{"line":1,"column":0},"end":{"line":32,"column":9}}})) != null ? stack1 : "")
+    + "\n";
 },"useData":true});
 })();

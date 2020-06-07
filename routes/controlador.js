@@ -111,9 +111,10 @@ controlador.post("/pedidosGuardados/:id", handlers_ln.guardarArticulos);
 
 controlador.get("/articulosGuardados", handlers_ln.articulosGuardados)
 
-controlador.post("/articulosGuardados/:id", handlers_ln.articulosGuardados);
+controlador.get("/misArticulos", handlers_ln.guardarArticulos);
 
-controlador.get("/factura", handlers_ln.facturacion);
+controlador.get("/carrito", handlers_ln.articulosGuardados);
+
 
 
 

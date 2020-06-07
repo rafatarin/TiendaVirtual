@@ -1,12 +1,12 @@
-
-
-
+{{#each clientes}}
 <div class="container page-container">
+	
 <div class="row gutters">
-    {{#each clientes}}
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
+    
+    <div class="col-lg-4 col-md-4 col-sm-4 col-3 mb-5">
     	<figure class="user-card green">
 			<figcaption>
+				
 				<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Milestone Admin" class="profile">
 				<h5>{{Nombre}} {{apellido1}} {{apellido2}}</h5>
 				<h6>Id de cliente: {{id_cliente}}</h6>
@@ -26,11 +26,8 @@
 				</ul>
 			</figcaption>
 		</figure>
-	</div>{{/each}}
+	</div>
 </div>
 </div>
-
-
-
-
+{{/each}}
 
