@@ -1,13 +1,11 @@
+{{#each detallePedido}}
 <h1 id="stock"><strong> Detalle Pedido: </strong></h1>
 <div class="divEnlaces">
 <a class="enlaces" href="/pedidosEnProceso">Pasa a vista Pedidos En Proceso</a>
-<a class="enlaces" id="generarPDF" href="/imprimirPDF"> Generar PDF</a>
+<a class="enlaces" id="generarPDF" href="/imprimir/{{id_pedido}}"> Generar PDF</a>
 </div>
 
-{{#each detallePedido}}
-
-
-<div name="divPedido" class="listaPedido" id="imprimir">
+<div name="divPedido" class="listaPedido" id="imprimir/{{id_pedido}}">
 <ul>	
 <li>Id pedido: {{id_pedido}}</li>
 <li>Productos: {{descripcion}}</li>

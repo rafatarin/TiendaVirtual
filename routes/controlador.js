@@ -77,6 +77,10 @@ controlador.get("/pedidosEnviados", handlers_ln.pedidosEnviados);
 
 controlador.get("/detallePedido/:id_pedido", handlers_ln.detallePedido);
 
+controlador.get("/detallePedidoEnv/:id_pedido", handlers_ln.detallePedidoEnv);
+
+controlador.get("/imprimir/:id_pedido", handlers_ln.imprimir);
+
 controlador.get("/historicoPedidos", handlers_ln.historicoPedidos);
 
 controlador.put("/actualizaProceso/:id_pedido", handlers_ln.actualizaProceso);
