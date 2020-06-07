@@ -34,12 +34,20 @@ templates['stock'] = template({"1":function(container,depth0,helpers,partials,da
     + alias4(((helper = (helper = lookupProperty(helpers,"id_articulo") || (depth0 != null ? lookupProperty(depth0,"id_articulo") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id_articulo","hash":{},"data":data,"loc":{"start":{"line":18,"column":52},"end":{"line":18,"column":67}}}) : helper)))
     + "\" value=\""
     + alias4(((helper = (helper = lookupProperty(helpers,"precio") || (depth0 != null ? lookupProperty(depth0,"precio") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"precio","hash":{},"data":data,"loc":{"start":{"line":18,"column":76},"end":{"line":18,"column":86}}}) : helper)))
-    + "\" size=\"3\">\n        <button class=\"btModificarPrecio\">Modificar</button><br/>\n        </article>\n        <article>\n         <img src=\"./img/"
-    + alias4(((helper = (helper = lookupProperty(helpers,"imagen") || (depth0 != null ? lookupProperty(depth0,"imagen") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"imagen","hash":{},"data":data,"loc":{"start":{"line":22,"column":25},"end":{"line":22,"column":35}}}) : helper)))
+    + "\" size=\"3\">\n        <button class=\"btModificarPrecio\">Modificar</button><br/>\n        </article>\n        <article>\n        <label for=\"categoria"
+    + alias4(((helper = (helper = lookupProperty(helpers,"id_articulo") || (depth0 != null ? lookupProperty(depth0,"id_articulo") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id_articulo","hash":{},"data":data,"loc":{"start":{"line":22,"column":29},"end":{"line":22,"column":44}}}) : helper)))
+    + "\">Categoría: "
+    + alias4(((helper = (helper = lookupProperty(helpers,"categoria") || (depth0 != null ? lookupProperty(depth0,"categoria") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"categoria","hash":{},"data":data,"loc":{"start":{"line":22,"column":57},"end":{"line":22,"column":70}}}) : helper)))
+    + "</label><br/>\n        <input name=\"categoria\" type=\"text\" id=\"categoria-"
+    + alias4(((helper = (helper = lookupProperty(helpers,"id_articulo") || (depth0 != null ? lookupProperty(depth0,"id_articulo") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id_articulo","hash":{},"data":data,"loc":{"start":{"line":23,"column":58},"end":{"line":23,"column":73}}}) : helper)))
+    + "\" value=\""
+    + alias4(((helper = (helper = lookupProperty(helpers,"categoria") || (depth0 != null ? lookupProperty(depth0,"categoria") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"categoria","hash":{},"data":data,"loc":{"start":{"line":23,"column":82},"end":{"line":23,"column":95}}}) : helper)))
+    + "\" size=\"20\">\n        <button class=\"btModificarCategoria\">Modificar</button><br/>\n        </article>\n        <article>\n         <img src=\"./img/"
+    + alias4(((helper = (helper = lookupProperty(helpers,"imagen") || (depth0 != null ? lookupProperty(depth0,"imagen") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"imagen","hash":{},"data":data,"loc":{"start":{"line":27,"column":25},"end":{"line":27,"column":35}}}) : helper)))
     + "\" img class=\"imagenStock\" alt=\"imagen Producto\">Nombre de la imagen: "
-    + alias4(((helper = (helper = lookupProperty(helpers,"imagen") || (depth0 != null ? lookupProperty(depth0,"imagen") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"imagen","hash":{},"data":data,"loc":{"start":{"line":22,"column":104},"end":{"line":22,"column":114}}}) : helper)))
+    + alias4(((helper = (helper = lookupProperty(helpers,"imagen") || (depth0 != null ? lookupProperty(depth0,"imagen") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"imagen","hash":{},"data":data,"loc":{"start":{"line":27,"column":104},"end":{"line":27,"column":114}}}) : helper)))
     + "\n        <br><br>\n        <form ref='uploadForm' id='upload"
-    + alias4(((helper = (helper = lookupProperty(helpers,"id_articulo") || (depth0 != null ? lookupProperty(depth0,"id_articulo") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id_articulo","hash":{},"data":data,"loc":{"start":{"line":24,"column":41},"end":{"line":24,"column":56}}}) : helper)))
+    + alias4(((helper = (helper = lookupProperty(helpers,"id_articulo") || (depth0 != null ? lookupProperty(depth0,"id_articulo") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id_articulo","hash":{},"data":data,"loc":{"start":{"line":29,"column":41},"end":{"line":29,"column":56}}}) : helper)))
     + "' action='/uploadArticulo' method='post' encType=\"multipart/form-data\">\n          <input type=\"file\" name=\"sampleFile\" />\n          <input type='submit' value='Cambiar Imagen' />\n        </form>\n\n </section>\n";
 },"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, lookupProperty = container.lookupProperty || function(parent, propertyName) {
@@ -50,7 +58,7 @@ templates['stock'] = template({"1":function(container,depth0,helpers,partials,da
     };
 
   return "\n"
-    + ((stack1 = lookupProperty(helpers,"each").call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? lookupProperty(depth0,"stock") : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data,"loc":{"start":{"line":2,"column":0},"end":{"line":30,"column":10}}})) != null ? stack1 : "")
+    + ((stack1 = lookupProperty(helpers,"each").call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? lookupProperty(depth0,"stock") : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data,"loc":{"start":{"line":2,"column":0},"end":{"line":35,"column":10}}})) != null ? stack1 : "")
     + "  ";
 },"useData":true});
 })();

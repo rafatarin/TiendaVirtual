@@ -19,6 +19,11 @@
         <button class="btModificarPrecio">Modificar</button><br/>
         </article>
         <article>
+        <label for="categoria{{id_articulo}}">Categoría: {{categoria}}</label><br/>
+        <input name="categoria" type="text" id="categoria-{{id_articulo}}" value="{{categoria}}" size="20">
+        <button class="btModificarCategoria">Modificar</button><br/>
+        </article>
+        <article>
          <img src="./img/{{imagen}}" img class="imagenStock" alt="imagen Producto">Nombre de la imagen: {{imagen}}
         <br><br>
         <form ref='uploadForm' id='upload{{id_articulo}}' action='/uploadArticulo' method='post' encType="multipart/form-data">
