@@ -8,11 +8,11 @@ templates['pdfPedido'] = template({"1":function(container,depth0,helpers,partial
         return undefined
     };
 
-  return "<script>const url = \"../src/pdfs/"
-    + alias4(((helper = (helper = lookupProperty(helpers,"pedido") || (depth0 != null ? lookupProperty(depth0,"pedido") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"pedido","hash":{},"data":data,"loc":{"start":{"line":2,"column":33},"end":{"line":2,"column":43}}}) : helper)))
+  return "<script>const url = \"../pdfs/"
+    + alias4(((helper = (helper = lookupProperty(helpers,"pedido") || (depth0 != null ? lookupProperty(depth0,"pedido") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"pedido","hash":{},"data":data,"loc":{"start":{"line":2,"column":29},"end":{"line":2,"column":39}}}) : helper)))
     + ".pdf\"</script>\n   <div id=\""
     + alias4(((helper = (helper = lookupProperty(helpers,"pedido") || (depth0 != null ? lookupProperty(depth0,"pedido") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"pedido","hash":{},"data":data,"loc":{"start":{"line":3,"column":12},"end":{"line":3,"column":22}}}) : helper)))
-    + "\" class=\"top-bar\">\n      <button class=\"btn\" id=\"prev-page\">\n        <i class=\"fas fa-arrow-circle-left\"></i> Prev Page\n      </button>\n      <button class=\"btn\" id=\"next-page\">\n        Next Page <i class=\"fas fa-arrow-circle-right\"></i>\n      </button>\n      <span class=\"page-info\">\n        Page <span id=\"page-num\"></span> of <span id=\"page-count\"></span>\n      </span>\n    </div>\n    \n	<canvas id=\"pdf-render\"></canvas>\n	<script src=\"https://mozilla.github.io/pdf.js/build/pdf.js\"></script>\n    <script type=\"text/javascript\" src=\"../src/pdfPedido.js\"></script>\n\n";
+    + "\" class=\"top-bar\">\n      <button class=\"btn\" id=\"prev-page\">\n        <i class=\"fas fa-arrow-circle-left\"></i> Prev Page\n      </button>\n      <button class=\"btn\" id=\"next-page\">\n        Next Page <i class=\"fas fa-arrow-circle-right\"></i>\n      </button>\n      <span class=\"page-info\">\n        Page <span id=\"page-num\"></span> of <span id=\"page-count\"></span>\n      </span>\n    </div>\n    \n  <canvas id=\"pdf-render\"></canvas>\n  <script src=\"https://mozilla.github.io/pdf.js/build/pdf.js\"></script>\n    <script type=\"text/javascript\" src=\"../src/pdfPedido.js\"></script>\n\n";
 },"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, lookupProperty = container.lookupProperty || function(parent, propertyName) {
         if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
