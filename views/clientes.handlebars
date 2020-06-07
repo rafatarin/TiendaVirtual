@@ -1,16 +1,36 @@
 
-{{#each clientes}}
 
-<div class="clientes">
-<ul>	
-<li>Id_cliente: {{id_cliente}}</li>
-<li>Nombre: {{nombre}}</li>
-<li>Primer Apellido: {{apellido1}}</li>
-<li>Segundo Apellido: {{apellido2}}</li>
-<li>Usuario: {{usuario}}</li>
-<li>Email: {{email}}</li>
-<li>Población: {{poblacion}}</li>
-</ul>
+
+<div class="container page-container">
+<div class="row gutters">
+    {{#each clientes}}
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
+    	<figure class="user-card green">
+			<figcaption>
+				<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Milestone Admin" class="profile">
+				<h5>{{Nombre}} {{apellido1}} {{apellido2}}</h5>
+				<h6>Id de cliente: {{id_cliente}}</h6>
+				<p>Usuario: {{usuario}}</p>
+				<ul class="contacts">
+					<li>
+						Email: <a href="#">
+							{{email}}
+						</a>
+					</li>
+                    <li>
+                        Dirección: {{poblacion}}
+                    </li>
+                    <li>
+                        Rol: {{rol}}
+                    </li>
+				</ul>
+			</figcaption>
+		</figure>
+	</div>{{/each}}
 </div>
-{{/each}}
+</div>
+
+
+
+
 

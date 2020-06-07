@@ -1,16 +1,26 @@
 <br><br><br><br><br>
-<h1><strong> Pedidos Guardados: </strong></h1>
-{{#if datosGuardados}}
+<h1><strong> Tu carro de compra: </strong></h1>
 {{#each datosGuardados}}
-<ul>
-	<li>Productos: {{descripcion}}</li><br>
-	<li>Precio: {{precio}} €</li><br>
-	<img src="../img/{{imagen}}" alt="" class="w-25"><br><br><br><br>
-</ul>
+<div class="card" style="width: 18rem;">
+    
+    <img class="card-img-top" src="/img/{{imagen}}" alt="Card image cap">
+    <div class="card-body">
+        <p class="card-text">{{descripcion}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Precio: {{precio}}</li>
+    </ul>
+
+
+</div>
 
 {{/each}}
-{{/if}}
-	<li>Cantidad:{{cantidad}} <button id="id_pedido">Modificar cantidad</button></li><br>
+</div>
 
 
-<button id="guardarArticulos">Guardar artículos</button>
+
+
+
+<br><br>
+
+    <button id="guardarArticulos">Guardar artículos</button><br><br>

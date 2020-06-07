@@ -113,6 +113,9 @@ controlador.get("/articulosGuardados", handlers_ln.articulosGuardados)
 
 controlador.post("/articulosGuardados/:id", handlers_ln.articulosGuardados);
 
+controlador.get("/factura", handlers_ln.facturacion);
+
+
 
 // controlador.put("/seleccionaCantidad/:id_pedido", handlers_ln.seleccionaCantidad)
 

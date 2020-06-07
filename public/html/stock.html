@@ -1,39 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Mantenimiento Stock</title>
-		<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js"></script>
-		<script
-			type="text/javascript"
-			src="../src/stock.precompiled.js"
-		></script>
-		<script type="text/javascript" src="../src/stock.js" async></script>
-		<link rel="stylesheet" href="../css/stylesAdmin.css" />
-	</head>
-	<body>
-		<header>
-    <div>
-                    <div id="header">
-                                   
-                        <a class="enlaces" href="/salir">Cerrar sesión</a>
-                        <a class="enlaces" href="/admin">Regresar a zona Administrador</a>
-                </div>
-</header>	
+  <head>
+    <title>Pedidos Salus</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	 <link rel="stylesheet" href="../css/styleAdministrador.css" type="text/css">
+	 
+
+  <script type="text/javascript" src="../src/estadisticas.js" type="text/javascript" async></script>
+  <script type="text/javascript" src="../src/pedidosEnProceso.js" type="text/javascript" async></script>
+  <script type="text/javascript" src="../src/pedidosEnviados.js" type="text/javascript" async></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js" async></script>
+  <script type="text/javascript" src="../src/stock.precompiled.js" async></script>
+  <script type="text/javascript" src="../src/stock.js" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Proyecto Pedidos</title>
+  </head>
+  <body>
+        
+        <div class="wrapper d-flex align-items-stretch">
+            <nav id="sidebar">
+                <div class="custom-menu">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+        </div>
+                <div class="p-4">
+                <h1><a href="/admin" class="logo">Hola Jano<span>Administrador</span></a></h1>
+            <ul class="list-unstyled components mb-5">
+              <li class="">
+                <a href="/admin"><span class="fa fa-home mr-3"></span> Inicio</a>
+              </li>
+              <li>
+                  <a href="/clientes"><span class="fa fa-user mr-3"></span>Datos clientes</a>
+              </li>
+              <li>
+              <a href="/datos"><span class="fa fa-briefcase mr-3"></span> Estadísticas</a>
+              </li>
+              <li>
+              <a href="/stock"><span class="fa fa-sticky-note mr-3"></span> Stock</a>
+              </li>
+              <li>
+              <a href="/pedidosEnProceso"><span class="fa fa-suitcase mr-3"></span> Pedidos en proceso</a>
+              </li>
+              <li>
+              <a href="/salir"><span class="fa fa-paper-plane mr-3"></span> Cerrar Sesión</a>
+              </li>
+            </ul>
+
+          </div>
+        </nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4">
 		<h1 id="stock">Mantenimiento Stock</h1>
-		<div id="selectCat">
+		<div id="selectCat" class="ml-4">
 			<p>
 				<input type="text" name="search" id="id_text_search" /><input type="submit"  
 					value="Buscar"
 					id="id_search"
-				/>
-				
-	<div>
-		<a class="enlaces" href="/imagenUltima">Crear Articulo Nuevo</a>
-	</div>
-				
-			</p>
+        />
+        <div>
+				<a class="ml-4 btn btn-primary enlaces" href="/imagenUltima">Crear Articulo Nuevo</a>
 		</div>
-		<section id="resultados"></section>
-	</body>
+				
+  </p>
+
+				
+			
+		
+		<section id="resultados" class=""></section>     
+    </div>
+
+    <script src="../src/scriptsAdministrador/jquery.min.js"></script>
+    <script src="../src/scriptsAdministrador/popper.js"></script>
+    <script src="../src/scriptsAdministrador/bootstrap.min.js"></script>
+	<script src="../src/scriptsAdministrador/main.js"></script>
+	<link rel="stylesheet" href="../css/stylesAdmin.css" type="text/css">
+  </body>
 </html>

@@ -28,28 +28,6 @@ buscaTodoStock();
 
 
 
-/*
-async function modificaDesc() {
-	let descripcion = document.getElementById("descripcion").value;
-	console.log(descripcion);
-	let respuesta = await fetch(
-		`http://localhost:3000/descripcion/${descripcion}`,
-		{
-			method: "PUT",
-			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify({ descripcion: descripcion}),
-		}
-	);
-			let respuestaJson = await respuesta.json();
-			console.log(respuestaJson);
-	}
-
-document
-	.getElementById("{{id_articulo}}_desc")
-	.addEventListener("click", modificaDesc);
-
-*/
-
 async function procesarDesc(e){
 	let actualizarPulsado = e.target.className === "btModificar";
 	console.log(actualizarPulsado)

@@ -11,7 +11,7 @@ var MemoryStore = require('memorystore')(sesion)
 var admin = require("firebase-admin");
 const fileUpload = require('express-fileupload');
 const path = require("path");
-var pdfMake = require("pdfmake")
+
 
 app.set("port", port);
 

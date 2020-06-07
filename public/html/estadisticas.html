@@ -1,21 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Estadísticas</title>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-		 <script src="https://cdn.jsdelivr.net/npm/jsonata/jsonata.min.js"></script> 
-    	<link rel="stylesheet" href="../css/stylesAdmin.css" type="text/css" />
-	</head>
-	<body>
-		<header>
-			<div id="header">
-				<a class="enlaces" href="/salir">Cerrar sesión</a>
-				<a class="enlaces" href="/admin"
-					>Regresar a zona Administrador</a
-				>
-			</div>
-		</header>
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Pedidos Salus</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	 <link rel="stylesheet" href="../css/styleAdministrador.css" type="text/css">
+	 <link rel="stylesheet" href="../css/stylesAdmin.css" type="text/css" />
+	 <script src="https://cdn.jsdelivr.net/npm/jsonata/jsonata.min.js" ></script> 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" ></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js" async></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Proyecto Pedidos</title>
+  </head>
+  <body>
+        
+        <div class="wrapper d-flex align-items-stretch">
+            <nav id="sidebar">
+                <div class="custom-menu">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+        </div>
+                <div class="p-4">
+                <h1><a href="#" class="logo">Hola Jano<span>Administrador</span></a></h1>
+            <ul class="list-unstyled components mb-5">
+              <li class="">
+                <a href="/admin"><span class="fa fa-home mr-3"></span> Inicio</a>
+              </li>
+              <li>
+                  <a href="/clientes"><span class="fa fa-user mr-3"></span>Datos clientes</a>
+              </li>
+              <li>
+              <a href="/estadisticas"><span class="fa fa-briefcase mr-3"></span> Estadísticas</a>
+              </li>
+              <li>
+              <a href="/stock"><span class="fa fa-sticky-note mr-3"></span> Stock</a>
+              </li>
+              <li>
+              <a href="/historico"><span class="fa fa-suitcase mr-3"></span>Histórico pedidos </a>
+              </li>
+              <li>
+              <a href="/salir"><span class="fa fa-paper-plane mr-3"></span> Cerrar Sesión</a>
+              </li>
+            </ul>
+
+          </div>
+        </nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
 		<div><button id="muestra">Prueba</button></div>
 		<div class="container">
 			<canvas id="grafica"></canvas>
@@ -24,6 +59,12 @@
 			<option value="productos_mas">Productos Más Comprados</option>
 			<option value="productos_menos">Productos Menos Comprados</option>
 		</select>
-	</body>
-	<!--<script type="text/javascript" src="/src/estadisticas.js"></script>-->
+		</div>
+	</div>
+	<script src="../src/estadisticas.js"></script>
+	<script src="../src/scriptsAdministrador/jquery.min.js"></script>
+    <script src="../src/scriptsAdministrador/popper.js"></script>
+    <script src="../src/scriptsAdministrador/bootstrap.min.js"></script>
+    <script src="../src/scriptsAdministrador/main.js"></script>
+  </body>
 </html>
