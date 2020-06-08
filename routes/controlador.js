@@ -115,6 +115,8 @@ controlador.get("/articulosGuardados", handlers_ln.articulosGuardados)
 
 controlador.get("/misArticulos", handlers_ln.guardarArticulos);
 
+controlador.get("/facturacion", handlers_ln.facturacion)
+
 controlador.get("/carrito", handlers_ln.articulosGuardados);
 
 
