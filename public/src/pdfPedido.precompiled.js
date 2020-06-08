@@ -22,6 +22,6 @@ templates['pdfPedido'] = template({"1":function(container,depth0,helpers,partial
     };
 
   return ((stack1 = lookupProperty(helpers,"if").call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? lookupProperty(depth0,"pedido") : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data,"loc":{"start":{"line":1,"column":1},"end":{"line":19,"column":11}}})) != null ? stack1 : "")
-    + "\n";
+    + "\n\n";
 },"useData":true});
 })();

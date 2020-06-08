@@ -25,12 +25,8 @@ async function buscaTodoStock() {
 }
 buscaTodoStock();
 
-
-
-
 async function procesarDesc(e){
 	let actualizarPulsado = e.target.className === "btModificar";
-	console.log(actualizarPulsado)
 	if (actualizarPulsado){
 		let descr = e.target.parentElement.childNodes[3].id;
 		console.log(descr)
@@ -51,15 +47,7 @@ async function procesarDesc(e){
 document
 	.getElementById("resultados")
 	.addEventListener("click", procesarDesc);
-
-/*document.getElementById("resultados").addEventListener("keyup", function(event){
-event.preventDefault();
-    if (event.keyCode == 13) {
-        procesarDesc;
-    }
-});
-*/
-    
+  
     
 async function procesarStock(e){
 	let actualizarStock = e.target.className === "btModificarStock";
@@ -102,13 +90,29 @@ document
 	.getElementById("resultados")
 	.addEventListener("click", procesarPrecio);
 
-/*document.getElementById("id_of_textbox")
-    .addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("id_of_button").click();
-    }
-});*/
 
+async function procesarCategoria(e){
+	console.log(e)
+	let actualizarCategoria = e.target.className === "btModificarCategoria";
+	console.log(actualizarCategoria)
+	if (actualizarCategoria){
+		let categoria = e.target.id;
+		console.log(categoria);		
+		let sacoNum = categoria.split("-");
+		console.log(sacoNum);
+		let id_articulo = sacoNum[1];
+		console.log(id_articulo)
+		let nuevaCategoria = sacoNum[0];
+		let respuesta = await fetch(`http://localhost:3000/modificaCategoria/${id_articulo}`, {
+										method: 'POST',
+										headers: {"Content-Type":"application/json"},
+										body: JSON.stringify({categoria: nuevaCategoria})
+								});
+		let respuestaJson = await respuesta.json();
+		buscaTodoStock();
+}
+}
+document
+	.getElementById("resultados")
+	.addEventListener("click", procesarCategoria);
 
-    

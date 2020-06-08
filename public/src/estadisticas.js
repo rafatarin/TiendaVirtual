@@ -78,14 +78,14 @@ async function usuariosRegistrados() {
     let chart = new Chart(miCanvas2, {
     
         
-         type: "horizontalBar",
+         type: "line",
         data: {
-            labels: usuario,
+            labels: fecha,
             datasets: [
                 {
                     label: "Vista Productos Comprados",
                     backgroundColor: "rgb(255,255,0)",
-                            data: fecha,
+                            data: usuario,
             backgroundColor: [
                 
     'rgba(30, 99, 132, 0.6)',
@@ -152,15 +152,11 @@ document.getElementById("vistaClientes").addEventListener("click", usuariosRegis
                 {
                     label: "Vista Productos Comprados según la población",
                     backgroundColor: "rgb(255,255,0)",
-                            data: productos,
+                            data: cantidad,
             backgroundColor: [
                 
     'rgba(30, 99, 132, 0.6)',
-    'rgba(60, 99, 132, 0.6)',
-    'rgba(90, 99, 132, 0.6)',
     'rgba(120, 99, 132, 0.6)',
-    'rgba(150, 99, 132, 0.6)',
-    'rgba(180, 99, 132, 0.6)',
     'rgba(210, 99, 132, 0.6)',
     'rgba(240, 99, 132, 0.6)',
     'rgba(30, 99, 132, 0.6)',
@@ -206,6 +202,7 @@ async function getData2() {
 	y = [];
 	let resultado = await fetch(`http://localhost:3000/datosGraf2`);
 	let data = await resultado.json();
+    console.log(data)
 	for (let i in data) {
 		x.push(data[i].articulos);
 		y.push(data[i].cantidad);
@@ -218,8 +215,8 @@ let fecha;
 
 async function getData() {
 
-    usuario = [];
-    fecha = [];
+    usuario = [1,1,3,1];
+    fecha = ["Enero", "Febrero", "Abril", "Junio"];
 
 	let resultado = await fetch(`http://localhost:3000/datosGraf`);
 	let data = await resultado.json();
@@ -243,20 +240,16 @@ console.log(fecha, usuario)
 
 
 
-let productos;
+let cantidad;
 let poblacion;
 
 async function getData3() {
-    x = productos;
-    y = poblacion;
+    cantidad = [5,3,3];
+    poblacion =["castellón", "kingston", "springsfield"];
     
     let resultado = await fetch(`http://localhost:3000/datosGraf3`);
     let data = await resultado.json();
-    console.log(data);
-    for (let i in data) {
-        productos.push(data[i].articulos);
-        console.log("productos" + productos);
-        poblacion.push(data[i].poblacion);
-        console.log("poblacion" + poblacion);
+    console.log(data) 
     }
-}
+    
+
