@@ -1,0 +1,12 @@
+<h1>SELECCIONA EL ARTICULO A GUARDAR AL CARRITO</h1>
+
+{{#if registros}}
+       {{#each registros}}
+        <p>Nº articulo: {{id_articulo}} -
+        categoria: {{categoria}} -
+        descripcion: {{descripcion}} -
+        precio: {{precio}}€ -
+        <button onclick="/carrito">añadir al carrito</button>
+        <img src="../img/{{id_articulo}}.webp" alt="chancla_producto" class="img_product" width="50" height="50"></p>
+    {{/each}}
+{{/if}}

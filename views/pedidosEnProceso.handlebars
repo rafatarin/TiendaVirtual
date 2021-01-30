@@ -1,0 +1,89 @@
+<h1 id="stock"><strong> Pedidos en Proceso: </strong></h1>
+<div class="divEnlaces">
+<a class="enlaces" href="/pedidosEnviados"><button class="btn btn-primary mr-3"> Pedidos Enviados</button></a>
+<a  class="enlaces" href="/historicoPedidos"><button class="btn btn-primary mr-3">Histórico de Pedidos</button></a>
+
+</div>
+<div>
+	
+</div>
+
+
+<table name="divPedido"  class="table">
+	  
+  <thead class="thead-dark">
+	
+    <tr>
+	  <th class="text-center"></th>
+      <th class="text-center">Id pedido</th>
+      <th class="text-center">Productos</th>
+      <th class="text-center">Cantidad</th>
+      <th class="text-center">Enviado</th>
+	  <th class="text-center">Guardar</th>
+    </tr>
+  </thead> 
+  <tbody>
+{{#if enProceso}}			
+		{{#each enProceso}}
+    <tr id="{{id_pedido}}mensaje">
+		
+		<p class="text-center">{{mensaje}}</p>
+	  <td> <a href="/detallePedido/{{id_pedido}}">Detalle Pedido</a></td>
+	  <td class="text-center">{{id_pedido}}</td>
+      <td class="text-center">{{descripcion}}</td>
+      <td class="text-center">{{cantidad}}</td>
+	  <td class="text-center"><input id="{{id_pedido}}" name="miCheck" type="checkbox"></td>
+	  <td class="text-center"><button id="{{id_pedido}}button">Guardar</button></td>
+	  </th>
+    </tr>
+{{/each}}
+{{/if}}
+  </tbody>
+</table>
+
+
+ <!--
+<div name="divPedido" class="card">
+<ul id="{{id_pedido}}mensaje">	
+<a href="/detallePedido/{{id_pedido}}">Detalle Pedido</a>
+<li>Id pedido: {{id_pedido}}</li>
+<li>Productos: {{descripcion}}</li>
+<li>Cantidad: {{cantidad}}</li>
+<label><input id="{{id_pedido}}" name="miCheck" type="checkbox"> Enviado</label>
+<li><button id="{{id_pedido}}button">Guardar</button></li>
+<li>{{mensaje}}</li>
+</ul>
+</div> -->
+
+
+{{#if enProceso}}			
+		{{#each enProceso}}
+<script async>
+async function alertaValue(req, res){ 
+   	const check = document.getElementById("{{id_pedido}}");
+   	if (check) {
+	actualizaProceso({{id_pedido}});
+   	}
+  	
+} 
+
+document.getElementById("{{id_pedido}}button").addEventListener("click", alertaValue);
+
+async function enviaMensaje(req, res){ 
+   	muestraMensaje({{id_pedido}});
+   	
+} 
+document.getElementById("{{id_pedido}}button").addEventListener("click", enviaMensaje);
+
+
+async function sendValue(req, res){ 
+   	busquedaCliente({{id_cliente}});
+   	
+} 
+
+document.getElementById("{{id_cliente}}").addEventListener("click", sendValue);
+
+</script>
+
+	{{/each}}
+{{/if}}

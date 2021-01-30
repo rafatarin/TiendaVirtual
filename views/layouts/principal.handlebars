@@ -1,43 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+       <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet" 
+    >
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js" ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+    <!-- MDB core JavaScript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js" ></script>
     <link rel="stylesheet" href="../css/styles.css" type="text/css">
-    <script src="../src/scripts.js" type="text/javascript" async></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script type="text/javascript" src="https://raw.github.com/HPNeo/gmaps/master/gmaps.js"></script>
-    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/stylesArticulos.css" >
+    <script type="text/javascript" src="../src/scripts.js" async></script>
+        <script type="text/javascript" src="../src/guardarPedidos.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            <link rel="stylesheet" href="../css/stylesFactura.css">
 </head>
-<body>
-    <body>
-    <header>
-        <div id="mySidepanel" class="sidepanel">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Home</a>
-            <a href="#">Productos</a>
-            <a href="#">Registrarse</a>
-            <a href="#">Contacto</a>
-        </div>
 
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
-        <img src="../img/cocacola.png" alt="Logo amazon" id="logoCocacola">
-        <button class="btn_navbar">Log In</button>
-        <button class="btn_navbar">Sign In</button>
+<body>
+    <header>
+        <div class="btn_navbar">
+
+            <li class="text-light float-left; margin: 0em 10em;">Estás viendo la nueva web, esta es la version
+                beta</li>
+        </div>
+        
+
+        <a href="/"><img src="../img/logo.png" alt="Logo de Prueba TestNG" id="logoPrueba"></a>
+        <ul class="listadoDesplegable">
+            <li><a href="/" class="link_menu ml-4">Inicio</a></li>
+            <li><a href="/secciones" class="link_menu mr-5">Secciones</a></li>
+            <li><a href="/#contacto" class="link_menu mr-2">Contáctanos</a></li>
+             <li> {{#if btn_hidden}}<a href="/registro" style="visibility: {{btn_hidden}};"
+                    class="text-light "><button class="btn btn-primary space-btn">Registrate</button> </a></li>
+            <li><a href="/identificacion" {{btn_hidden}} class="text-light "><button class="btn btn-primary">Identifícate</button> </a>
+                {{/if}}
+            <li>
+                <div class="dropdown float-sm-right">
+                    {{#if identificado}}
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{identificado}}</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/perfil">Mi cuenta</a>
+                        <a class="dropdown-item" href="/facturacion">Mis facturas</a>
+                        <a class="dropdown-item" href="/carrito">Mis pedidos</a>
+                        <a class="dropdown-item" href="/salir">Cerrar sesión</a>
+                    </div>
+                    <a href="/articulosGuardados" class="text-light float-left"><img src="../img/carrito.png" alt="cesta"
+                        class="header_logo_cesta"></a>
+                </div>{{/if}}
+            </li>
+        </ul>
     </header>
-    <hr>
+
+
     {{{body}}}
+
+   <footer class="footer row ml-3">
+  <div class="col-md-4">
+    <br>
+    <img src="../img/logo.png" alt="logo empresa" class="w-25 ">
+    <p class="text-light text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Debitis tempore officia odit tempora quia laudantium magnam voluptatibus ea alias! </p>
+    <ul class="" >
+      <li class="">
+      <a href="https://www.facebook.com/coopsaluss/"><img src="../img/logo_twitter.png" class="logo_col1_footer "  alt="logo_facebook"></a>
+      </li>
+       <li>
+        <a href="https://www.facebook.com/coopsaluss/"><img src="../img/logo_facebook.png" class="logo_col1_footer ml-1" alt="logo_facebook"></a>
+      </li>
+       <li>
+        <a href="www.instagram.com"><img src="../img/logo_instragram.png" class="logo_col1_footer ml-1" alt="logo_instagram"></a>
+      </li>
+    </ul>
+  </div>
+    <div class="col-md-4">
+        <ul><br>
+            <li class="text-light font-weight-bold">INFORMACIÓN LEGAL Y AYUDA</li><br><br>
+            <a href="" class="text-light"><li>Blog</li></a><br>
+           <a href="" class="text-light"><li>Contacto</li></a><br>
+           <a href="" class="text-light"><li>Inicio</li></a><br>
+           <a href="" class="text-light"><li>Terminos y condiciones</li></a><br>  
+        </ul>
+    </div>
+    <div class="col-md-4">
+      <ul><br>
+        <li class="text-light font-weight-bold">CONTACTA CON NOSOTROS </li><br><br>
+        <li class="text-light">Dirección: Carrer del Pintor Vergara, 3, 12004 Castelló de la Plana, Castelló</li><br>
+        <li class="text-light">Teléfono: 964 21 86 17</li><br>
+        <li class="text-light">info@coopsalus.com</li><br>
+      </ul>
+    </div>
+
+</footer>
+
 </body>
+
 </html>

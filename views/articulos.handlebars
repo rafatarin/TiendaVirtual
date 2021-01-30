@@ -1,0 +1,48 @@
+
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<br><br><br><br><br>
+
+{{#each secciones}}
+<div class="row d-inline">
+        <div class="col-3 float-left item">
+                <div class="card-wrapper">
+                        <div class="card">
+                                <div class="card-img-wrapper">
+                                        <div class="">
+                                                        <span>
+                                                        <p class="col-4 text-center  bg-warning mt-2"><strong>{{precio}}€</strong></p>
+                                                        </span>
+                                        </div>
+                                        <div class="h-25 d-inline-block">
+                                                 <img class="card-img-top" src="../img/{{imagen}}" alt="Card image cap">
+                                        </div>
+                                       
+                                        <div class="card-body row float-left">
+                                                <h5 class="card-title">{{descripcion}}</h5>
+                                                        <div class="col-md-1 ">
+
+                                                        </div>
+                                                
+                                                        <div class="ml-1 col-md-3">
+                                                                <span><input type="number" class="w-100 cantidadCarro"
+                                                                                placeholder="1" min="1"
+                                                                                max="10"></span>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <a href="#"><img src="../img/cesta.png" class="w-50 cesta" alt="cesta_compra" id="{{id_articulo}}"></a> 
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>{{/each}}
+        
+        </div>
+</div>
+
+   
+ <script src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>

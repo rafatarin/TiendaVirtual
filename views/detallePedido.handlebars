@@ -1,0 +1,45 @@
+{{#each detallePedido}} 
+<h1 id="stock"><strong> Detalle en pedidos </strong></h1>
+<div class="divEnlaces">
+<a class="enlaces" href="/pedidosEnProceso"><button class="btn btn-primary mr-3 float-left">Pedidos En Proceso</button></a>
+<a class="enlaces" id="generarPDF" href="/imprimir/{{id_pedido}}"> <button class="btn btn-primary mr-3 float-left">Generar PDF</button></a>
+</div>
+<br><br>
+
+<table class="table">
+	  
+  <thead class="thead-dark">
+	
+    <tr>
+      <th class="text-center">Id pedido:</th>
+      <th class="text-center">Productos: </th>
+      <th class="text-center">Cantidad: </th>
+	  <th class="text-center">Precio Unidad: </th>
+      <th class="text-center">Subtotal: </th>
+      <th class="text-center">IVA: </th>
+      <th class="text-center">Total Factura: </th>
+
+    </tr>
+  </thead> 
+  <tbody>
+	  
+    <tr id="{{id_pedido}}mensaje">
+		
+	  <td  class="text-center">{{id_pedido}}</td>
+	  <td class="text-center"> {{descripcion}}</td>
+      <td class="text-center">{{cantidad}}</td>
+	  <td class="text-center">{{precio}}€</td>
+      {{/each}}
+      {{#if sumaPrecio}}
+       <td class="text-center">{{sumaPrecio}}€</td>{{/if}}
+       {{#if precioIVA}} <td class="text-center">{{sumaPrecio}}€</td>{{/if}}
+       {{#if totalFactura}} <td class="text-center">{{totalFactura}}€</td>{{/if}}
+	  </th>
+    </tr>
+
+
+  </tbody>
+</table>
+
+
+

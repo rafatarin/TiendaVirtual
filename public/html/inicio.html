@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="../css/styles.css" type="text/css">
+    <script type="text/javascript" src="../src/scripts.js" async></script>
+</head>
+
+<body>
+    <header>
+        <div id="mySidepanel" class="sidepanel" class="hidden" hidden>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Inicio</a>
+            <a href="#">Catálogo</a>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Ayuda</a>
+        </div>
+        <button class="openbtn" onclick="openNav()" class="hidden" hidden>&#9776;</button>
+
+
+        <div class="btn_navbar">
+            <li class="text-light" style="float: left; margin: 0em 10em;">Estás viendo la nueva web, esta es la version beta</li>
+            <li><a href="/registro" class="text-light">Mi cesta <img src="../img/cesta.png" alt="cesta" class="header_logo_cesta"></a></li>
+            <li><a href="/registro" class="text-light">Registrate</a></li>
+            <li><a href="/identificacion" class="text-light">identificate</a></li>
+
+        </div>
+        <a href="/"><img src="../img/logo.png" alt="Logo de Prueba TestNG" id="logoPrueba"></a>
+        <ul class="listadoDesplegable">
+            <li><a href="/" class="link_menu">Inicio</a></li>
+            <li><a href="/secciones" class="link_menu">Secciones</a></li>
+            <li><a href="/#contacto" class="link_menu">Contáctanos</a></li>
+        </ul>
+    </header>
+    
+      <!-- BANNERS EN LA WEB-->
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval=5000>
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="../img/banner1.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../img/banner2.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../img/banner3.jpg" alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../img/banner4.jpg" alt="Fourth slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <!-- BANNERS DE LA EMPRESA-->
+      <a href="/secciones" style="text-decoration: none;"><div class="banners_inicio">
+<p class="banner_text_inicio">TODAS LAS SECCIONES DE NUESTRO CATALOGO</p>
+</div></a>
+
+      <!-- MAPA DE LA EMPRESA-->
+<a href="" name="contacto"></a>
+<div class="cont_contacto">
+<div id="gmaps"><iframe width="50%" height="400" src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=coop%20salus+()&ie=UTF8&t=&z=17&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/marcar-radio-circulo-mapa/">Marcar radio en el mapa</a></iframe>
+<form action="/enviarMail" method="POST" enctype="text/plain" id="formularioContacto">
+    <p>Contacta con nosotros</p>
+    <input type="text" id="name" class="textbox_short" placeholder="Nombre">
+    <input type="email" name="email" id="email" class="textbox_short" placeholder="Email">
+    <input type="text" name="asunto" id="subject" class="textbox_large" placeholder="Asunto"><br>
+    <textarea placeholder="Mensaje" name="mensaje" class="textbox_message" cols="30" rows="10"></textarea><br>
+    <input type="submit" class="box_submit">
+</form>
+</div>
+</div>
+<footer >
+    <div>
+        <ul>
+            <li>Información legal y Ayuda</li><br>
+            <a href=""><li>Ayuda</li></a><br>
+           <a href=""><li>Información legal</li></a><br>
+           <a href=""><li>Política de cookies</li></a><br>
+           <a href=""><li>Condiciones de contratación</li></a><br>  
+        </ul>
+    </div>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+
+<h1 id="stock"><strong> Pedidos Enviados: </strong></h1>
+<div class="divEnlaces">
+<a class="enlaces" href="/pedidosEnProceso"><button class="btn btn-primary mr-3">Pedidos En Proceso</button></a>
+<a  class="enlaces" href="/historicoPedidos"><button class="btn btn-primary mr-3">Histórico de Pedidos</button></a></div>
+<br><br>
+
+
+<table class="table">
+	  
+  <thead class="thead-dark">
+	
+    <tr>
+	  <th class="text-center"></th>
+      <th class="text-center">Id pedido</th>
+      <th class="text-center">Productos</th>
+      <th class="text-center">Cantidad</th>
+      <th class="text-center">Entregado</th>
+	  <th class="text-center">Guardar</th>
+    </tr>
+  </thead> 
+  <tbody>
+	  {{#if enviados}}
+{{#each enviados}}	
+    <tr id="{{id_pedido}}mensaje">
+		
+		<p class="text-center">{{mensaje}}</p>
+	  <td> <a href="/detallePedidoEnv/{{id_pedido}}">Detalle Pedido</a></td>
+	  <td class="text-center">{{id_pedido}}</td>
+      <td class="text-center">{{descripcion}}</td>
+      <td class="text-center">{{cantidad}}</td>
+	  <td class="text-center"><input id="{{id_pedido}}" name="miCheck" type="checkbox"></td>
+	  <td class="text-center"><button id="{{id_pedido}}button">Guardar</button></td>
+	  </th>
+    </tr>
+{{/each}}
+{{/if}}
+  </tbody>
+</table>
+
+<!--
+<div class="listaPedido">
+<ul id="{{id_pedido}}mensaje">	
+<a href="/detallePedidoEnv/{{id_pedido}}">Detalle Pedido</a>
+<li>Id pedido: {{id_pedido}}</li>
+<li>Productos: {{descripcion}}</li>
+<li>Cantidad: {{cantidad}}</li>
+<label><input id="{{id_pedido}}" name="miCheck" type="checkbox"> Entregado </a></label>
+<li><button id="{{id_pedido}}button">Guardar</li>
+<li>{{mensaje}}</li>
+</ul>
+</div>  -->
+{{#if enviados}}
+{{#each enviados}}
+<script>
+async function alertaValueEnv(req, res){ 
+   	const check = document.getElementById("{{id_pedido}}");
+   	if (check) {
+	actualizaEnviados({{id_pedido}});
+   	}
+  	
+} 
+
+document.getElementById("{{id_pedido}}").addEventListener("click", alertaValueEnv);
+
+async function enviaMensajeEnv(req, res){ 
+   	muestraMensajeEnv({{id_pedido}});
+   	
+} 
+document.getElementById("{{id_pedido}}button").addEventListener("click", enviaMensajeEnv);
+
+
+</script>
+{{/each}}
+{{/if}}
+
+

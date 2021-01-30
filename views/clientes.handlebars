@@ -1,14 +1,33 @@
-<link rel="stylesheet" href="../css/styles.css" type="text/css">
-<h1><strong> Clientes: </strong></h1>
-
-{{#if datos}}
-	{{#each datos}}
-<div class="product">
-<ul>	
-<li>Nombre:{{nombre}}</li>
-<li>Email: {{email}}</li>
-<li>Telefono: {{telefono}}</li>
-</ul>
+{{#each clientes}}
+<div class="container page-container">
+	
+<div class="row gutters">
+    
+    <div class="col-lg-4 col-md-4 col-sm-4 col-3 mb-5">
+    	<figure class="user-card green">
+			<figcaption>
+				
+				<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Milestone Admin" class="profile">
+				<h5>{{Nombre}} {{apellido1}} {{apellido2}}</h5>
+				<h6>Id de cliente: {{id_cliente}}</h6>
+				<p>Usuario: {{usuario}}</p>
+				<ul class="contacts">
+					<li>
+						Email: <a href="#">
+							{{email}}
+						</a>
+					</li>
+                    <li>
+                        Dirección: {{poblacion}}
+                    </li>
+                    <li>
+                        Rol: {{rol}}
+                    </li>
+				</ul>
+			</figcaption>
+		</figure>
+	</div>
+</div>
 </div>
 {{/each}}
-{{/if}}
+

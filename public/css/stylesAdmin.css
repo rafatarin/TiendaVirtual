@@ -1,0 +1,167 @@
+
+
+.contenedorPedidos {
+  width: 40%;
+  margin-left: 10%;
+}
+
+.product {
+  display: inline-block;
+  margin: 1vw 2vw;
+  background-color: white;
+  border-radius: 2vw;
+  width: 20%;
+  -webkit-box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
+  box-shadow: -9px 9px 20px -8px rgba(0, 0, 0, 0.52);
+}
+
+.fotoAdmin {
+  text-decoration: none;
+  color: #212529;
+}
+
+.img_product {
+  margin: 0.2vw 4vw;
+  width: 50%;
+  height: 25%;
+  padding-top: 1%;
+}
+
+.container {
+  margin-top: 3%;
+  width: 50%;
+  height: 50%;
+}
+
+#muestra {
+  width: 80%;
+  margin: 0 auto;
+}
+#muestraAdmin {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.descStats {
+  font-size: 1vw;
+  text-align: center;
+}
+
+.descSecciones {
+  text-align: center;
+  font-size: 1vw;
+}
+
+
+.stock {
+  margin-top: 6%;
+}
+
+.proceso {
+  margin-top: auto;
+}
+
+#stock {
+  text-align: center;
+}
+
+
+.contenedorStock {
+  background-color: rgba(238, 237, 237, 0.438);
+  float: left;
+  margin-left: 2em;
+  margin-bottom: 2em;
+  padding: 5%;
+  width: 46%;
+  height: 550px;
+  overflow-wrap: break-word;
+}
+
+
+
+button {
+  background-color: #90aee2;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 6px;
+  text-align: center;
+  font-size: 10px;
+  opacity: 0.7;
+  transition: 0.3s;
+  float: right;
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+button:hover {opacity: 1}
+
+.valorStock {
+  text-transform: uppercase;
+  font-size: 12px;
+  width: 100%;
+}
+
+
+
+.imagenStock {
+  height: 50%;
+  width: 50%;
+}
+
+ul > li {
+  list-style: none;
+}
+
+
+#seletCat {
+  margin-left: 46%;
+}
+
+.stockVista {
+  padding-left: -2%;
+}
+
+.btnActualizar {
+  background-color: #e2c8c8;
+}
+
+.clientes {
+  background-color: #aacae6;
+  width: 50%;
+  margin-left: 25%;
+}
+.titulo {
+  text-align: center;
+}
+
+.divEnlaces {
+  text-align: center;
+}
+
+
+.listaPedido {
+  margin-top: 3%;
+  border: 0.5px solid grey;
+  width: 40%;
+  display: inline-block;
+  background-color: white;
+}
+
+.containerCanvas {
+  width: 80%;
+  margin-top: 3%;
+  height: 50%;
+}
+#grafica {
+  margin-left: 15%;
+  
+}
+
+
+#nuevoProducto {
+ border: 1px solid #decede;
+ 
+}
+

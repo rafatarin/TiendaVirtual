@@ -1,0 +1,35 @@
+{{#each stock}}
+<section data-id="{{id_articulo}}_desc" class="contenedorStock box">
+
+        <article> 
+        <label for="descr{{id_articulo}}">Descripción:</label><br/>
+        <p class="valorStock">{{descripcion}}<br/>
+        <input name="descripcion" type="text" id="descr-{{id_articulo}}" value="{{descripcion}}" size="30">
+        <button id="btModificar" class="btModificar">Modificar</button>
+        </article>
+        <article>
+        <label for="stock{{id_articulo}}">Stock Actual: {{stock}} </label>
+        <input name="stock" type="text" id="stock-{{id_articulo}}" value="{{stock}}" size="3">
+        <button class="btModificarStock">Modificar</button><br/>
+        </article>
+        <article>
+        <label for="precio{{id_articulo}}">Precio en Eur: {{precio}}</label>
+        <input name="precio" type="text" id="precio-{{id_articulo}}" value="{{precio}}" size="3">
+        <button class="btModificarPrecio">Modificar</button><br/>
+        </article>
+            <label>Modificar Categoría: {{categoria}}</label><br/>
+            <button id="1-{{id_articulo}}" class="btModificarCategoria">Ropa deportiva</button>
+            <button id="2-{{id_articulo}}" class="btModificarCategoria">Calzado deportivo</button>
+            <button id="3-{{id_articulo}}" class="btModificarCategoria">Joyería</button>
+            <button id="4-{{id_articulo}}" class="btModificarCategoria">Jueguetes</button>
+            <button id="5-{{id_articulo}}" class="btModificarCategoria">Libros</button>
+        </article>
+        <img src="./img/{{imagen}}" img class="imagenStock" alt="imagen Producto"> Nombre de la imagen: {{imagen}}
+        <br><br>
+        <form ref='uploadForm' id='upload{{id_articulo}}' action='/uploadArticulo' method='post' encType="multipart/form-data">
+          <input type="file" name="sampleFile" />
+          <input type='submit' value='Cambiar Imagen' />
+        </form>
+
+ </section>
+ {{/each}}

@@ -1,0 +1,31 @@
+
+       
+            
+{{#if datos}}
+
+    <div id="muestra">
+        <div id="vistaProducto" class="w-25 d-inline-block mr-5" ><a class="fotoAdmin" href="#">
+        <img src="../img/productosVistos.png" alt="dibujo representa base de datos" class="w-100">
+        <p class="descStats text-center">Vista Producto/Comprado</p></a>
+        </div>
+        
+        <div id="vistaClientes" class=" w-25 d-inline-block mr-5"><a class="fotoAdmin" href="#">
+        <img src="../img/clientes.png" alt="dibujo de un gráfico" class="w-100">
+        <p class="descStats text-center ">Vista Clientes Registrados/Meses</p></a>
+        </div>
+
+        <div id="productosComprados" class="w-25 d-inline-block"><a class="fotoAdmin" href="#">
+        <img src="../img/productosComprados.png" alt="imagen representa productos comprados" class="w-100">
+        <p class="descStats text-center">Total Prod.Comprados/Población</p></a>
+        </div>
+        
+    </div>
+    <div id="containerCanvas" class="containerCanvas">
+            <canvas id="grafica"></canvas>
+            
+    </div>
+    
+    
+  
+
+    {{/if}}

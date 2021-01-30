@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet" 
+    >
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js" ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js" ></script>
+    <link rel="stylesheet" href="../css/stylesRegister.css" type="text/css">
+    <link rel="stylesheet" href="../css/styles.css" type="text/css">
+    <script type="text/javascript" src="../src/registroForm/registro1.js" async></script>
+</head>
+
+<body>
+    <header>
+        <div id="mySidepanel" class="sidepanel" class="hidden" hidden>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Inicio</a>
+            <a href="#">Catálogo</a>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Ayuda</a>
+        </div>
+        <button class="openbtn" onclick="openNav()" class="hidden" hidden>&#9776;</button>
+
+
+
+        <div class="btn_navbar">
+
+            <li class="text-light" style="float: left; margin: 0em 10em;">Estás viendo la nueva web, esta es la version
+                beta</li>
+            
+            <li> <a href="/registro" 
+                    class="text-light ">Registrate</a></li>
+            <li><a href="/identificacion" class="text-light ">Identifícate</a>
+              
+                
+
+        </div>
+        
+
+        <a href="/"><img src="../img/logo.png" alt="Logo de Prueba TestNG" id="logoPrueba"></a>
+        <ul class="listadoDesplegable">
+            <li><a href="/" class="link_menu">Inicio</a></li>
+            <li><a href="/secciones" class="link_menu">Secciones</a></li>
+            <li><a href="/#contacto" class="link_menu">Contáctanos</a></li>
+            <li>
+                
+            </li>
+        </ul>
+    </header>
+    <div></div>
+    <div class="cont_registros">
+        <form action="/registrado1" method="POST">
+            <h3>Crea una cuenta con nosotros</h3><br>
+            <h5>PASO 1</h5><br>
+            <input type="text" placeholder="Nombre" class="box_inputs" name="campos"><br><br>
+            <input type="text" placeholder="Primer Apellido" class="box_inputs" name="campos"><br><br>
+            <input type="text" placeholder="Segundo Apellido" class="box_inputs" name="campos"><br><br>
+            <a href="/registro2"><input type="submit" value="Siguiente"></a>
+        </form>
+    </div>
+</body>
+
+</html>

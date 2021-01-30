@@ -1,0 +1,77 @@
+<br><br><br><br><br>
+<div class="container row">
+      {{#if facturas}}
+
+      <div class="col-12 text-center">
+        <h1><strong> PEDIDOS SALUS</strong></h1>
+
+      </div>
+      <div class="col-6 mt-4 mr-5 text-left">
+        Adreça: Carrer del Pintor Vergara, 3, <br>
+        12004 Castelló de la Plana, Castelló
+      </div>
+      <div class="col-5 ml-4 mt-4 ">
+        <img src="../img/logo.png" alt="" class="w-50">
+      </div>
+
+      <div class="col-4 mt-5">
+        <h5>Facturar a:</h5>
+        <div>
+          {{nombre}} {{apellido1}} {{apellido2}}
+        </div>
+        <div>
+          {{direccion}}
+        </div>
+      </div>
+      <div class="col-4 mt-5">
+        <h5>Enviar a:</h5>
+        <div>
+          {{nombre}} {{apellido1}} {{apellido2}}
+        </div>
+        <div>
+          {{direccion}}
+        </div>
+      </div>
+      <div class="col-4 mt-5">
+
+        <div class="col-8">
+          <strong> Nº de pedido:</strong> {{pedido}}
+        </div>
+        <div class="col-8">
+          <strong> Fecha: </strong> {{fecha}}
+        </div>
+      </div>
+
+      <div>
+        <table class="row mt-5 ml-3">
+          <tr>
+            <td class="apartadoFactura col">CANTIDAD</td>
+            <td class="apartadoDescripcion col">DESCRIPCIÓN</td>
+            <td class="apartadoFactura col">PRECIO UNITARIO</TD>
+            <td class="apartadoFactura col">IMPORTE</td>
+          </tr>
+          {{#each facturas}}
+          <tr>
+            <td class="apartadoFactura">{{cantidad}}</td>
+            <td class="apartadoFactura">{{descripcion}} €</td>
+            <td class="apartadoFactura">{{precio}} €</td>
+            <td class="apartadoFactura">{{precioCantidad}} €</td>
+            
+          </tr>{{/each}}
+
+          </table>
+            
+            <div class="resultados ">SubTotal:</div> <div class="resultadosCantidad"> {{sumaPrecio}} €</div>
+           
+            <div class="resultados">IVA 21%:</div> <div class="resultadosCantidad"> {{precioIVA}} €</div>
+         
+            <div class="resultados">TOTAL:</div> <div class="resultadosCantidad mb-3"> {{totalFactura}} €</div>
+        
+      </div>
+
+      {{/if}}
+    </div>
+    
+      <a href="/imprimirPDF"><div class="btn btn-primary botonPDF">Generar PDF</div></a>
+    
+  </div>

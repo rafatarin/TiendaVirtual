@@ -1,0 +1,20 @@
+<br><br><br><br><br>
+<h1 class="text-center"><strong> Cesta de compra</strong></h1><br><br>
+{{#each datosGuardados}}
+<div class="card ml-3 mb-5" style="width: 18rem;">
+    
+    <img class="card-img-top" src="/img/{{imagen}}" alt="Card image cap">
+    <div class="card-body">
+        <p class="card-text">{{descripcion}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Precio: {{precio}}</li>
+    </ul>
+</div>
+
+{{/each}}
+</div>
+
+<br><br>
+
+ <a href="/"><button id="guardarArticulos" class="btn btn-primary ml-3">Guardar artículos</button><br><br></a>
